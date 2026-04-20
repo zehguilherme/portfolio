@@ -31,3 +31,7 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Playwright
+playwright-report/
+test-results/
