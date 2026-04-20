@@ -6,6 +6,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { ExternalLink, Github } from 'lucide-react'
 
 interface ProjectCardProps {
   project: {
@@ -59,12 +60,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
           <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 group">
             <Button variant="link" className="p-0 hover:underline">
-              Ver Projeto →
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Ver Projeto
             </Button>
           </a>
           <a href={project.repository} target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 group">
             <Button variant="link" className="p-0 hover:underline">
-              Ver Repositório ↗
+              <Github className="mr-2 h-4 w-4" />
+              Ver Repositório
             </Button>
           </a>
         </div>
