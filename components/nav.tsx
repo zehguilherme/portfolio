@@ -28,95 +28,93 @@ export default function Nav() {
   }
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-background"
-    >
+    <nav className="bg-background fixed top-0 right-0 left-0 z-50">
       <div className="mx-auto max-w-7xl px-6 py-4">
-<div className="flex items-center justify-between">
+        <div className="flex items-center justify-between">
+          <a
+            href="#"
+            className="text-xl font-semibold"
+            onClick={(e) => {
+              e.preventDefault()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
+            JG
+          </a>
+
+          <button
+            className="cursor-pointer md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+          >
+            {isOpen ? <XIcon /> : <MenuIcon />}
+          </button>
+
+          <div className="hidden items-center gap-8 md:flex">
             <a
               href="#"
-              className="text-xl font-semibold"
+              className="hover:text-primary text-sm"
               onClick={(e) => {
                 e.preventDefault()
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
-              JG
+              Início
             </a>
-
-            <button
-              className="md:hidden"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+            <a
+              href="#projects"
+              className="hover:text-primary text-sm"
+              onClick={(e) => handleSmoothScroll(e, 'projects')}
             >
-              {isOpen ? <XIcon /> : <MenuIcon />}
-            </button>
+              Projetos
+            </a>
+            <a
+              href="#about"
+              className="hover:text-primary text-sm"
+              onClick={(e) => handleSmoothScroll(e, 'about')}
+            >
+              Sobre
+            </a>
+          </div>
+        </div>
 
-            <div className="hidden md:flex items-center gap-8">
+        {isOpen && (
+          <div className="bg-background absolute top-full right-0 left-0 border-t md:hidden">
+            <div className="flex flex-col gap-4 px-6 py-4">
               <a
                 href="#"
-                className="text-sm hover:text-primary"
+                className="hover:text-primary text-sm"
                 onClick={(e) => {
                   e.preventDefault()
                   window.scrollTo({ top: 0, behavior: 'smooth' })
+                  setIsOpen(false)
                 }}
               >
                 Início
               </a>
               <a
                 href="#projects"
-                className="text-sm hover:text-primary"
-                onClick={(e) => handleSmoothScroll(e, 'projects')}
+                className="hover:text-primary text-sm"
+                onClick={(e) => {
+                  handleSmoothScroll(e, 'projects')
+                  setIsOpen(false)
+                }}
               >
                 Projetos
               </a>
               <a
                 href="#about"
-                className="text-sm hover:text-primary"
-                onClick={(e) => handleSmoothScroll(e, 'about')}
+                className="hover:text-primary text-sm"
+                onClick={(e) => {
+                  handleSmoothScroll(e, 'about')
+                  setIsOpen(false)
+                }}
               >
                 Sobre
               </a>
             </div>
           </div>
-
-          {isOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t">
-              <div className="flex flex-col gap-4 px-6 py-4">
-                <a
-                  href="#"
-                  className="text-sm hover:text-primary"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                    setIsOpen(false)
-                  }}
-                >
-                  Início
-                </a>
-                <a
-                  href="#projects"
-                  className="text-sm hover:text-primary"
-                  onClick={(e) => {
-                    handleSmoothScroll(e, 'projects')
-                    setIsOpen(false)
-                  }}
-                >
-                  Projetos
-                </a>
-                <a
-                  href="#about"
-                  className="text-sm hover:text-primary"
-                  onClick={(e) => {
-                    handleSmoothScroll(e, 'about')
-                    setIsOpen(false)
-                  }}
-                >
-                  Sobre
-                </a>
-              </div>
-            </div>
-          )}
+        )}
       </div>
     </nav>
   )

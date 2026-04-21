@@ -18,26 +18,26 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background">
+    <section className="bg-background flex min-h-screen items-center justify-center">
       <div className="mx-auto max-w-7xl px-6 py-32">
         <div className="max-w-3xl">
-          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
+          <p className="text-muted-foreground mb-4 text-sm tracking-wider uppercase">
             {PERSONAL_INFO.role}
           </p>
 
-          <h1 className="text-5xl font-semibold mb-6 leading-tight">
+          <h1 className="mb-6 text-5xl leading-tight font-semibold">
             Olá, eu sou{' '}
             <span className="text-primary">{PERSONAL_INFO.name}</span>
           </h1>
 
-          <p className="text-base text-muted-foreground mb-8 max-w-xl">
+          <p className="text-muted-foreground mb-8 max-w-xl text-base">
             {PERSONAL_INFO.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row">
             <Button
               onClick={(e) => handleSmoothScroll(e, 'projects')}
-              className="hover:cursor-pointer"
+              className="cursor-pointer"
             >
               Ver Projetos
             </Button>
@@ -50,14 +50,22 @@ export default function Hero() {
             </Button>
 
             <Button asChild variant="outline">
-              <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer">
+              <a
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GithubIcon className="mr-2 h-4 w-4" />
                 GitHub
               </a>
             </Button>
 
             <Button asChild variant="outline">
-              <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer">
+              <a
+                href={PERSONAL_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <LinkedInIcon className="mr-2 h-4 w-4" />
                 LinkedIn
               </a>
