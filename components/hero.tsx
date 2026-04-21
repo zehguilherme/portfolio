@@ -42,7 +42,7 @@ export default function Hero() {
               Ver Projetos
             </Button>
 
-            <Button asChild variant="secondary">
+            <Button asChild variant="outline">
               <a href="mailto:jgtomaine@hotmail.com">
                 <MailIcon className="mr-2 h-4 w-4" />
                 Entrar em Contato
