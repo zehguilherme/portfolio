@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Button } from '@/components/ui/button'
 import { PERSONAL_INFO } from '@/lib/constants'
-import { Mail, Github, Linkedin } from 'lucide-react'
+import { MailIcon, GithubIcon, LinkedInIcon } from '@/components/ui/icon'
 
 export default function Hero() {
   const handleSmoothScroll = (
@@ -35,27 +35,30 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button onClick={(e) => handleSmoothScroll(e, 'projects')}>
+            <Button
+              onClick={(e) => handleSmoothScroll(e, 'projects')}
+              className="hover:cursor-pointer"
+            >
               Ver Projetos
             </Button>
 
             <Button asChild variant="secondary">
               <a href="mailto:jgtomaine@hotmail.com">
-                <Mail className="mr-2 h-4 w-4" />
+                <MailIcon className="mr-2 h-4 w-4" />
                 Entrar em Contato
               </a>
             </Button>
 
             <Button asChild variant="outline">
               <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" />
+                <GithubIcon className="mr-2 h-4 w-4" />
                 GitHub
               </a>
             </Button>
 
             <Button asChild variant="outline">
               <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-4 w-4" />
+                <LinkedInIcon className="mr-2 h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
