@@ -61,6 +61,7 @@ export default function Nav() {
             >
               Início
             </a>
+
             <a
               href="#projects"
               className="hover:text-primary text-sm"
@@ -68,6 +69,7 @@ export default function Nav() {
             >
               Projetos
             </a>
+
             <a
               href="#about"
               className="hover:text-primary text-sm"
@@ -92,6 +94,7 @@ export default function Nav() {
               >
                 Início
               </a>
+
               <a
                 href="#projects"
                 className="hover:text-primary text-sm"
@@ -102,6 +105,7 @@ export default function Nav() {
               >
                 Projetos
               </a>
+
               <a
                 href="#about"
                 className="hover:text-primary text-sm"
