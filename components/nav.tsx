@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X } from 'lucide-react'
+import { MenuIcon, XIcon } from '@/components/ui/icon'
 
 export default function Nav() {
   const [isScrolled, setIsScrolled] = React.useState(false)
@@ -49,7 +49,7 @@ export default function Nav() {
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <XIcon /> : <MenuIcon />}
             </button>
 
             <div className="hidden md:flex items-center gap-8">
