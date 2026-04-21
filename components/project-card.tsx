@@ -68,9 +68,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="w-full hover:underline"
           >
-            <Button variant="link" className="w-full p-0">
-              <ExternalLinkIcon className="mr-2 h-4 w-4" />
-              Ver Projeto
+            <Button variant="link" className="w-full p-0" asChild>
+              <span className="flex items-center">
+                <ExternalLinkIcon className="mr-2 h-4 w-4" />
+                Ver Projeto
+              </span>
             </Button>
           </Link>
 
@@ -80,9 +82,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="w-full hover:underline"
           >
-            <Button variant="link" className="w-full p-0">
-              <GithubIcon className="mr-2 h-4 w-4" />
-              Ver Repositório
+            <Button variant="link" className="w-full p-0" asChild>
+              <span className="flex items-center">
+                <GithubIcon className="mr-2 h-4 w-4" />
+                Ver Repositório
+              </span>
             </Button>
           </Link>
         </div>
