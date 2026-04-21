@@ -41,8 +41,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
         )}
       </div>
-      <CardContent className="flex flex-grow flex-col justify-between p-6">
-        <div className="flex-grow">
+      <CardContent className="flex grow flex-col justify-between p-6">
+        <div className="grow">
           <CardTitle className="mb-2">{project.title}</CardTitle>
 
           <CardDescription className="mb-4">
