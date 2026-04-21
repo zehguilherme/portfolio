@@ -31,6 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               src={project.image}
               alt={project.title}
               fill
+              priority
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
