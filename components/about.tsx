@@ -43,6 +43,7 @@ export default function About() {
               src="/images/profile.png"
               alt="Foto de perfil"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
               priority
             />
