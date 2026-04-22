@@ -40,20 +40,22 @@ export const PROJECTS = [
   },
 ]
 
-export const SKILLS = [
-  'Vue.js',
-  'Nuxt.js',
-  'React.js',
-  'Next.js',
-  'TypeScript',
-  'JavaScript',
-  'Sass (SCSS)',
-  'Bootstrap',
-  'Tailwind CSS',
-  'HTML',
-  'CSS',
-  'Git',
-  'Jest',
-  'Testing Library',
-  'API REST',
-]
+export const SKILLS_CATEGORIES: Record<string, string[]> = {
+  'Front-end': [
+    'Vue.js',
+    'Nuxt.js',
+    'React.js',
+    'Next.js',
+    'JavaScript',
+    'TypeScript',
+    'Sass (SCSS)',
+    'Bootstrap',
+    'Tailwind CSS',
+    'HTML',
+    'CSS',
+  ],
+  'Qualidade e testes': ['Jest', 'Testing Library'],
+  Ferramentas: ['Git', 'VS Code', 'Figma'],
+  Metodologias: ['Scrum', 'Kanban'],
+  Idiomas: ['Inglês (Técnico)'],
+}
