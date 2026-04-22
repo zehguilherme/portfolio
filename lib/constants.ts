@@ -29,7 +29,7 @@ export const PROJECTS = [
     tags: [
       'Next.js',
       'React.js',
-      'TypeScript',
+      'JavaScript',
       'Tailwind CSS',
       'Jest',
       'Testing Library',
