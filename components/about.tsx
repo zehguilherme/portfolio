@@ -1,4 +1,4 @@
-import { SKILLS, PERSONAL_INFO } from '@/lib/constants'
+import { SKILLS_CATEGORIES, PERSONAL_INFO } from '@/lib/constants'
 import Image from 'next/image'
 
 export default function About() {
@@ -22,19 +22,22 @@ export default function About() {
               novas oportunidades e colaborações.
             </p>
 
-            <div>
-              <h3 className="mb-4 text-xl font-medium">Habilidades</h3>
-
-              <div className="flex flex-wrap gap-2">
-                {SKILLS.map((skill) => (
-                  <span
-                    key={skill}
-                    className="bg-secondary text-secondary-foreground rounded-full px-4 py-2 text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+            <div className="space-y-4">
+              {Object.entries(SKILLS_CATEGORIES).map(([category, skills]) => (
+                <div key={category}>
+                  <h3 className="mb-2 text-xl font-medium">{category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="bg-secondary text-secondary-foreground rounded-full px-4 py-2 text-sm"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
