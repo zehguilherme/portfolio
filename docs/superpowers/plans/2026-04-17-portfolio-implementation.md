@@ -50,6 +50,7 @@ portfolio/
 ## Task 1: Initialize Next.js 16.2.4 Project
 
 **Files:**
+
 - Create: `package.json`
 - Create: `next.config.ts`
 - Create: `tsconfig.json`
@@ -100,7 +101,7 @@ portfolio/
 - [ ] **Step 2: Create Next.js configuration**
 
 ```typescript
-import type { NextConfig } from 'next';
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   eslint: {
@@ -109,9 +110,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
 ```
 
 - [ ] **Step 3: Create tsconfig.json**
@@ -147,7 +148,7 @@ export default nextConfig;
 - [ ] **Step 4: Create Tailwind configuration with Slate & Monolith tokens**
 
 ```typescript
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   darkMode: ['class'],
@@ -206,8 +207,14 @@ const config: Config = {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'display-lg': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-md': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+        'display-lg': [
+          '3.5rem',
+          { lineHeight: '1.1', letterSpacing: '-0.02em' },
+        ],
+        'display-md': [
+          '2.5rem',
+          { lineHeight: '1.2', letterSpacing: '-0.02em' },
+        ],
         'headline-sm': ['1.5rem', { lineHeight: '1.3' }],
         'body-md': ['0.875rem', { lineHeight: '1.6' }],
         'label-sm': ['0.75rem', { lineHeight: '1', letterSpacing: '0.05em' }],
@@ -220,9 +227,9 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+}
 
-export default config;
+export default config
 ```
 
 - [ ] **Step 5: Create PostCSS configuration**
@@ -233,9 +240,9 @@ const config = {
     tailwindcss: {},
     autoprefixer: {},
   },
-};
+}
 
-export default config;
+export default config
 ```
 
 - [ ] **Step 6: Create ESLint configuration**
@@ -269,6 +276,7 @@ npm install
 ## Task 2: Create Core Application Files
 
 **Files:**
+
 - Create: `app/layout.tsx`
 - Create: `app/globals.css`
 - Create: `app/page.tsx`
@@ -278,11 +286,11 @@ npm install
 - [ ] **Step 1: Create lib/utils.ts**
 
 ```typescript
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 ```
 
@@ -292,12 +300,13 @@ export function cn(...inputs: ClassValue[]) {
 export const PERSONAL_INFO = {
   name: 'José Guilherme',
   role: 'Front-end Developer',
-  description: 'Desenvolvedor front-end especializado em criar interfaces modernas e funcionais.',
+  description:
+    'Desenvolvedor front-end especializado em criar interfaces modernas e funcionais.',
   email: 'email@example.com',
   github: 'https://github.com',
   linkedin: 'https://linkedin.com',
   location: 'Brasil',
-};
+}
 
 export const PROJECTS = [
   {
@@ -332,7 +341,7 @@ export const PROJECTS = [
     image: '/images/project-4.jpg',
     link: '#',
   },
-];
+]
 
 export const SKILLS = [
   'React',
@@ -343,7 +352,7 @@ export const SKILLS = [
   'Tailwind CSS',
   'Git',
   'Node.js',
-];
+]
 ```
 
 - [ ] **Step 3: Create app/globals.css**
@@ -442,6 +451,7 @@ export default function Home() {
 ## Task 3: Create Shadcn UI Base Components
 
 **Files:**
+
 - Create: `components/ui/button.tsx`
 - Create: `components/ui/card.tsx`
 - Create: `components/ui/input.tsx`
@@ -632,6 +642,7 @@ export { Label };
 ## Task 4: Create Portfolio Components
 
 **Files:**
+
 - Create: `components/nav.tsx`
 - Create: `components/hero.tsx`
 - Create: `components/projects.tsx`
@@ -968,6 +979,7 @@ export default function Home() {
 ## Task 5: Verify Build and Lint
 
 **Files:**
+
 - Run: `npm run build`
 - Run: `npm run lint`
 

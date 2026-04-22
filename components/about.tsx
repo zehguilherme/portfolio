@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" className="py-12 bg-background">
+    <section id="about" className="bg-background py-12">
       <div className="mx-auto max-w-7xl px-6 py-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="text-4xl font-semibold mb-6">Sobre Mim</h2>
+            <h2 className="mb-6 text-4xl font-semibold">Sobre Mim</h2>
 
-            <p className="text-base text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 text-base">
               Sou um desenvolvedor front-end apaixonado por criar interfaces
               modernas e funcionais. Com experiência em Vue.js, Nuxt.js,
               React.js, Next.js, JavaScript, TypeScript, Sass (SCSS), Bootstrap,
@@ -17,19 +17,19 @@ export default function About() {
               performático.
             </p>
 
-            <p className="text-base text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-8 text-base">
               Localizado em {PERSONAL_INFO.location}, estou sempre aberto a
               novas oportunidades e colaborações.
             </p>
 
             <div>
-              <h3 className="text-xl font-medium mb-4">Habilidades</h3>
+              <h3 className="mb-4 text-xl font-medium">Habilidades</h3>
 
               <div className="flex flex-wrap gap-2">
                 {SKILLS.map((skill) => (
                   <span
                     key={skill}
-                    className="text-sm px-4 py-2 bg-secondary rounded-full text-secondary-foreground"
+                    className="bg-secondary text-secondary-foreground rounded-full px-4 py-2 text-sm"
                   >
                     {skill}
                   </span>
@@ -38,7 +38,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative w-1/2 mx-auto aspect-square rounded-xl overflow-hidden bg-muted">
+          <div className="bg-muted relative mx-auto aspect-square w-1/2 overflow-hidden rounded-xl">
             <Image
               src="/images/profile.png"
               alt="Foto de perfil"

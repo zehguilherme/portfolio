@@ -13,15 +13,15 @@
 
 ## Design System ("Slate & Monolith")
 
-| Token | Value |
-|-------|-------|
-| primary | #0f172a |
+| Token      | Value   |
+| ---------- | ------- |
+| primary    | #0f172a |
 | background | #f9f9f9 |
 | foreground | #2d3435 |
-| muted | #f2f4f4 |
-| border | #dde4e5 |
-| font | Inter |
-| accent | #f2f4f4 |
+| muted      | #f2f4f4 |
+| border     | #dde4e5 |
+| font       | Inter   |
+| accent     | #f2f4f4 |
 
 **Tailwind CSS v4** - Config via `app/globals.css` @theme block (NO `tailwind.config.ts`).
 
