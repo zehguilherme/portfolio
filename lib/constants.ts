@@ -3,7 +3,7 @@ export const PERSONAL_INFO = {
   role: 'Desenvolvedor de Software',
   description:
     'Desenvolvedor front-end especializado em criar interfaces modernas e funcionais.',
-  email: 'email@example.com',
+  email: 'jgtomaine@hotmail.com',
   github: 'https://github.com/zehguilherme',
   linkedin:
     'https://www.linkedin.com/in/jos%C3%A9-guilherme-paro-monteiro-tomaine/',
