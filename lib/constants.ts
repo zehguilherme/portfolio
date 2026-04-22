@@ -43,12 +43,17 @@ export const PROJECTS = [
 export const SKILLS = [
   'Vue.js',
   'Nuxt.js',
-  'React',
+  'React.js',
   'Next.js',
   'TypeScript',
   'JavaScript',
   'Sass (SCSS)',
   'Bootstrap',
   'Tailwind CSS',
+  'HTML',
+  'CSS',
   'Git',
+  'Jest',
+  'Testing Library',
+  'API REST',
 ]
