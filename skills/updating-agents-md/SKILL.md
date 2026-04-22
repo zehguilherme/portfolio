@@ -17,13 +17,13 @@
 Run these checks to identify what changed:
 
 ```
-glob: app/**/*.{ts,tsx,css}
-glob: components/**/*.{ts,tsx}
-glob: lib/**/*.{ts}
-glob: public/**/*
-read: package.json
-read: app/globals.css
-read: AGENTS.md
+glob app/**/*.{ts,tsx,css}
+glob components/**/*.{ts,tsx}
+glob lib/**/*.{ts}
+glob public/**/*
+read package.json
+read app/globals.css
+read AGENTS.md
 ```
 
 ### 2. Compare State
