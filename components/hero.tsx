@@ -43,9 +43,9 @@ export default function Hero() {
             </Button>
 
             <Button asChild variant="outline">
-              <a href="mailto:jgtomaine@hotmail.com">
+              <a href={`mailto:${PERSONAL_INFO.email}`}>
                 <MailIcon className="mr-2 h-4 w-4" />
-                Entrar em Contato
+                E-mail
               </a>
             </Button>
 
