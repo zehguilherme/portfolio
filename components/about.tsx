@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <section id="about" className="py-12 bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-semibold mb-6">Sobre Mim</h2>
