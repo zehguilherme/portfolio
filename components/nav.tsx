@@ -81,7 +81,7 @@ export default function Nav() {
         </div>
 
         {isOpen && (
-          <div className="bg-background absolute top-full right-0 left-0 border-t border-border md:hidden">
+          <div className="bg-background border-border absolute top-full right-0 left-0 border-t md:hidden">
             <div className="flex flex-col gap-4 px-6 py-4">
               <a
                 href="#"

@@ -47,9 +47,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.variable}>
-          {children}
-          <Analytics />
-        </body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }

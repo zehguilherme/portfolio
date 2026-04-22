@@ -29,6 +29,7 @@ read: AGENTS.md
 ### 2. Compare State
 
 Diff current state against what AGENTS.md documents:
+
 - **Project Structure**: Check `app/`, `components/`, `lib/` trees
 - **UI Components**: Check `components/ui/` for new/removed components
 - **Tech Stack**: Compare `package.json` versions
@@ -40,6 +41,7 @@ Diff current state against what AGENTS.md documents:
 If changes detected, update these sections:
 
 #### Commands Section
+
 ```markdown
 ## Commands
 
@@ -51,25 +53,29 @@ If changes detected, update these sections:
 Extract from `package.json` scripts.
 
 #### Project Structure Section
+
 ```markdown
 ## Project Structure
-
 ```
+
 portfolio/
 ├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
+│ ├── layout.tsx
+│ ├── page.tsx
+│ └── globals.css
 ├── components/
-│   ├── ui/
-│   ├── nav.tsx
-│   └── ...
+│ ├── ui/
+│ ├── nav.tsx
+│ └── ...
+
 ```
+
 ```
 
 Use current file tree.
 
 #### UI Components Section
+
 ```markdown
 ## UI Components (`components/ui/`)
 
@@ -80,11 +86,13 @@ Use current file tree.
 List files in `components/ui/`.
 
 #### Tech Stack & Design System
+
 Update versions from `package.json` and tokens from `app/globals.css`.
 
 ### 4. Summarize
 
 Print summary of changes:
+
 - Files added/removed
 - New UI components
 - Tech stack updates
