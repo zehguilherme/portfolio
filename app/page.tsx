@@ -8,11 +8,15 @@ export default function Home() {
   return (
     <>
       <Nav />
+
       <main>
         <Hero />
+
         <Projects />
+
         <About />
       </main>
+
       <Footer />
     </>
   )
