@@ -37,6 +37,7 @@ export default function About() {
               {Object.entries(SKILLS_CATEGORIES).map(([category, skills]) => (
                 <div key={category}>
                   <h3 className="mb-2 text-xl font-medium">{category}</h3>
+
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill) => (
                       <span
