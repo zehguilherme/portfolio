@@ -1,14 +1,15 @@
-# Skill: updating-agents-md
+---
+name: updating-agents-md
+description: Automatically update AGENTS.md when project structure or specifications change significantly.
+---
 
-> Automatically update `AGENTS.md` when project structure or specifications change significantly.
+# Updating AGENTS.md
 
-## When to Use
+This skill ensures your project documentation stays in sync with the actual codebase.
 
-- File/folder created, deleted, or renamed in `app/`, `components/`, `lib/`, `public/`
-- Dependencies added/removed in `package.json`
-- Design tokens modified in `app/globals.css`
-- New commands added to `package.json` scripts
-- UI components added/removed in `components/ui/`
+## When to Use This Skill
+
+Use this skill whenever files are created, deleted, or renamed in `app/`, `components/`, `lib/`, or `public/` directories. Also use when dependencies are added or removed in `package.json`, design tokens are modified in `app/globals.css`, or new commands are added to package.json scripts. Additionally, use when UI components are added or removed in `components/ui/`.
 
 ## Workflow
 
@@ -56,7 +57,6 @@ Extract from `package.json` scripts.
 
 ```markdown
 ## Project Structure
-```
 
 portfolio/
 ├── app/
@@ -67,9 +67,6 @@ portfolio/
 │ ├── ui/
 │ ├── nav.tsx
 │ └── ...
-
-```
-
 ```
 
 Use current file tree.

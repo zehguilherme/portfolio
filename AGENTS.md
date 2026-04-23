@@ -47,7 +47,8 @@ portfolio/
 ├── app/
 │   ├── layout.tsx      # Root layout (Inter font, metadata, Vercel Analytics)
 │   ├── page.tsx        # Home page
-│   └── globals.css    # Tailwind CSS v4 @theme config
+│   ├── not-found.tsx   # 404 page
+│   └── globals.css     # Tailwind CSS v4 @theme config
 ├── components/
 │   ├── ui/             # Shadcn UI components
 │   ├── nav.tsx         # Navigation
@@ -60,7 +61,10 @@ portfolio/
 │   ├── utils.ts        # cn() utility
 │   └── constants.ts    # PERSONAL_INFO, PROJECTS, SKILLS
 ├── public/
-│   └── images/        # Project images
+│   └── images/
+│       ├── profile.png
+│       ├── studio-amanda-borges.png
+│       └── naturella.png
 ├── docs/superpowers/  # Implementation plans
 ├── package.json
 ├── tsconfig.json
