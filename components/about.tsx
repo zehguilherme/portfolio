@@ -10,16 +10,27 @@ export default function About() {
             <h2 className="mb-6 text-4xl font-semibold">Sobre Mim</h2>
 
             <p className="text-muted-foreground mb-6 text-base">
-              Sou um desenvolvedor front-end apaixonado por criar interfaces
-              modernas e funcionais. Com experiência em Vue.js, Nuxt.js,
-              React.js, Next.js, JavaScript, TypeScript, Sass (SCSS), Bootstrap,
-              Tailwind CSS e Git, busco sempre entregar código limpo e
-              performático.
+              Tenho 8 anos de experiência em desenvolvimento de software, com
+              foco nos últimos 6 anos em Front-end. Trabalho principalmente com
+              Vue.js, Nuxt.js, React e Next.js, além de TypeScript e JavaScript
+              no desenvolvimento da lógica das aplicações.
+            </p>
+
+            <p className="text-muted-foreground mb-6 text-base">
+              Na estilização, utilizo Sass (SCSS), Bootstrap e Tailwind CSS para
+              criação de interfaces responsivas e bem organizadas. Também faço
+              uso de Git no controle de versão e colaboração em equipe.
+            </p>
+
+            <p className="text-muted-foreground mb-6 text-base">
+              Minha trajetória é marcada pela atuação em projetos de diferentes
+              contextos, com foco em performance, manutenibilidade e boas
+              práticas de desenvolvimento.
             </p>
 
             <p className="text-muted-foreground mb-8 text-base">
               Localizado em {PERSONAL_INFO.location}, estou sempre aberto a
-              novas oportunidades e colaborações.
+              novas oportunidades.
             </p>
 
             <div className="space-y-4">
