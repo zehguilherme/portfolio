@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/profile.png',
-        width: 1200,
-        height: 630,
+        width: 800,
+        height: 418,
         alt: 'José Guilherme - Desenvolvedor de Software',
       },
     ],
