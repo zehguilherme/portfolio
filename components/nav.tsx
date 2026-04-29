@@ -1,20 +1,10 @@
 'use client'
 
 import * as React from 'react'
-import { Button } from '@/components/ui/button'
 import { MenuIcon, XIcon } from '@/components/ui/icon'
 
 export default function Nav() {
-  const [isScrolled, setIsScrolled] = React.useState(false)
   const [isOpen, setIsOpen] = React.useState(false)
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
