@@ -6,6 +6,17 @@ import { MenuIcon, XIcon } from '@/components/ui/icon'
 export default function Nav() {
   const [isOpen, setIsOpen] = React.useState(false)
 
+  React.useEffect(() => {
+    const hash = window.location.hash.slice(1)
+
+    if (hash) {
+      const element = document.getElementById(hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [])
+
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
     targetId: string
@@ -13,6 +24,7 @@ export default function Nav() {
     e.preventDefault()
     const element = document.getElementById(targetId)
     if (element) {
+      window.history.pushState(null, '', `#${targetId}`)
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
@@ -26,6 +38,7 @@ export default function Nav() {
             className="text-xl font-semibold"
             onClick={(e) => {
               e.preventDefault()
+              window.history.pushState(null, '', window.location.pathname)
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
@@ -46,6 +59,7 @@ export default function Nav() {
               className="hover:text-primary text-sm"
               onClick={(e) => {
                 e.preventDefault()
+                window.history.pushState(null, '', window.location.pathname)
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
@@ -78,6 +92,7 @@ export default function Nav() {
                 className="hover:text-primary text-sm"
                 onClick={(e) => {
                   e.preventDefault()
+                  window.history.pushState(null, '', window.location.pathname)
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                   setIsOpen(false)
                 }}
