@@ -13,6 +13,7 @@ export default function Hero() {
     e.preventDefault()
     const element = document.getElementById(targetId)
     if (element) {
+      window.history.pushState(null, '', `#${targetId}`)
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
