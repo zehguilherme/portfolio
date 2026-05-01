@@ -40,6 +40,7 @@ export default function Nav() {
               e.preventDefault()
               window.history.pushState(null, '', window.location.pathname)
               window.scrollTo({ top: 0, behavior: 'smooth' })
+              setIsOpen(false)
             }}
           >
             JG
