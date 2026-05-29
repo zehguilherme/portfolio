@@ -56,9 +56,9 @@ export const SKILLS_CATEGORIES: Record<string, string[]> = {
   ],
   'Back-end': ['API REST', 'GraphQL'],
   'Qualidade e Testes': ['Jest', 'Testing Library'],
+  'Controle de Versão': ['Git (GitFlow)'],
+  Design: ['Figma'],
   Ferramentas: ['VS Code'],
   Metodologias: ['Scrum', 'Kanban'],
   Idiomas: ['Inglês (Técnico)'],
-  'Controle de Versão': ['Git (GitFlow)'],
-  Design: ['Figma'],
 }
