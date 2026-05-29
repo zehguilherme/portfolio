@@ -19,7 +19,6 @@
       }
     ],
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo",
-    "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./*"]
