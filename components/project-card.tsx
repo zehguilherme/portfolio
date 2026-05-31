@@ -63,33 +63,29 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full hover:underline"
-          >
-            <Button variant="link" className="w-full p-0" asChild>
-              <span className="flex items-center">
-                <ExternalLinkIcon className="mr-2 h-4 w-4" />
-                Ver Projeto
-              </span>
-            </Button>
-          </a>
+          <Button variant="link" className="w-full p-0" asChild>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <ExternalLinkIcon className="mr-2 h-4 w-4" />
+              Ver Projeto
+            </a>
+          </Button>
 
-          <a
-            href={project.repository}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full hover:underline"
-          >
-            <Button variant="link" className="w-full p-0" asChild>
-              <span className="flex items-center">
-                <GithubIcon className="mr-2 h-4 w-4" />
-                Ver Repositório
-              </span>
-            </Button>
-          </a>
+          <Button variant="link" className="w-full p-0" asChild>
+            <a
+              href={project.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <GithubIcon className="mr-2 h-4 w-4" />
+              Ver Repositório
+            </a>
+          </Button>
         </div>
       </CardContent>
     </Card>

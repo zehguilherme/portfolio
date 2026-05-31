@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="flex gap-6">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="text-muted-foreground hover:text-primary text-sm"
+              className="text-muted-foreground hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             >
               E-mail
             </a>
@@ -22,7 +22,7 @@ export default function Footer() {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary text-sm"
+              className="text-muted-foreground hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             >
               GitHub
             </a>
@@ -31,7 +31,7 @@ export default function Footer() {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary text-sm"
+              className="text-muted-foreground hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             >
               LinkedIn
             </a>

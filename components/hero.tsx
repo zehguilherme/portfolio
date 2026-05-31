@@ -15,6 +15,7 @@ export default function Hero() {
     if (element) {
       window.history.pushState(null, '', `#${targetId}`)
       element.scrollIntoView({ behavior: 'smooth' })
+      element.focus({ preventScroll: true })
     }
   }
 
