@@ -26,6 +26,13 @@ export default function Nav() {
     if (element) {
       window.history.pushState(null, '', `#${targetId}`)
       element.scrollIntoView({ behavior: 'smooth' })
+      element.focus({ preventScroll: true })
+    }
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setIsOpen(false)
     }
   }
 
@@ -35,7 +42,7 @@ export default function Nav() {
         <div className="flex items-center justify-between">
           <a
             href="#"
-            className="text-xl font-semibold"
+            className="text-xl font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             onClick={(e) => {
               e.preventDefault()
               window.history.pushState(null, '', window.location.pathname)
@@ -47,9 +54,11 @@ export default function Nav() {
           </a>
 
           <button
-            className="cursor-pointer md:hidden"
+            className="cursor-pointer md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             onClick={() => setIsOpen(!isOpen)}
+            onKeyDown={handleKeyDown}
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isOpen}
           >
             {isOpen ? <XIcon /> : <MenuIcon />}
           </button>
@@ -57,7 +66,7 @@ export default function Nav() {
           <div className="hidden items-center gap-8 md:flex">
             <a
               href="#"
-              className="hover:text-primary text-sm"
+              className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
               onClick={(e) => {
                 e.preventDefault()
                 window.history.pushState(null, '', window.location.pathname)
@@ -69,7 +78,7 @@ export default function Nav() {
 
             <a
               href="#projects"
-              className="hover:text-primary text-sm"
+              className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
               onClick={(e) => handleSmoothScroll(e, 'projects')}
             >
               Projetos
@@ -77,7 +86,7 @@ export default function Nav() {
 
             <a
               href="#about"
-              className="hover:text-primary text-sm"
+              className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
               onClick={(e) => handleSmoothScroll(e, 'about')}
             >
               Sobre
@@ -90,7 +99,7 @@ export default function Nav() {
             <div className="flex flex-col gap-4 px-6 py-4">
               <a
                 href="#"
-                className="hover:text-primary text-sm"
+                className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                 onClick={(e) => {
                   e.preventDefault()
                   window.history.pushState(null, '', window.location.pathname)
@@ -103,7 +112,7 @@ export default function Nav() {
 
               <a
                 href="#projects"
-                className="hover:text-primary text-sm"
+                className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                 onClick={(e) => {
                   handleSmoothScroll(e, 'projects')
                   setIsOpen(false)
@@ -114,7 +123,7 @@ export default function Nav() {
 
               <a
                 href="#about"
-                className="hover:text-primary text-sm"
+                className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                 onClick={(e) => {
                   handleSmoothScroll(e, 'about')
                   setIsOpen(false)
