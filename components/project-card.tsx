@@ -7,7 +7,6 @@ import {
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { ExternalLinkIcon, GithubIcon } from '@/components/ui/icon'
-import Link from 'next/link'
 
 interface ProjectCardProps {
   project: {
@@ -64,7 +63,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
-          <Link
+          <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -76,9 +75,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 Ver Projeto
               </span>
             </Button>
-          </Link>
+          </a>
 
-          <Link
+          <a
             href={project.repository}
             target="_blank"
             rel="noopener noreferrer"
@@ -90,7 +89,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 Ver Repositório
               </span>
             </Button>
-          </Link>
+          </a>
         </div>
       </CardContent>
     </Card>
