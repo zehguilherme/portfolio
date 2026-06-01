@@ -36,6 +36,38 @@ export default function Nav() {
     }
   }
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    window.history.pushState(null, '', window.location.pathname)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    scrollToTop(e)
+    setIsOpen(false)
+  }
+
+  const handleHomeClick = scrollToTop
+
+  const handleHomeMobileClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    scrollToTop(e)
+    setIsOpen(false)
+  }
+
+  const handleToggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleProjectsMobileClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleSmoothScroll(e, 'projects')
+    setIsOpen(false)
+  }
+
+  const handleAboutMobileClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleSmoothScroll(e, 'about')
+    setIsOpen(false)
+  }
+
   return (
     <nav className="bg-background fixed top-0 right-0 left-0 z-50">
       <div className="mx-auto max-w-7xl px-6 py-4">
@@ -43,19 +75,14 @@ export default function Nav() {
           <a
             href="#"
             className="text-xl font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            onClick={(e) => {
-              e.preventDefault()
-              window.history.pushState(null, '', window.location.pathname)
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-              setIsOpen(false)
-            }}
+            onClick={handleLogoClick}
           >
             JG
           </a>
 
           <button
             className="cursor-pointer md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={handleToggleMenu}
             onKeyDown={handleKeyDown}
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isOpen}
@@ -67,11 +94,7 @@ export default function Nav() {
             <a
               href="#"
               className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-              onClick={(e) => {
-                e.preventDefault()
-                window.history.pushState(null, '', window.location.pathname)
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }}
+              onClick={handleHomeClick}
             >
               Início
             </a>
@@ -100,12 +123,7 @@ export default function Nav() {
               <a
                 href="#"
                 className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                onClick={(e) => {
-                  e.preventDefault()
-                  window.history.pushState(null, '', window.location.pathname)
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
-                  setIsOpen(false)
-                }}
+                onClick={handleHomeMobileClick}
               >
                 Início
               </a>
@@ -113,10 +131,7 @@ export default function Nav() {
               <a
                 href="#projects"
                 className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                onClick={(e) => {
-                  handleSmoothScroll(e, 'projects')
-                  setIsOpen(false)
-                }}
+                onClick={handleProjectsMobileClick}
               >
                 Projetos
               </a>
@@ -124,10 +139,7 @@ export default function Nav() {
               <a
                 href="#about"
                 className="hover:text-primary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                onClick={(e) => {
-                  handleSmoothScroll(e, 'about')
-                  setIsOpen(false)
-                }}
+                onClick={handleAboutMobileClick}
               >
                 Sobre
               </a>
