@@ -48,6 +48,7 @@ portfolio/
 │   ├── layout.tsx      # Root layout (Inter font, metadata, Vercel Analytics)
 │   ├── page.tsx        # Home page
 │   ├── not-found.tsx   # 404 page
+│   ├── icon.svg        # Favicon
 │   └── globals.css     # Tailwind CSS v4 @theme config
 ├── components/
 │   ├── ui/             # Shadcn UI components
@@ -59,7 +60,7 @@ portfolio/
 │   └── footer.tsx      # Footer
 ├── lib/
 │   ├── utils.ts        # cn() utility
-│   └── constants.ts    # PERSONAL_INFO, PROJECTS, SKILLS
+│   └── constants.ts    # PERSONAL_INFO, PROJECTS, SKILLS_CATEGORIES
 ├── public/
 │   └── images/
 │       ├── profile.png
