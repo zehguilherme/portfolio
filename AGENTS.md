@@ -74,6 +74,10 @@ portfolio/
 └── next.config.ts
 ```
 
+## TypeScript Guidelines
+
+- **No `any`** — Use `unknown` quando o tipo for indeterminado, ou tipos genéricos. `any` desliga toda a verificação de tipo e não é permitido.
+
 ## Reference
 
 - Implementation plan: `docs/superpowers/plans/2026-04-17-portfolio-implementation.md`
