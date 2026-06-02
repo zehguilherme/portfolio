@@ -25,9 +25,7 @@ This is my online portfolio! I'm a front-end developer specialized in creating m
 
 ## 🚀 Getting Started
 
-First of all you need to have `node` and `yarn` (or `npm`) installed on your machine.
-
-_If you decide to use npm, don't forget to delete `yarn.lock` in the folders._
+First of all you need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
 
 Then you can clone the repository.
 
@@ -37,8 +35,8 @@ Then you can clone the repository.
 
 Start the application
 
-1. `yarn` or `npm install`
-2. `yarn dev` or `npm run dev`
+1. `npm install`
+2. `npm run dev`
 
 ## 🤔 How to contribute
 
