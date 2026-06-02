@@ -25,9 +25,7 @@ Este é o meu portfólio online! Sou desenvolvedor front-end especializado em cr
 
 ## 🚀 Começando
 
-Primeiro de tudo você precisa ter `node` e `yarn` (ou `npm`) instalados em sua máquina.
-
-_Se você decidir usar o npm, não se esqueça de deletar `yarn.lock` nas pastas._
+Primeiro de tudo você precisa ter [Node.js](https://nodejs.org/) e [npm](https://www.npmjs.com/) instalados em sua máquina.
 
 Então você pode clonar o repositório.
 
@@ -37,8 +35,8 @@ Então você pode clonar o repositório.
 
 Inicie a aplicação
 
-1. `yarn` ou `npm install`
-2. `yarn dev` ou `npm run dev`
+1. `npm install`
+2. `npm run dev`
 
 ## 🤔 Como contribuir
 
