@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { PERSONAL_INFO } from '@/lib/constants'
 import './globals.css'
 
 const inter = Inter({
@@ -10,13 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://joseguilherme.vercel.app/'),
-  title: 'José Guilherme - Desenvolvedor de Software',
-  description:
-    'Portfólio de José Guilherme, desenvolvedor de software especializado em criar interfaces modernas e funcionais.',
+  title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
+  description: PERSONAL_INFO.description,
   openGraph: {
-    title: 'José Guilherme - Desenvolvedor de Software',
-    description:
-      'Portfólio de José Guilherme, desenvolvedor de software especializado em criar interfaces modernas e funcionais.',
+    title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
+    description: PERSONAL_INFO.description,
     url: 'https://joseguilherme.vercel.app/',
     siteName: 'José Guilherme',
     locale: 'pt_BR',
@@ -26,15 +25,14 @@ export const metadata: Metadata = {
         url: '/images/profile.png',
         width: 800,
         height: 418,
-        alt: 'José Guilherme - Desenvolvedor de Software',
+        alt: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'José Guilherme - Desenvolvedor de Software',
-    description:
-      'Portfólio de José Guilherme, desenvolvedor de software especializado em criar interfaces modernas e funcionais.',
+    title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
+    description: PERSONAL_INFO.description,
     images: ['/images/profile.png'],
   },
 }
