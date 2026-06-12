@@ -28,11 +28,10 @@ export default function Hero() {
       <div className="mx-auto w-full max-w-7xl px-6 py-32">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="flex flex-col items-start">
-            <p className="text-muted-foreground mb-4 text-sm tracking-wider uppercase">
-              {PERSONAL_INFO.role}
-            </p>
-
             <h1 className="mb-6 text-5xl leading-tight font-semibold">
+              <span className="text-muted-foreground mb-2 block text-sm font-normal tracking-wider uppercase">
+                {PERSONAL_INFO.role}
+              </span>
               Olá, eu sou{' '}
               <span className="text-primary">{PERSONAL_INFO.name}</span>
             </h1>
@@ -61,6 +60,7 @@ export default function Hero() {
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visitar perfil no GitHub (abre em nova aba)"
                 >
                   <GithubIcon className="mr-2 h-4 w-4" />
                   GitHub
@@ -72,6 +72,7 @@ export default function Hero() {
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visitar perfil no LinkedIn (abre em nova aba)"
                 >
                   <LinkedInIcon className="mr-2 h-4 w-4" />
                   LinkedIn
