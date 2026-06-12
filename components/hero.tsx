@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { PERSONAL_INFO } from '@/lib/constants'
 import { MailIcon, GithubIcon, LinkedInIcon } from '@/components/ui/icon'
@@ -11,67 +12,85 @@ export default function Hero() {
     targetId: string
   ) => {
     e.preventDefault()
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
     const element = document.getElementById(targetId)
     if (element) {
       window.history.pushState(null, '', `#${targetId}`)
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth' })
       element.focus({ preventScroll: true })
     }
   }
 
   return (
-    <section className="bg-background flex min-h-screen items-center justify-center">
-      <div className="mx-auto max-w-7xl px-6 py-32">
-        <div className="max-w-3xl">
-          <p className="text-muted-foreground mb-4 text-sm tracking-wider uppercase">
-            {PERSONAL_INFO.role}
-          </p>
+    <section className="bg-background flex min-h-screen items-center">
+      <div className="mx-auto w-full max-w-7xl px-6 py-32">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <div className="flex flex-col items-start">
+            <p className="text-muted-foreground mb-4 text-sm tracking-wider uppercase">
+              {PERSONAL_INFO.role}
+            </p>
 
-          <h1 className="mb-6 text-5xl leading-tight font-semibold">
-            Olá, eu sou{' '}
-            <span className="text-primary">{PERSONAL_INFO.name}</span>
-          </h1>
+            <h1 className="mb-6 text-5xl leading-tight font-semibold">
+              Olá, eu sou{' '}
+              <span className="text-primary">{PERSONAL_INFO.name}</span>
+            </h1>
 
-          <p className="text-muted-foreground mb-8 max-w-xl text-base">
-            {PERSONAL_INFO.description}
-          </p>
+            <p className="text-muted-foreground mb-8 max-w-xl text-base leading-relaxed">
+              {PERSONAL_INFO.description}
+            </p>
 
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Button
-              onClick={(e) => handleSmoothScroll(e, 'projects')}
-              className="cursor-pointer"
-            >
-              Ver Projetos
-            </Button>
-
-            <Button asChild variant="outline">
-              <a href={`mailto:${PERSONAL_INFO.email}`}>
-                <MailIcon className="mr-2 h-4 w-4" />
-                E-mail
-              </a>
-            </Button>
-
-            <Button asChild variant="outline">
-              <a
-                href={PERSONAL_INFO.github}
-                target="_blank"
-                rel="noopener noreferrer"
+            <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+              <Button
+                onClick={(e) => handleSmoothScroll(e, 'projects')}
+                className="w-full cursor-pointer sm:w-auto"
               >
-                <GithubIcon className="mr-2 h-4 w-4" />
-                GitHub
-              </a>
-            </Button>
+                Ver Projetos
+              </Button>
 
-            <Button asChild variant="outline">
-              <a
-                href={PERSONAL_INFO.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon className="mr-2 h-4 w-4" />
-                LinkedIn
-              </a>
-            </Button>
+              <Button asChild variant="outline" className="w-full sm:w-auto">
+                <a href={`mailto:${PERSONAL_INFO.email}`}>
+                  <MailIcon className="mr-2 h-4 w-4" />
+                  E-mail
+                </a>
+              </Button>
+
+              <Button asChild variant="outline" className="w-full sm:w-auto">
+                <a
+                  href={PERSONAL_INFO.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GithubIcon className="mr-2 h-4 w-4" />
+                  GitHub
+                </a>
+              </Button>
+
+              <Button asChild variant="outline" className="w-full sm:w-auto">
+                <a
+                  href={PERSONAL_INFO.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon className="mr-2 h-4 w-4" />
+                  LinkedIn
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <div className="bg-muted relative aspect-square w-1/2 overflow-hidden rounded-xl shadow-sm">
+              <Image
+                src="/images/profile.png"
+                alt="José Guilherme — Foto de perfil"
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -33,6 +33,9 @@ npm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Test screenshots
+/tests/screenshots/
+
 # Playwright
 playwright-report/
 test-results/
