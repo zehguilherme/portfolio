@@ -13,21 +13,13 @@
 
 ## Design System ("Slate & Monolith")
 
-| Token      | Value   |
-| ---------- | ------- |
-| primary    | #0f172a |
-| background | #f9f9f9 |
-| foreground | #2d3435 |
-| muted      | #f2f4f4 |
-| border     | #dde4e5 |
-| font       | Inter   |
-| accent     | #f2f4f4 |
-
 **Tailwind CSS v4** - Config via `app/globals.css` @theme block (NO `tailwind.config.ts`).
+
+Todas as cores, bordas arredondadas e fontes em `app/globals.css` @theme.
 
 ## Tech Stack
 
-- Next.js 16.2.4, React 19.0.0, TypeScript 6
+- Next.js 16.2.9, React 19.0.0, TypeScript 6
 - Tailwind CSS v4.2.4
 - ESLint 10, Prettier + prettier-plugin-tailwindcss
 - Shadcn UI components
@@ -67,11 +59,17 @@ portfolio/
 │       ├── studio-amanda-borges.png
 │       └── naturella.png
 ├── docs/superpowers/  # Implementation plans
+├── tests/             # Playwright tests
 ├── package.json
 ├── tsconfig.json
 ├── eslint.config.mjs
+├── postcss.config.mjs
 ├── .prettierrc
-└── next.config.ts
+├── next.config.ts
+├── next-env.d.ts
+├── README.md
+├── README-en.md
+└── .gitignore
 ```
 
 ## TypeScript Guidelines
