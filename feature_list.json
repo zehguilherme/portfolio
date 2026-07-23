@@ -1,0 +1,57 @@
+{
+  "project_type": "frontend",
+  "features": [
+    {
+      "id": "ui-001",
+      "type": "ui",
+      "area": "home",
+      "category": "functional",
+      "description": "The home route renders the full portfolio shell with nav, hero, projects, about, and footer.",
+      "steps": [
+        "Open the home page",
+        "Verify the navigation, hero, projects, about, and footer sections render in order",
+        "Verify the main content is reachable from the skip link and section anchors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "ui-002",
+      "type": "ui",
+      "area": "navigation",
+      "category": "functional",
+      "description": "The navigation supports hash links and mobile menu interaction.",
+      "steps": [
+        "Open the home page on desktop and mobile widths",
+        "Verify the nav links target the expected sections",
+        "Verify the mobile menu opens and closes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "ui-003",
+      "type": "ui",
+      "area": "projects",
+      "category": "functional",
+      "description": "Project cards render the project list with images, tags, and outbound links.",
+      "steps": [
+        "Scroll to the projects section",
+        "Verify each project card shows title, description, tags, and link actions",
+        "Verify external links open the expected destinations"
+      ],
+      "passes": false
+    },
+    {
+      "id": "ui-004",
+      "type": "ui",
+      "area": "not-found",
+      "category": "functional",
+      "description": "The 404 page offers a clear recovery path back to the home page.",
+      "steps": [
+        "Open a non-existent route",
+        "Verify the 404 page renders",
+        "Verify the return-to-home button points back to the root route"
+      ],
+      "passes": false
+    }
+  ]
+}
