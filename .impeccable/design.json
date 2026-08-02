@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-02T00:00:00.000Z",
+  "title": "Design System: Portfolio — José Guilherme",
+  "extensions": {
+    "colorMeta": {
+      "deep-slate-ink": { "role": "primary", "displayName": "Deep Slate Ink", "canonical": "#0f172a", "tonalRamp": ["oklch(10% 0.03 265)", "oklch(20% 0.035 265)", "oklch(30% 0.04 265)", "oklch(40% 0.045 265)", "oklch(50% 0.045 265)", "oklch(65% 0.035 265)", "oklch(80% 0.02 265)", "oklch(95% 0.008 265)"] },
+      "cool-paper": { "role": "neutral", "displayName": "Cool Paper", "canonical": "#f9f9f9", "tonalRamp": ["oklch(15% 0.004 250)", "oklch(30% 0.004 250)", "oklch(45% 0.004 250)", "oklch(60% 0.004 250)", "oklch(72% 0.004 250)", "oklch(82% 0.004 250)", "oklch(90% 0.004 250)", "oklch(97% 0.003 250)"] },
+      "white-card": { "role": "neutral", "displayName": "White Card", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(30% 0 0)", "oklch(45% 0 0)", "oklch(60% 0 0)", "oklch(72% 0 0)", "oklch(82% 0 0)", "oklch(90% 0 0)", "oklch(99% 0 0)"] },
+      "slate-body": { "role": "neutral", "displayName": "Slate Body", "canonical": "#2d3435", "tonalRamp": ["oklch(15% 0.006 200)", "oklch(30% 0.008 200)", "oklch(45% 0.008 200)", "oklch(58% 0.008 200)", "oklch(70% 0.006 200)", "oklch(82% 0.005 200)", "oklch(91% 0.004 200)", "oklch(97% 0.002 200)"] },
+      "ledger-gray": { "role": "neutral", "displayName": "Ledger Gray", "canonical": "#596061", "tonalRamp": ["oklch(15% 0.008 220)", "oklch(28% 0.01 220)", "oklch(42% 0.012 220)", "oklch(55% 0.012 220)", "oklch(68% 0.01 220)", "oklch(80% 0.008 220)", "oklch(90% 0.006 220)", "oklch(97% 0.003 220)"] },
+      "ledger-wash": { "role": "neutral", "displayName": "Ledger Wash", "canonical": "#f2f4f4", "tonalRamp": ["oklch(15% 0.004 230)", "oklch(30% 0.004 230)", "oklch(45% 0.004 230)", "oklch(60% 0.004 230)", "oklch(72% 0.004 230)", "oklch(82% 0.004 230)", "oklch(90% 0.003 230)", "oklch(96% 0.003 230)"] },
+      "ledger-line": { "role": "neutral", "displayName": "Ledger Line", "canonical": "#dde4e5", "tonalRamp": ["oklch(15% 0.008 225)", "oklch(30% 0.01 225)", "oklch(45% 0.012 225)", "oklch(58% 0.012 225)", "oklch(70% 0.01 225)", "oklch(80% 0.008 225)", "oklch(88% 0.006 225)", "oklch(95% 0.004 225)"] },
+      "ash-violet": { "role": "tertiary", "displayName": "Ash Violet", "canonical": "#605c78", "tonalRamp": ["oklch(15% 0.03 290)", "oklch(28% 0.04 290)", "oklch(42% 0.045 290)", "oklch(55% 0.045 290)", "oklch(68% 0.035 290)", "oklch(80% 0.025 290)", "oklch(90% 0.015 290)", "oklch(97% 0.006 290)"] },
+      "rust-clay": { "role": "destructive", "displayName": "Rust Clay", "canonical": "#9f403d", "tonalRamp": ["oklch(15% 0.06 25)", "oklch(28% 0.09 25)", "oklch(42% 0.11 25)", "oklch(55% 0.11 25)", "oklch(68% 0.09 25)", "oklch(80% 0.06 25)", "oklch(90% 0.035 25)", "oklch(97% 0.015 25)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles — Projetos, Sobre Mim." },
+      "title": { "displayName": "Title", "purpose": "Card titles; the nav mark JG." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs, 65–75ch line lengths." },
+      "label": { "displayName": "Label", "purpose": "Buttons and nav links." }
+    },
+    "shadows": [
+      { "name": "card-ambient", "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)", "purpose": "The single shadow level; cards and imagery only." }
+    ],
+    "motion": [
+      { "name": "ease-secondary", "value": "200ms color", "purpose": "Secondary button hover transitions." },
+      { "name": "ease-outline", "value": "300ms color", "purpose": "Outline button hover transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single call-to-action; ink authority, no lift on hover.",
+      "html": "<button class=\"ds-btn-primary\">Ver Projetos</button>",
+      "css": ".ds-btn-primary { background: #0f172a; color: #faf7fb; font-family: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; } .ds-btn-primary:hover { background: rgba(15, 23, 42, 0.9); } .ds-btn-primary:focus-visible { outline: 2px solid #0f172a; outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.5; pointer-events: none; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on paper; stroke in Ledger Line, fill shifts on hover.",
+      "html": "<button class=\"ds-btn-outline\">E-mail</button>",
+      "css": ".ds-btn-outline { background: #f9f9f9; color: #2d3435; font-family: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 8px 16px; border: 1px solid #dde4e5; border-radius: 6px; cursor: pointer; transition: background 0.3s; } .ds-btn-outline:hover { background: #e4e4e7; } .ds-btn-outline:focus-visible { outline: 2px solid #0f172a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Wash-filled tertiary action; darkens gently on hover.",
+      "html": "<button class=\"ds-btn-secondary\">Ação</button>",
+      "css": ".ds-btn-secondary { background: #f4f4f5; color: #2d3435; font-family: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; } .ds-btn-secondary:hover { background: rgba(244, 244, 245, 0.8); } .ds-btn-secondary:focus-visible { outline: 2px solid #0f172a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Borderless control; fills with Ledger Wash on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Ação</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #2d3435; font-family: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; } .ds-btn-ghost:hover { background: #f2f4f4; } .ds-btn-ghost:focus-visible { outline: 2px solid #0f172a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Link Button",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Text action in ink; underline appears on hover.",
+      "html": "<button class=\"ds-btn-link\">Ver Projeto</button>",
+      "css": ".ds-btn-link { background: none; border: none; color: #0f172a; font-family: inherit; font-size: 14px; font-weight: 500; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color 0.2s; } .ds-btn-link:hover { text-decoration-color: currentColor; } .ds-btn-link:focus-visible { outline: 2px solid #0f172a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill tag for project tech stacks and skill badges.",
+      "html": "<span class=\"ds-chip\">Next.js</span>",
+      "css": ".ds-chip { display: inline-block; background: #f4f4f5; color: #2d3435; font-family: inherit; font-size: 12px; padding: 4px 12px; border-radius: 9999px; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White project surface with Ledger Line edge and the single shadow level.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Naturella</h3><p class=\"ds-card-desc\">Loja especializada na fabricação de peças decorativas em concreto.</p></div>",
+      "css": ".ds-card { background: #ffffff; color: #2d3435; border: 1px solid #dde4e5; border-radius: 12px; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); padding: 24px; } .ds-card-title { font-size: 20px; font-weight: 600; letter-spacing: -0.025em; margin: 0 0 8px; } .ds-card-desc { font-size: 14px; color: #596061; margin: 0; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "button-link",
+      "description": "Fixed-top navigation link; Ledger Gray at rest, ink on hover.",
+      "html": "<a class=\"ds-nav-link\" href=\"#projects\">Projetos</a>",
+      "css": ".ds-nav-link { font-size: 14px; color: #596061; text-decoration: none; transition: color 0.2s; } .ds-nav-link:hover { color: #0f172a; } .ds-nav-link:focus-visible { outline: 2px solid #0f172a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Eyebrow",
+      "kind": "custom",
+      "refersTo": "typography.display",
+      "description": "Uppercase kicker above the hero name; the only tracked-caps pattern.",
+      "html": "<span class=\"ds-eyebrow\">Desenvolvedor de Software</span>",
+      "css": ".ds-eyebrow { display: block; font-family: inherit; font-size: 14px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: #596061; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cool Ledger",
+    "overview": "José Guilherme's portfolio is a quiet, precise record of professional work — a ledger kept in cool slate and paper. The palette reads like a well-organized codebase: near-white paper surfaces (#f9f9f9), a single near-black ink reserved for interaction (#0f172a), and cool grays carrying structure and hierarchy. Nothing flashes, nothing shouts; the interface behaves like well-documented code — everything in its place, each element earning its contrast.\n\nThe system is flat by default. Depth is conveyed through tonal layering — paper background, wash-tinted section bands, white cards — with a single restrained shadow level reserved for cards and imagery. Typography is one family, Inter, expressing hierarchy through size and weight alone. The strongest statement on the page is the photograph and the projects, not the chrome.\n\nAnti-references (confirmed): this is not a dark-terminal aesthetic, and it is not a colorful agency showroom. Saturated accents, gradient text, and shadow-lifted buttons would break the world.",
+    "keyCharacteristics": [
+      "Ink-on-paper contrast discipline: one near-black, one paper white, cool grays between",
+      "Single-family typography; hierarchy by size and weight only",
+      "Flat surfaces with tonal layering; one shadow level, sparingly used",
+      "Restrained motion: color-shift hovers (200–300ms), no lifts or transforms",
+      "Consistent focus treatment everywhere: 2px ring in Deep Slate Ink with 2px offset"
+    ],
+    "rules": [
+      { "name": "The Ink Rule", "body": "Deep Slate Ink appears on interactive elements and the JG mark only. Its rarity on an otherwise paper page is what makes it read as authority.", "section": "colors" },
+      { "name": "The Single-Family Rule", "body": "Inter is the only typeface. Hierarchy is expressed through size, weight, and case — never by adding a second family.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows exist on cards and imagery only, never on interactive elements, and never intensify on hover.", "section": "elevation" },
+      { "name": "The One-Border Rule", "body": "Borders exist only where they separate surfaces: the card edge, the footer top rule, and the mobile nav dropdown divider. Nav and hero carry no chrome.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do reserve Deep Slate Ink for interactive elements and the JG mark; everything else stays in the paper family.",
+      "Do keep surfaces within the paper family — Cool Paper, White Card, Ledger Wash.",
+      "Do use one shadow level (shadow-sm) on cards and imagery, and nowhere else.",
+      "Do use 6px radius for controls, 12px for cards, pills for chips.",
+      "Do express type hierarchy with size/weight — Inter only.",
+      "Do keep the uppercase tracking-wider eyebrow pattern for kickers.",
+      "Do apply the 2px ring focus treatment to every interactive element."
+    ],
+    "donts": [
+      "Don't add a second typeface.",
+      "Don't use saturated brand colors, gradients, or colorful accents — this is not an agency showroom.",
+      "Don't use dark backgrounds — the paper world is light by definition (anti-reference: dark-terminal aesthetic).",
+      "Don't lift buttons on hover or add shadow to interactive elements.",
+      "Don't add borders that don't separate surfaces."
+    ]
+  }
+}

@@ -10,6 +10,8 @@ The modular harness is in place for the portfolio app.
 - `feature_list.json` - active UI feature list
 - `progress.md` - current harness status
 - `init.sh` - baseline verification entry point
+- `DESIGN.md` - design system source of truth
+- `PRODUCT.md` - product context
 - `app/app.md`, `components/components.md`, `components/ui/ui.md`, `lib/lib.md`, `tests/tests.md`, `docs/superpowers/superpowers.md`
 
 ## Verification
