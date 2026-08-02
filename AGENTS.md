@@ -37,8 +37,22 @@ Read this file first, then the relevant module doc before editing code in that a
 | tests | `tests/` | `tests/tests.md` | review screenshots and run lint/build |
 | docs/superpowers | `docs/superpowers/` | `docs/superpowers/superpowers.md` | keep plans and notes aligned |
 
+## Startup Workflow
+
+1. Read this file.
+2. Read `feature_list.json` and `progress.md` to find the active feature.
+3. Read the module doc for the area you will edit.
+4. Then write code and verify it.
+
+## Scope
+
+- In scope: `app/` routes, `components/` and `components/ui/`, `lib/`, `tests/`.
+- Out of scope: backend, API routes, auth, database, CMS — this is a frontend-only Next.js portfolio.
+- Stay within the active feature; do not refactor unrelated code.
+
 ## Working Rules
 
+- Work on one feature at a time; finish and verify it before starting another.
 - Do not use `any`.
 - Keep harness files short and local to the module they describe.
 - Update the relevant module doc whenever code in that module changes.
@@ -50,3 +64,10 @@ Read this file first, then the relevant module doc before editing code in that a
 - Root harness files exist: `feature_list.json`, `progress.md`, `init.sh`, `session-handoff.md`.
 - Every detected module has a local doc.
 - Verification commands are known and match the actual repo scripts.
+
+## End of Session
+
+1. Update `feature_list.json` with the feature status and evidence.
+2. Update `progress.md` with what was done and the next step.
+3. Update `session-handoff.md` with blockers, files touched, and current state.
+4. Run `init.sh` (or the repo verification commands) and record the output.

@@ -10,6 +10,7 @@
 - Module docs added next to the detected areas.
 - `feature_list.json` created with frontend UI features.
 - `init.sh` and `session-handoff.md` added.
+- Added Startup Workflow, Scope, one-feature rule, and End of Session sections to `AGENTS.md`; harness validates 100/100.
 
 ## Next Verification
 
