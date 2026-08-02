@@ -59,6 +59,7 @@ Read this file first, then the relevant module doc before editing code in that a
 - Update the relevant module doc whenever code in that module changes.
 - Treat `feature_list.json` and `progress.md` as current state, not archived history.
 - Before claiming completion, run the repo verification commands and capture evidence.
+- After any UI change, run the `ui-accessibility-check` skill (`.opencode/skills/`) before claiming completion.
 
 ## Definition of Done
 
