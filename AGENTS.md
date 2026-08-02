@@ -13,14 +13,15 @@
 
 ## Design System
 
-- Tailwind CSS v4 is configured in `app/globals.css` with `@theme`.
-- Keep colors, radii, and fonts in `app/globals.css`; do not add `tailwind.config.ts`.
-- Use the existing Slate & Monolith tokens and shadcn UI primitives.
+- `DESIGN.md` is the source of truth for colors, radii, and typography.
+- Tailwind CSS v4 is configured in `app/globals.css` with `@theme`; keep tokens in sync with `DESIGN.md`.
+- Do not add `tailwind.config.ts`.
+- Use the existing tokens and shadcn UI primitives.
 
 ## Tech Stack
 
-- Next.js 16.2.9, React 19, TypeScript 6
-- Tailwind CSS v4.2
+- Next.js 16.2.12, React 19, TypeScript 6
+- Tailwind CSS v4.3
 - ESLint 10, Prettier, prettier-plugin-tailwindcss
 - shadcn UI components
 
@@ -41,7 +42,7 @@ Read this file first, then the relevant module doc before editing code in that a
 
 1. Read this file.
 2. Read `feature_list.json` and `progress.md` to find the active feature.
-3. Read the module doc for the area you will edit.
+3. Read `PRODUCT.md` for product context and the module doc for the area you will edit.
 4. Then write code and verify it.
 
 ## Scope

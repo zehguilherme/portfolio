@@ -2,7 +2,7 @@
 
 - Status: harness initialized
 - Project type: frontend
-- Last updated: 2026-07-23
+- Last updated: 2026-08-02
 
 ## Completed
 
@@ -11,6 +11,7 @@
 - `feature_list.json` created with frontend UI features.
 - `init.sh` and `session-handoff.md` added.
 - Added Startup Workflow, Scope, one-feature rule, and End of Session sections to `AGENTS.md`; harness validates 100/100.
+- Added `DESIGN.md` (design tokens) and `PRODUCT.md` (product context); referenced both from `AGENTS.md` and updated tech stack versions.
 
 ## Next Verification
 
