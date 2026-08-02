@@ -29,14 +29,14 @@
 
 Read this file first, then the relevant module doc before editing code in that area.
 
-| Module | Path | Doc | Verify |
-|---|---|---|---|
-| app | `app/` | `app/app.md` | `npm run build` |
-| components | `components/` | `components/components.md` | `npm run lint` |
-| ui | `components/ui/` | `components/ui/ui.md` | `npm run lint` |
-| lib | `lib/` | `lib/lib.md` | `npm run build` |
-| tests | `tests/` | `tests/tests.md` | review screenshots and run lint/build |
-| docs/superpowers | `docs/superpowers/` | `docs/superpowers/superpowers.md` | keep plans and notes aligned |
+| Module           | Path                | Doc                               | Verify                                |
+| ---------------- | ------------------- | --------------------------------- | ------------------------------------- |
+| app              | `app/`              | `app/app.md`                      | `npm run build`                       |
+| components       | `components/`       | `components/components.md`        | `npm run lint`                        |
+| ui               | `components/ui/`    | `components/ui/ui.md`             | `npm run lint`                        |
+| lib              | `lib/`              | `lib/lib.md`                      | `npm run build`                       |
+| tests            | `tests/`            | `tests/tests.md`                  | review screenshots and run lint/build |
+| docs/superpowers | `docs/superpowers/` | `docs/superpowers/superpowers.md` | keep plans and notes aligned          |
 
 ## Startup Workflow
 
@@ -54,12 +54,19 @@ Read this file first, then the relevant module doc before editing code in that a
 ## Working Rules
 
 - Work on one feature at a time; finish and verify it before starting another.
-- Do not use `any`.
+- Never use `export default`; always use named exports.
+- Do not use `any` — every variable, parameter, and function return must have an explicit type. If the needed type does not exist, create your own `type` or `interface`. Validate with `npm run lint && npm run format:check` in each module before concluding — use the `type-safety-staged` skill (`.opencode/skills/`).
+- After any modification, run `npm run lint` and `npm run format` in the modified directory before concluding.
 - Keep harness files short and local to the module they describe.
 - Update the relevant module doc whenever code in that module changes.
 - Treat `feature_list.json` and `progress.md` as current state, not archived history.
 - Before claiming completion, run the repo verification commands and capture evidence.
 - After any UI change, run the `ui-accessibility-check` skill (`.opencode/skills/`) before claiming completion.
+
+## Git Workflow
+
+- Commit messages must be in English following Conventional Commits (`tipo(escopo): descrição`), consistent with the existing history (e.g.: `feat`, `fix`, `ci`, `chore`, `docs`).
+- No git operation (commit, push, merge, rebase, create PR, etc.) may be executed without explicit user authorization.
 
 ## Definition of Done
 
