@@ -2,7 +2,7 @@ export const PERSONAL_INFO = {
   name: 'José Guilherme',
   role: 'Desenvolvedor de Software',
   description:
-    'Especializado em construir produtos na web que entregam resultado para o cliente e qualidade técnica para o time. Interfaces modernas, performance e boas práticas de desenvolvimento.',
+    'Há 8 anos construo produtos na web em que resultado para o cliente e qualidade técnica andam juntos: interfaces modernas, performance e código que o time gosta de manter.',
   email: 'jgtomaine@hotmail.com',
   github: 'https://github.com/zehguilherme',
   linkedin:

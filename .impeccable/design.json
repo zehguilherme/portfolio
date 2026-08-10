@@ -4,29 +4,176 @@
   "title": "Design System: Portfolio — José Guilherme",
   "extensions": {
     "colorMeta": {
-      "deep-slate-ink": { "role": "primary", "displayName": "Deep Slate Ink", "canonical": "#0f172a", "tonalRamp": ["oklch(10% 0.03 265)", "oklch(20% 0.035 265)", "oklch(30% 0.04 265)", "oklch(40% 0.045 265)", "oklch(50% 0.045 265)", "oklch(65% 0.035 265)", "oklch(80% 0.02 265)", "oklch(95% 0.008 265)"] },
-      "cool-paper": { "role": "neutral", "displayName": "Cool Paper", "canonical": "#f9f9f9", "tonalRamp": ["oklch(15% 0.004 250)", "oklch(30% 0.004 250)", "oklch(45% 0.004 250)", "oklch(60% 0.004 250)", "oklch(72% 0.004 250)", "oklch(82% 0.004 250)", "oklch(90% 0.004 250)", "oklch(97% 0.003 250)"] },
-      "white-card": { "role": "neutral", "displayName": "White Card", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(30% 0 0)", "oklch(45% 0 0)", "oklch(60% 0 0)", "oklch(72% 0 0)", "oklch(82% 0 0)", "oklch(90% 0 0)", "oklch(99% 0 0)"] },
-      "slate-body": { "role": "neutral", "displayName": "Slate Body", "canonical": "#2d3435", "tonalRamp": ["oklch(15% 0.006 200)", "oklch(30% 0.008 200)", "oklch(45% 0.008 200)", "oklch(58% 0.008 200)", "oklch(70% 0.006 200)", "oklch(82% 0.005 200)", "oklch(91% 0.004 200)", "oklch(97% 0.002 200)"] },
-      "ledger-gray": { "role": "neutral", "displayName": "Ledger Gray", "canonical": "#596061", "tonalRamp": ["oklch(15% 0.008 220)", "oklch(28% 0.01 220)", "oklch(42% 0.012 220)", "oklch(55% 0.012 220)", "oklch(68% 0.01 220)", "oklch(80% 0.008 220)", "oklch(90% 0.006 220)", "oklch(97% 0.003 220)"] },
-      "ledger-wash": { "role": "neutral", "displayName": "Ledger Wash", "canonical": "#f2f4f4", "tonalRamp": ["oklch(15% 0.004 230)", "oklch(30% 0.004 230)", "oklch(45% 0.004 230)", "oklch(60% 0.004 230)", "oklch(72% 0.004 230)", "oklch(82% 0.004 230)", "oklch(90% 0.003 230)", "oklch(96% 0.003 230)"] },
-      "ledger-line": { "role": "neutral", "displayName": "Ledger Line", "canonical": "#dde4e5", "tonalRamp": ["oklch(15% 0.008 225)", "oklch(30% 0.01 225)", "oklch(45% 0.012 225)", "oklch(58% 0.012 225)", "oklch(70% 0.01 225)", "oklch(80% 0.008 225)", "oklch(88% 0.006 225)", "oklch(95% 0.004 225)"] },
-      "ash-violet": { "role": "tertiary", "displayName": "Ash Violet", "canonical": "#605c78", "tonalRamp": ["oklch(15% 0.03 290)", "oklch(28% 0.04 290)", "oklch(42% 0.045 290)", "oklch(55% 0.045 290)", "oklch(68% 0.035 290)", "oklch(80% 0.025 290)", "oklch(90% 0.015 290)", "oklch(97% 0.006 290)"] },
-      "rust-clay": { "role": "destructive", "displayName": "Rust Clay", "canonical": "#9f403d", "tonalRamp": ["oklch(15% 0.06 25)", "oklch(28% 0.09 25)", "oklch(42% 0.11 25)", "oklch(55% 0.11 25)", "oklch(68% 0.09 25)", "oklch(80% 0.06 25)", "oklch(90% 0.035 25)", "oklch(97% 0.015 25)"] }
+      "deep-slate-ink": {
+        "role": "primary",
+        "displayName": "Deep Slate Ink",
+        "canonical": "#0f172a",
+        "tonalRamp": [
+          "oklch(10% 0.03 265)",
+          "oklch(20% 0.035 265)",
+          "oklch(30% 0.04 265)",
+          "oklch(40% 0.045 265)",
+          "oklch(50% 0.045 265)",
+          "oklch(65% 0.035 265)",
+          "oklch(80% 0.02 265)",
+          "oklch(95% 0.008 265)"
+        ]
+      },
+      "cool-paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "#f9f9f9",
+        "tonalRamp": [
+          "oklch(15% 0.004 250)",
+          "oklch(30% 0.004 250)",
+          "oklch(45% 0.004 250)",
+          "oklch(60% 0.004 250)",
+          "oklch(72% 0.004 250)",
+          "oklch(82% 0.004 250)",
+          "oklch(90% 0.004 250)",
+          "oklch(97% 0.003 250)"
+        ]
+      },
+      "white-card": {
+        "role": "neutral",
+        "displayName": "White Card",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(30% 0 0)",
+          "oklch(45% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(90% 0 0)",
+          "oklch(99% 0 0)"
+        ]
+      },
+      "slate-body": {
+        "role": "neutral",
+        "displayName": "Slate Body",
+        "canonical": "#2d3435",
+        "tonalRamp": [
+          "oklch(15% 0.006 200)",
+          "oklch(30% 0.008 200)",
+          "oklch(45% 0.008 200)",
+          "oklch(58% 0.008 200)",
+          "oklch(70% 0.006 200)",
+          "oklch(82% 0.005 200)",
+          "oklch(91% 0.004 200)",
+          "oklch(97% 0.002 200)"
+        ]
+      },
+      "ledger-gray": {
+        "role": "neutral",
+        "displayName": "Ledger Gray",
+        "canonical": "#596061",
+        "tonalRamp": [
+          "oklch(15% 0.008 220)",
+          "oklch(28% 0.01 220)",
+          "oklch(42% 0.012 220)",
+          "oklch(55% 0.012 220)",
+          "oklch(68% 0.01 220)",
+          "oklch(80% 0.008 220)",
+          "oklch(90% 0.006 220)",
+          "oklch(97% 0.003 220)"
+        ]
+      },
+      "ledger-wash": {
+        "role": "neutral",
+        "displayName": "Ledger Wash",
+        "canonical": "#f2f4f4",
+        "tonalRamp": [
+          "oklch(15% 0.004 230)",
+          "oklch(30% 0.004 230)",
+          "oklch(45% 0.004 230)",
+          "oklch(60% 0.004 230)",
+          "oklch(72% 0.004 230)",
+          "oklch(82% 0.004 230)",
+          "oklch(90% 0.003 230)",
+          "oklch(96% 0.003 230)"
+        ]
+      },
+      "ledger-line": {
+        "role": "neutral",
+        "displayName": "Ledger Line",
+        "canonical": "#dde4e5",
+        "tonalRamp": [
+          "oklch(15% 0.008 225)",
+          "oklch(30% 0.01 225)",
+          "oklch(45% 0.012 225)",
+          "oklch(58% 0.012 225)",
+          "oklch(70% 0.01 225)",
+          "oklch(80% 0.008 225)",
+          "oklch(88% 0.006 225)",
+          "oklch(95% 0.004 225)"
+        ]
+      },
+      "ash-violet": {
+        "role": "tertiary",
+        "displayName": "Ash Violet",
+        "canonical": "#605c78",
+        "tonalRamp": [
+          "oklch(15% 0.03 290)",
+          "oklch(28% 0.04 290)",
+          "oklch(42% 0.045 290)",
+          "oklch(55% 0.045 290)",
+          "oklch(68% 0.035 290)",
+          "oklch(80% 0.025 290)",
+          "oklch(90% 0.015 290)",
+          "oklch(97% 0.006 290)"
+        ]
+      },
+      "rust-clay": {
+        "role": "destructive",
+        "displayName": "Rust Clay",
+        "canonical": "#9f403d",
+        "tonalRamp": [
+          "oklch(15% 0.06 25)",
+          "oklch(28% 0.09 25)",
+          "oklch(42% 0.11 25)",
+          "oklch(55% 0.11 25)",
+          "oklch(68% 0.09 25)",
+          "oklch(80% 0.06 25)",
+          "oklch(90% 0.035 25)",
+          "oklch(97% 0.015 25)"
+        ]
+      }
     },
     "typographyMeta": {
       "display": { "displayName": "Display", "purpose": "Hero headline only." },
-      "headline": { "displayName": "Headline", "purpose": "Section titles — Projetos, Sobre Mim." },
-      "title": { "displayName": "Title", "purpose": "Card titles; the nav mark JG." },
-      "body": { "displayName": "Body", "purpose": "Paragraphs, 65–75ch line lengths." },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles — Projetos, Sobre Mim."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles; the nav mark JG."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, 65–75ch line lengths."
+      },
       "label": { "displayName": "Label", "purpose": "Buttons and nav links." }
     },
     "shadows": [
-      { "name": "card-ambient", "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)", "purpose": "The single shadow level; cards and imagery only." }
+      {
+        "name": "card-ambient",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "The single shadow level; cards and imagery only."
+      }
     ],
     "motion": [
-      { "name": "ease-secondary", "value": "200ms color", "purpose": "Secondary button hover transitions." },
-      { "name": "ease-outline", "value": "300ms color", "purpose": "Outline button hover transitions." }
+      {
+        "name": "ease-secondary",
+        "value": "200ms color",
+        "purpose": "Secondary button hover transitions."
+      },
+      {
+        "name": "ease-outline",
+        "value": "300ms color",
+        "purpose": "Outline button hover transitions."
+      }
     ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },
@@ -119,10 +266,26 @@
       "Consistent focus treatment everywhere: 2px ring in Deep Slate Ink with 2px offset"
     ],
     "rules": [
-      { "name": "The Ink Rule", "body": "Deep Slate Ink appears on interactive elements and the JG mark only. Its rarity on an otherwise paper page is what makes it read as authority.", "section": "colors" },
-      { "name": "The Single-Family Rule", "body": "Inter is the only typeface. Hierarchy is expressed through size, weight, and case — never by adding a second family.", "section": "typography" },
-      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows exist on cards and imagery only, never on interactive elements, and never intensify on hover.", "section": "elevation" },
-      { "name": "The One-Border Rule", "body": "Borders exist only where they separate surfaces: the card edge, the footer top rule, and the mobile nav dropdown divider. Nav and hero carry no chrome.", "section": "shapes" }
+      {
+        "name": "The Ink Rule",
+        "body": "Deep Slate Ink appears on interactive elements and the JG mark only. Its rarity on an otherwise paper page is what makes it read as authority.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single-Family Rule",
+        "body": "Inter is the only typeface. Hierarchy is expressed through size, weight, and case — never by adding a second family.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are flat at rest. Shadows exist on cards and imagery only, never on interactive elements, and never intensify on hover.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One-Border Rule",
+        "body": "Borders exist only where they separate surfaces: the card edge, the footer top rule, and the mobile nav dropdown divider. Nav and hero carry no chrome.",
+        "section": "shapes"
+      }
     ],
     "dos": [
       "Do reserve Deep Slate Ink for interactive elements and the JG mark; everything else stays in the paper family.",
