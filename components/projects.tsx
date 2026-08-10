@@ -9,8 +9,7 @@ export default function Projects() {
           <h2 className="mb-4 text-4xl font-semibold">Projetos</h2>
 
           <p className="text-muted-foreground max-w-xl">
-            Uma seleção de projetos que demonstra minhas habilidades e
-            experiência.
+            Uma seleção de projetos que construí e publiquei.
           </p>
         </div>
 
