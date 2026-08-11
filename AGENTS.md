@@ -55,13 +55,13 @@ Read this file first, then the relevant module doc before editing code in that a
 
 - Work on one feature at a time; finish and verify it before starting another.
 - Never use `export default`; always use named exports.
-- Do not use `any` — every variable, parameter, and function return must have an explicit type. If the needed type does not exist, create your own `type` or `interface`. Validate with `npm run lint && npm run format:check` in each module before concluding — use the `type-safety-staged` skill (`.opencode/skills/`).
+- Do not use `any` — every variable, parameter, and function return must have an explicit type. If the needed type does not exist, create your own `type` or `interface`. Validate with `npm run lint && npm run format:check` in each module before concluding — use the `type-safety-staged` skill (`.agents/skills/`).
 - After any modification, run `npm run lint` and `npm run format` in the modified directory before concluding.
 - Keep harness files short and local to the module they describe.
 - Update the relevant module doc whenever code in that module changes.
 - Treat `feature_list.json` and `progress.md` as current state, not archived history.
 - Before claiming completion, run the repo verification commands and capture evidence.
-- After any UI change, run the `ui-accessibility-check` skill (`.opencode/skills/`) before claiming completion.
+- After any UI change, run the `ui-accessibility-check` skill (`.agents/skills/`) before claiming completion.
 
 ## Git Workflow
 
