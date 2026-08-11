@@ -15,11 +15,11 @@ Two primary audiences, both evaluating José Guilherme as a professional and rea
 
 ## Product Purpose
 
-Personal portfolio of José Guilherme (joseguilherme.vercel.app): presents who he is, his 8 years of experience (6 focused on front-end), his skills, and two real client projects so visitors can judge competence and contact him via email, LinkedIn, or GitHub. Success means the visitor assesses capability and initiates contact.
+Personal portfolio of José Guilherme (joseguilherme.vercel.app): presents who he is, his 8 years of experience, his skills (strong front-end with a growing back-end), and two real client projects so visitors can judge competence and contact him via email, LinkedIn, or GitHub. Success means the visitor assesses capability and initiates contact.
 
 ## Positioning
 
-A front-end developer with a wide, production-ready stack (Vue/Nuxt, React/Next, TypeScript) who claims performance, maintainability, and good practices as the work's distinguishing qualities — verified by real client projects shipped to production.
+A software developer with a wide, production-ready front-end stack (Vue/Nuxt, React/Next, TypeScript) who is actively deepening back-end skills (Node.js, SQL, Docker, authentication) and claims performance, maintainability, and good practices as the work's distinguishing qualities — verified by real client projects shipped to production.
 
 ## Operating Context
 

@@ -23,3 +23,7 @@ The modular harness is in place for the portfolio app.
 
 - The app is a frontend-only Next.js portfolio with a single home route and a 404 page.
 - Existing screenshot artifacts live under `tests/screenshots/`.
+- 2026-08-11: `lib/constants.ts` `SKILLS_CATEGORIES` updated (Back-end: +Node.js, SQL, Docker, Autenticação e Autorização; Ferramentas: +Vercel). Lint/build verified.
+- 2026-08-11: Docs aligned to current positioning — `PRODUCT.md`, `README.md`/`README-en.md` (description + regenerated `home.png`), `AGENTS.md` (Next.js ^16.3.0).
+- 2026-08-11: `.github/img/home.png` re-captured as viewport-only (1280x800, first visible area, no scroll). `profile.png` untouched.
+- 2026-08-11: `.github/img/home.png` re-captured with scrollbar hidden via injected CSS (`scrollbar-width:none` + `::-webkit-scrollbar{display:none}`).

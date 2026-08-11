@@ -12,7 +12,7 @@
 
 ## 💬 Description
 
-This is my online portfolio! I'm a front-end developer specialized in creating modern and functional interfaces. Here you can learn more about me, my main projects, and how to get in touch.
+This is my online portfolio! I'm a software developer specialized in creating modern and functional interfaces, with a strong focus on front-end and growing back-end experience. Here you can learn more about me, my main projects, and how to get in touch.
 
 ## 🚀 Technologies
 
