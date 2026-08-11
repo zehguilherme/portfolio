@@ -6,6 +6,8 @@
 
 ## Completed
 
+- Updated `SKILLS_CATEGORIES` in `lib/constants.ts` to match the Sobre narrative: Back-end gained `Node.js`, `SQL`, `Docker`, `Autenticação e Autorização`; Ferramentas gained `Vercel`. Lint + build pass; a11y clean (data-only change).
+- Aligned docs with the current positioning: `PRODUCT.md` (purpose/positioning now "software developer, growing back-end"), `README.md`/`README-en.md` (description updated, screenshot regenerated from live home), `AGENTS.md` (Next.js ^16.3.0).
 - Root `AGENTS.md` converted into a short index.
 - Module docs added next to the detected areas.
 - `feature_list.json` created with frontend UI features.

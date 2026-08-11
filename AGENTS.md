@@ -20,7 +20,7 @@
 
 ## Tech Stack
 
-- Next.js 16.2.12, React 19, TypeScript 6
+- Next.js ^16.3.0, React 19, TypeScript 6
 - Tailwind CSS v4.3
 - ESLint 10, Prettier, prettier-plugin-tailwindcss
 - shadcn UI components

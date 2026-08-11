@@ -12,7 +12,7 @@
 
 ## 💬 Descrição
 
-Este é o meu portfólio online! Sou desenvolvedor front-end especializado em criar interfaces modernas e funcionais. Aqui você pode conhecer um pouco mais sobre mim, meus principais projetos e como entrar em contato.
+Este é o meu portfólio online! Sou desenvolvedor de software especializado em criar interfaces modernas e funcionais, com forte atuação em Front-end e experiência crescente em Back-end. Aqui você pode conhecer um pouco mais sobre mim, meus principais projetos e como entrar em contato.
 
 ## 🚀 Tecnologias
 
