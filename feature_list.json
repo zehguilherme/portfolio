@@ -52,6 +52,26 @@
         "Verify the return-to-home button points back to the root route"
       ],
       "passes": false
+    },
+    {
+      "id": "tooling-001",
+      "type": "tooling",
+      "area": "skills",
+      "category": "maintenance",
+      "description": "Local skills are shared from .agents/skills by Codex and Opencode.",
+      "steps": [
+        "Verify .agents/skills contains the local SKILL.md files",
+        "Verify Opencode resolves the local skills from .agents/skills",
+        "Verify Codex includes the local skills in prompt input"
+      ],
+      "passes": true,
+      "evidence": [
+        "opencode debug skill lists ui-accessibility-check and type-safety-staged under .agents/skills",
+        "codex debug prompt-input lists both skills with project root .agents/skills",
+        "npm run lint passed",
+        "npm run build passed",
+        "npm run format:check currently fails on 14 pre-existing files outside this migration"
+      ]
     }
   ]
 }
