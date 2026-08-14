@@ -1,4 +1,4 @@
-import { SKILLS_CATEGORIES, PERSONAL_INFO } from '@/lib/constants'
+import { SKILLS_CATEGORIES } from '@/lib/constants'
 
 export default function About() {
   return (
@@ -13,70 +13,62 @@ export default function About() {
         <div className="max-w-3xl">
           <p className="text-muted-foreground mb-6 text-base leading-relaxed">
             Desenvolvedor de software com 8 anos de experiência na construção,
-            evolução e manutenção de aplicações web, com forte atuação em
-            Front-end e experiência crescente em Back-end. Minha principal base
-            técnica está no ecossistema JavaScript/TypeScript, trabalhando com
-            React, Next.js, Node.js e tecnologias modernas para desenvolvimento
-            web.
+            evolução e manutenção de aplicações web, com sólida atuação em
+            Front-end e conhecimentos em expansão no Back-end. Minha principal
+            base técnica está no ecossistema JavaScript/TypeScript, trabalhando
+            com React, Next.js, Vue.js, Nuxt.js e Node.js.
           </p>
 
           <p className="text-muted-foreground mb-6 text-base leading-relaxed">
-            Atuei em projetos de diferentes contextos e modelos de negócio,
-            desde a criação de interfaces e componentes até a evolução de
-            aplicações existentes.
+            Ao longo da minha trajetória, participei de projetos em diferentes
+            contextos e modelos de negócio, atuando no desenvolvimento de
+            interfaces, criação de componentes, integração com APIs,
+            implementação de regras de negócio, testes e manutenção de
+            aplicações.
           </p>
 
           <p className="text-muted-foreground mb-6 text-base leading-relaxed">
-            Entre as principais experiências que desenvolvi, destaco:
+            Entre minhas principais experiências estão:
           </p>
 
           <ul className="text-muted-foreground mb-6 list-disc space-y-2 pl-6 text-base leading-relaxed">
             <li>
               Desenvolvimento de aplicações web com React.js, Next.js, Vue.js,
-              Nuxt.js, TypeScript e JavaScript, com boas práticas de
-              componentização, separação de responsabilidades e código
-              organizado, reutilizável e de fácil manutenção.
+              Nuxt.js, TypeScript e JavaScript.
             </li>
             <li>
-              Criação de componentes e interfaces responsivas, com foco em
-              qualidade, consistência e experiência do usuário.
+              Criação de componentes reutilizáveis e interfaces responsivas, com
+              foco em qualidade, consistência e experiência do usuário.
             </li>
             <li>Integração com APIs REST, GraphQL e serviços externos.</li>
-            <li>
-              Desenvolvimento de aplicações CRUD, formulários, validações,
-              roteamento e regras de negócio.
-            </li>
             <li>
               Implementação de testes automatizados com Jest e Testing Library.
             </li>
             <li>
-              Utilização de soluções como Tailwind CSS e Bootstrap para
-              construção e manutenção de interfaces.
+              Construção e manutenção de interfaces com Tailwind CSS e
+              Bootstrap.
             </li>
             <li>
-              Experiência com deploy de aplicações e ambientes de execução,
-              incluindo projetos publicados na Vercel.
+              Aplicação de boas práticas de desenvolvimento, como
+              componentização, separação de responsabilidades e reutilização de
+              código.
             </li>
           </ul>
 
           <p className="text-muted-foreground mb-6 text-base leading-relaxed">
-            Meus projetos públicos no GitHub refletem essa evolução: comecei com
-            aplicações em React.js e JavaScript e avancei para projetos mais
-            completos com TypeScript, Next.js, APIs, GraphQL, testes
-            automatizados e integrações com serviços externos.
-          </p>
-
-          <p className="text-muted-foreground mb-6 text-base leading-relaxed">
-            Atualmente, aprofundo meus conhecimentos em Back-end com Node.js,
-            APIs REST, autenticação e autorização, bancos de dados relacionais,
-            SQL e Docker. Meu objetivo é atuar de forma completa no
-            desenvolvimento de aplicações, compreendendo da interface à
-            arquitetura, integração e infraestrutura dos sistemas.
+            Atualmente, venho ampliando meus conhecimentos em Back-end,
+            principalmente com Node.js, APIs REST, autenticação e autorização,
+            bancos de dados relacionais, SQL e Docker. Busco evoluir para uma
+            atuação cada vez mais completa no desenvolvimento de aplicações,
+            entendendo não apenas a interface, mas também as regras de negócio,
+            integrações e arquitetura dos sistemas.
           </p>
 
           <p className="text-muted-foreground mb-8 text-base leading-relaxed">
-            Localizado em {PERSONAL_INFO.location}, estou sempre aberto a novas
-            oportunidades.
+            Busco oportunidades em desenvolvimento de software nas quais eu
+            possa contribuir com minha experiência, continuar evoluindo
+            tecnicamente e participar da construção de soluções de qualidade que
+            gerem valor para usuários e negócios.
           </p>
         </div>
 
