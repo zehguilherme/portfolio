@@ -25,6 +25,8 @@ The modular harness is in place for the portfolio app. Local skills now live in 
 
 ## Notes
 
+- 2026-08-14: Removed the “Principais tecnologias” paragraph from components/about.tsx. Lint, typecheck, Prettier, diff-check, and build passed; no new accessibility findings.
+
 - The app is a frontend-only Next.js portfolio with a single home route and a 404 page.
 - Existing screenshot artifacts live under `tests/screenshots/`.
 - 2026-08-11: `lib/constants.ts` `SKILLS_CATEGORIES` updated (Back-end: +Node.js, SQL, Docker, Autenticação e Autorização; Ferramentas: +Vercel). Lint/build verified.

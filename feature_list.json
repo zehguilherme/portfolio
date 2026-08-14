@@ -12,7 +12,17 @@
         "Verify the navigation, hero, projects, about, and footer sections render in order",
         "Verify the main content is reachable from the skip link and section anchors"
       ],
-      "passes": false
+      "passes": false,
+      "evidence": [
+        "Sobre copy updated in components/about.tsx",
+        "Vercel removed from lib/constants.ts",
+        "Technology summary paragraph removed; skill categories retained",
+        "npm run lint passed",
+        "npx tsc --noEmit passed",
+        "npm run build passed",
+        "Prettier check passed",
+        "No new accessibility findings in the changed section"
+      ]
     },
     {
       "id": "ui-002",

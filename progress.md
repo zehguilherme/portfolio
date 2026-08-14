@@ -1,8 +1,8 @@
 # Progress
 
-- Status: harness initialized
+- Status: Sobre content updated and verified
 - Project type: frontend
-- Last updated: 2026-08-11
+- Last updated: 2026-08-14
 
 ## Completed
 
@@ -25,6 +25,8 @@
 - Review the existing `tests/screenshots/` artifacts after UI changes
 
 ## Latest Evidence
+
+- Removed the “Principais tecnologias” paragraph from the Sobre section; skill categories remain available below.
 
 - `opencode debug skill`: `ui-accessibility-check` and `type-safety-staged` resolve from `.agents/skills`.
 - `codex debug prompt-input`: both local skills appear in the Codex available skills list from project `.agents/skills`.
