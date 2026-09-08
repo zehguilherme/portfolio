@@ -28,3 +28,4 @@ Holds the page sections that compose the portfolio experience.
 - Keep props explicit and local to each section.
 - Preserve anchor targets used by navigation.
 - Keep project and skills data driven through `lib/constants.ts`.
+- The projects section currently renders three cards in this order: Ficha de Treino, Studio Amanda Borges, and Naturella.

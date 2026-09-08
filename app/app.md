@@ -12,6 +12,8 @@ Owns the Next.js app router entry points, root layout, metadata, and the home ro
 ## Key Files
 
 - `app/layout.tsx` - global metadata, font setup, analytics, skip link
+- `app/robots.ts` - crawler access rules and sitemap reference
+- `app/sitemap.ts` - public URL sitemap
 - `app/page.tsx` - home route composition
 - `app/not-found.tsx` - 404 fallback
 - `app/globals.css` - theme tokens and base styling
@@ -20,6 +22,8 @@ Owns the Next.js app router entry points, root layout, metadata, and the home ro
 
 - `/` - portfolio landing page with nav, hero, projects, about, and footer
 - `404` - centered error page with return link
+- `/robots.txt` - allows crawler access and references the sitemap
+- `/sitemap.xml` - lists the public home URL
 
 ## Verification
 

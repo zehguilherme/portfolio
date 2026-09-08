@@ -2,7 +2,8 @@
 
 ## Purpose
 
-Holds implementation plans and project-level notes that guide changes.
+Holds historical implementation plans and project-level notes. Routine code
+changes do not require these documents to be synchronized.
 
 ## Boundaries
 
@@ -15,10 +16,10 @@ Holds implementation plans and project-level notes that guide changes.
 
 ## Verification
 
-- Keep the plan aligned with the current app structure before starting work.
-- Update or add plan docs when scope changes materially.
+- Review a plan before starting work when it is the active source for that task.
+- Update a plan only when its planning scope or decisions are intentionally revised.
 
 ## Constraints
 
 - Plans should stay readable and actionable.
-- Do not let planning docs drift from the actual route and component structure.
+- Do not treat planning docs as living implementation documentation.

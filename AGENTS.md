@@ -59,6 +59,9 @@ Read this file first, then the relevant module doc before editing code in that a
 - After any modification, run `npm run lint` and `npm run format` in the modified directory before concluding.
 - Keep harness files short and local to the module they describe.
 - Update the relevant module doc whenever code in that module changes.
+- Before declaring work complete, use `.agents/skills/documentation-sync/SKILL.md`
+  to review and synchronize all affected living documentation. Documentation-only
+  edits do not trigger a second synchronization pass.
 - Treat `feature_list.json` and `progress.md` as current state, not archived history.
 - Before claiming completion, run the repo verification commands and capture evidence.
 - After any UI change, run the `ui-accessibility-check` skill (`.agents/skills/`) before claiming completion.
