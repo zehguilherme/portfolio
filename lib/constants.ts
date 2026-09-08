@@ -12,14 +12,21 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS = [
   {
-    id: 1,
-    title: 'Naturella',
+    id: 3,
+    title: 'Ficha de Treino',
     description:
-      'Loja especializada na fabricação de peças decorativas em concreto',
-    tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS'],
-    image: '/images/naturella.png',
-    link: 'https://naturellastudio.vercel.app/',
-    repository: 'https://github.com/zehguilherme/naturella',
+      'Aplicação web para gerenciar treinos semanais, consultar exercícios e acompanhar a conclusão de cada treino.',
+    tags: [
+      'Next.js',
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Node.js',
+      'PostgreSQL',
+    ],
+    image: '/images/ficha-treino.png',
+    link: 'https://fichatreino.vercel.app/',
+    repository: 'https://github.com/zehguilherme/ficha-treino',
   },
   {
     id: 2,
@@ -37,6 +44,16 @@ export const PROJECTS = [
     image: '/images/studio-amanda-borges.png',
     link: 'https://studioamandaborges.vercel.app/',
     repository: 'https://github.com/zehguilherme/studio-amanda-borges',
+  },
+  {
+    id: 1,
+    title: 'Naturella',
+    description:
+      'Loja especializada na fabricação de peças decorativas em concreto',
+    tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS'],
+    image: '/images/naturella.png',
+    link: 'https://naturellastudio.vercel.app/',
+    repository: 'https://github.com/zehguilherme/naturella',
   },
 ]
 

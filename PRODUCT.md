@@ -15,7 +15,7 @@ Two primary audiences, both evaluating José Guilherme as a professional and rea
 
 ## Product Purpose
 
-Personal portfolio of José Guilherme (joseguilherme.vercel.app): presents who he is, his 8 years of experience, his skills (strong front-end with a growing back-end), and two real client projects so visitors can judge competence and contact him via email, LinkedIn, or GitHub. Success means the visitor assesses capability and initiates contact.
+Personal portfolio of José Guilherme (joseguilherme.vercel.app): presents who he is, his 8 years of experience, his skills (strong front-end with a growing back-end), and three real projects so visitors can judge competence and contact him via email, LinkedIn, or GitHub. Success means the visitor assesses capability and initiates contact.
 
 ## Positioning
 
@@ -41,7 +41,7 @@ A software developer with a wide, production-ready front-end stack (Vue/Nuxt, Re
 ## Evidence on Hand
 
 - Profile photo: public/images/profile.png.
-- Two real projects with live links and repositories: Naturella and Studio Amanda Borges (screenshots in public/images/).
+- Three real projects with live links and repositories: Naturella, Studio Amanda Borges, and Ficha de Treino (screenshots in public/images/).
 - Real contact channels (email, GitHub, LinkedIn). No testimonials or case studies — future work must not fabricate them.
 
 ## Product Principles

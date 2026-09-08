@@ -1,8 +1,8 @@
 # Progress
 
-- Status: Sobre content updated and verified
+- Status: Project order updated in portfolio
 - Project type: frontend
-- Last updated: 2026-08-14
+- Last updated: 2026-09-07
 
 ## Completed
 
@@ -15,6 +15,11 @@
 - `init.sh` and `session-handoff.md` added.
 - Added Startup Workflow, Scope, one-feature rule, and End of Session sections to `AGENTS.md`; harness validates 100/100.
 - Added `DESIGN.md` (design tokens) and `PRODUCT.md` (product context); referenced both from `AGENTS.md` and updated tech stack versions.
+- Added `.agents/skills/documentation-sync/SKILL.md` for frontend-aware living-document synchronization; integrated it into `AGENTS.md` and clarified that `docs/superpowers/` is historical.
+- Added the Ficha de Treino project card with its local screenshot, live URL, repository, and technology tags; synchronized product, module, feature, and handoff documentation.
+- Ordered the projects section as Ficha de Treino, Studio Amanda Borges, and Naturella.
+- Added native Next.js `robots.txt` and `sitemap.xml` metadata routes for the public home URL.
+- Verified with `npx tsc --noEmit`, `npm run lint`, `npm run build`, Prettier, JSON parsing, and `git diff --check`; browser AX/screenshot inspection confirmed the card at mobile width.
 
 ## Next Verification
 
@@ -27,8 +32,10 @@
 ## Latest Evidence
 
 - Removed the “Principais tecnologias” paragraph from the Sobre section; skill categories remain available below.
+- Generated `/robots.txt` allows all crawlers and references `/sitemap.xml`; generated `/sitemap.xml` lists the public home URL.
 
 - `opencode debug skill`: `ui-accessibility-check` and `type-safety-staged` resolve from `.agents/skills`.
+- `opencode debug skill` is unavailable in the current shell; local skill files and frontmatter were reviewed directly.
 - `codex debug prompt-input`: both local skills appear in the Codex available skills list from project `.agents/skills`.
 - `npm run lint`: passed.
 - `npm run build`: passed.

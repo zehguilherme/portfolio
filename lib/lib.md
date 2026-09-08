@@ -11,7 +11,7 @@ Shared utilities and content constants.
 
 ## Key Files
 
-- `lib/constants.ts` - personal info, project data, and skills categories
+- `lib/constants.ts` - personal info, the three portfolio projects, and skills categories
 - `lib/utils.ts` - shared helpers such as `cn()`
 
 ## Verification

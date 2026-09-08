@@ -46,9 +46,16 @@
       "steps": [
         "Scroll to the projects section",
         "Verify each project card shows title, description, tags, and link actions",
-        "Verify external links open the expected destinations"
+        "Verify external links open the expected destinations",
+        "Verify the Ficha de Treino card shows its image, live link, repository, and technology tags"
       ],
-      "passes": false
+      "passes": false,
+      "evidence": [
+        "Ficha de Treino card added to lib/constants.ts with live URL, repository, image, description, and tags",
+        "Local image available at public/images/ficha-treino.png",
+        "Browser DOM/screenshot check confirmed title, image, tags, and both outbound links",
+        "External links retain noopener noreferrer"
+      ]
     },
     {
       "id": "ui-004",
@@ -68,19 +75,45 @@
       "type": "tooling",
       "area": "skills",
       "category": "maintenance",
-      "description": "Local skills are shared from .agents/skills by Codex and Opencode.",
+      "description": "Local skills are shared from .agents/skills by Codex and Opencode, including mandatory documentation synchronization before completion.",
       "steps": [
         "Verify .agents/skills contains the local SKILL.md files",
         "Verify Opencode resolves the local skills from .agents/skills",
-        "Verify Codex includes the local skills in prompt input"
+        "Verify Codex includes the local skills in prompt input",
+        "Verify documentation-sync is available and scoped to this frontend portfolio"
       ],
       "passes": true,
       "evidence": [
         "opencode debug skill lists ui-accessibility-check and type-safety-staged under .agents/skills",
         "codex debug prompt-input lists both skills with project root .agents/skills",
+        "documentation-sync skill created at .agents/skills/documentation-sync/SKILL.md",
+        "AGENTS.md requires documentation synchronization before completion",
         "npm run lint passed",
         "npm run build passed",
         "npm run format:check currently fails on 14 pre-existing files outside this migration"
+      ]
+    },
+    {
+      "id": "seo-001",
+      "type": "tooling",
+      "area": "seo",
+      "category": "functional",
+      "description": "The site publishes crawler instructions and a sitemap for its public home URL.",
+      "steps": [
+        "Open /robots.txt",
+        "Verify all crawlers are allowed and the sitemap URL is listed",
+        "Open /sitemap.xml",
+        "Verify the public home URL is listed"
+      ],
+      "passes": true,
+      "evidence": [
+        "Next.js build generated static /robots.txt and /sitemap.xml routes",
+        "Generated robots body allows / and references https://joseguilherme.vercel.app/sitemap.xml",
+        "Generated sitemap body lists https://joseguilherme.vercel.app/",
+        "npx tsc --noEmit passed",
+        "npm run lint passed",
+        "npm run build passed",
+        "git diff --check passed"
       ]
     }
   ]
