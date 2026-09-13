@@ -17,6 +17,7 @@ The modular harness is in place for the portfolio app. Local skills now live in 
 - `public/images/ficha-treino.png` - Ficha de Treino project card screenshot
 - `app/app.md`, `components/components.md`, `components/ui/ui.md`, `lib/lib.md`, `tests/tests.md`, `docs/superpowers/superpowers.md`
 - `app/robots.ts` and `app/sitemap.ts` - native crawler metadata routes
+- `public/images/og-image.png` - horizontal Open Graph preview image
 
 ## Verification
 
@@ -44,3 +45,4 @@ The modular harness is in place for the portfolio app. Local skills now live in 
 - 2026-09-07: Added Ficha de Treino to `lib/constants.ts` and synchronized the project documentation; `components/projects.tsx` required no logic change.
 - 2026-09-07: Reordered `PROJECTS` to Ficha de Treino, Studio Amanda Borges, and Naturella; rendering logic remains unchanged.
 - 2026-09-07: Typecheck, lint, build, Prettier, JSON parsing, and diff-check passed. Browser inspection confirmed the new card image, tags, and outbound links at `http://localhost:3000/#projects` (683px mobile viewport); Python Playwright helper was unavailable because Python is not installed.
+- 2026-09-13: Open Graph metadata now points to `public/images/og-image.png` (1734x907, 1.91:1) and uses a shortened social description. Lint, typecheck, build, Prettier, and diff-check passed; PNG dimensions were validated from the PNG header with PowerShell.

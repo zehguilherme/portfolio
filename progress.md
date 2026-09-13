@@ -2,7 +2,7 @@
 
 - Status: Project order updated in portfolio
 - Project type: frontend
-- Last updated: 2026-09-07
+- Last updated: 2026-09-13
 
 ## Completed
 
@@ -33,6 +33,7 @@
 
 - Removed the “Principais tecnologias” paragraph from the Sobre section; skill categories remain available below.
 - Generated `/robots.txt` allows all crawlers and references `/sitemap.xml`; generated `/sitemap.xml` lists the public home URL.
+- Open Graph metadata now uses a dedicated 1734x907 social image with readable identity/value-proposition text; social and page descriptions were shortened.
 
 - `opencode debug skill`: `ui-accessibility-check` and `type-safety-staged` resolve from `.agents/skills`.
 - `opencode debug skill` is unavailable in the current shell; local skill files and frontmatter were reviewed directly.

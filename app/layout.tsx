@@ -9,22 +9,25 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+const socialDescription =
+  'Desenvolvedor de software com 8 anos de experiência em produtos web, interfaces modernas, performance e código sustentável.'
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://joseguilherme.vercel.app/'),
   title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
-  description: PERSONAL_INFO.description,
+  description: socialDescription,
   openGraph: {
     title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
-    description: PERSONAL_INFO.description,
+    description: socialDescription,
     url: 'https://joseguilherme.vercel.app/',
     siteName: 'José Guilherme',
     locale: 'pt_BR',
     type: 'website',
     images: [
       {
-        url: '/images/profile.png',
-        width: 460,
-        height: 460,
+        url: '/images/og-image.png',
+        width: 1734,
+        height: 907,
         alt: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
       },
     ],
@@ -32,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
-    description: PERSONAL_INFO.description,
-    images: ['/images/profile.png'],
+    description: socialDescription,
+    images: ['/images/og-image.png'],
   },
 }
 

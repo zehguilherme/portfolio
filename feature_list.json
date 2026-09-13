@@ -113,7 +113,9 @@
         "npx tsc --noEmit passed",
         "npm run lint passed",
         "npm run build passed",
-        "git diff --check passed"
+        "git diff --check passed",
+        "Open Graph image updated to a 1.91:1 1734x907 PNG with visible name, role, and value proposition",
+        "Open Graph, page, and Twitter descriptions shortened below the evaluator's truncation threshold"
       ]
     }
   ]
