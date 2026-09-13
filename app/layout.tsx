@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/profile.png',
-        width: 800,
-        height: 418,
+        width: 460,
+        height: 460,
         alt: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
       },
     ],
