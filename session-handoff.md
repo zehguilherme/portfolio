@@ -46,3 +46,4 @@ The modular harness is in place for the portfolio app. Local skills now live in 
 - 2026-09-07: Reordered `PROJECTS` to Ficha de Treino, Studio Amanda Borges, and Naturella; rendering logic remains unchanged.
 - 2026-09-07: Typecheck, lint, build, Prettier, JSON parsing, and diff-check passed. Browser inspection confirmed the new card image, tags, and outbound links at `http://localhost:3000/#projects` (683px mobile viewport); Python Playwright helper was unavailable because Python is not installed.
 - 2026-09-13: Open Graph metadata now points to `public/images/og-image.png` (1200x630, standard social-preview dimensions) and uses a shortened social description. Lint, typecheck, build, Prettier, and diff-check passed; PNG dimensions were validated from the PNG header with PowerShell.
+- 2026-09-21: Added a Ledger Line bottom divider to the mobile navigation dropdown so it separates clearly from page content.
