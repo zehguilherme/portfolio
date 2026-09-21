@@ -35,6 +35,9 @@
         "Verify the nav links target the expected sections",
         "Verify the mobile menu opens and closes"
       ],
+      "evidence": [
+        "Mobile menu panel now has a Ledger Line bottom border to separate it from page content"
+      ],
       "passes": false
     },
     {

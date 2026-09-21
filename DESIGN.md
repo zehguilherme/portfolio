@@ -198,7 +198,7 @@ A restrained radius language: controls at 6px (`rounded-md`), cards at 12px (`ro
 ### Navigation
 
 - **Style:** Fixed at top, paper background, no border. Mark "JG" at 20px semibold. Links at 14px, Ledger Gray at rest, shifting to Deep Slate Ink on hover.
-- **Mobile:** Below `md`, a hamburger toggles a dropdown panel with a Ledger Line top border; Escape closes it; `aria-expanded` tracks state.
+- **Mobile:** Below `md`, a hamburger toggles a dropdown panel with Ledger Line top and bottom borders; Escape closes it; `aria-expanded` tracks state.
 
 ### Footer
 
