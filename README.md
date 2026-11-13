@@ -16,7 +16,7 @@ Este é o meu portfólio online! Sou desenvolvedor de software especializado em 
 
 ## 🎨 Referência visual
 
-[Projeto do portfólio no Stitch](https://stitch.withgoogle.com/projects/5719660689573789097) — referência das telas desktop e mobile, nos temas claro e escuro.
+[Projeto do portfólio no Stitch](https://stitch.google.com/projects/5719660689573789097) — referência pública, somente para visualização, das telas desktop e mobile nos temas claro e escuro.
 
 ## 🚀 Tecnologias
 

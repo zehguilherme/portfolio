@@ -16,7 +16,7 @@ This is my online portfolio! I'm a software developer specialized in creating mo
 
 ## 🎨 Visual reference
 
-[Portfolio Stitch project](https://stitch.withgoogle.com/projects/5719660689573789097) — reference for desktop and mobile screens in light and dark themes.
+[Portfolio Stitch project](https://stitch.google.com/projects/5719660689573789097) — public, view-only reference for desktop and mobile screens in light and dark themes.
 
 ## 🚀 Technologies
 

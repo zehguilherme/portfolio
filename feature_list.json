@@ -26,6 +26,7 @@
         "Hero social links show GitHub and LinkedIn beside their icons below 768px and remain icon-only from 768px upward.",
         "Issue #282: production browser checked responsive widths 320, 390, 768, 1024, and 1440px; theme, menu keyboard behavior, project images, and 404 recovery checked.",
         "Issue #292: refreshed .github/img/portfolio-preview.png with the published portfolio's initial 1440x900 viewport; both README files reference the image through valid repository-relative paths.",
+        "Issue #293: README files, DESIGN.md, and AGENTS.md link to the publicly viewable Stitch project; anonymous browser access loaded the project canvas, and sharing is set to ANYONE with READER access.",
         "npm run lint, npx tsc --noEmit, npm run build, Prettier check, and git diff --check passed."
       ]
     },

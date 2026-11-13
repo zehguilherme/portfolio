@@ -47,7 +47,7 @@ spacing:
 
 ## Identity
 
-The visual direction follows the light desktop and mobile screens in [Stitch project 5719660689573789097](https://stitch.withgoogle.com/projects/5719660689573789097). Cool slate text, paper surfaces, and teal actions create a precise, approachable portfolio. The prior "Cool Ledger" restrictions against a second font and accent color no longer apply.
+The visual direction follows the light desktop and mobile screens in the [public, view-only Stitch project 5719660689573789097](https://stitch.google.com/projects/5719660689573789097). Cool slate text, paper surfaces, and teal actions create a precise, approachable portfolio. The prior "Cool Ledger" restrictions against a second font and accent color no longer apply.
 
 ## References and extraction
 
