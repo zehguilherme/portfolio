@@ -28,7 +28,13 @@ Outlined hero and GitHub project buttons use brighter dark-mode hover colors, wi
 
 Mobile menu links use the stronger `surface-active` hover background in both themes.
 
-Project technology chips use less padding and gaps below 375px to keep six-tag cards to two rows.
+Issue #290 aligns project category badges and technology chips with the About skills pills at every responsive size.
+
+Hero actions stack at full content width below 768px and return to a horizontal row from that breakpoint upward.
+
+GitHub and LinkedIn labels appear beside the icons only below 768px; larger screens remain icon-only.
+
+Project card actions stack vertically at full width below 768px and return to equal-width columns from that breakpoint upward.
 
 Technology chips now keep their natural height when the reserved tag slot has extra vertical space.
 
@@ -58,6 +64,12 @@ JSX links across the app and section components now use Next.js `Link`; existing
 
 ## Verification
 
+- Hero mobile actions: the full-width vertical stack was verified at 320, 390, and 767px; the horizontal layout was verified at 768, 1024, and 1440px. All action heights remain at least 44px, with no horizontal overflow.
+- Hero social labels: browser checks at 320, 390, 767, 768, 1024, and 1440px verified visible names beside icons below 768px, icon-only buttons from 768px upward, 44px minimum height, and no horizontal overflow.
+- Project card actions: verified at 320, 390, 767, 768, 1024, and 1440px. Buttons stack at full card width below 768px, remain equal-width columns above it, and keep at least 44px height without horizontal overflow.
+- Repository-wide `npm run format:check` still reports pre-existing drift in 32 unrelated files; all files changed for the Hero layout pass targeted Prettier.
+- Issue #290: lint, TypeScript, production build, targeted Prettier, and `git diff --check` passed. Browser computed styles for About and project pills match at 320, 390, 768, 1024, and 1440px with no horizontal overflow; these non-interactive chips introduce no keyboard controls.
+- Issue #290: dark-mode browser check confirmed the shared `#1f3342` chip surface and `#f5f5f5` text. Repository-wide `npm run format:check` reports drift in 36 files; all six changed files pass targeted Prettier.
 - Issue #291: `npm run lint`, `npx tsc --noEmit`, targeted Prettier check, and `git diff --check` passed. Static accessibility review confirmed 44px minimum action height, visible focus, descriptive labels, and safe new-tab attributes.
 - Project preview/action spacing is now 16px across breakpoints. Lint, TypeScript, production build, targeted Prettier, JSON validation, and `git diff --check` passed; whole-repo `npm run format:check` still flags 28 unrelated files.
 - Button radius normalization: ESLint, TypeScript, targeted Prettier, JSON validation, `git diff --check`, and production build passed; one transient font-resolution build error cleared on immediate retry.

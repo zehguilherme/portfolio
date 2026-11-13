@@ -22,6 +22,8 @@
         "npm run build passed",
         "Prettier check passed",
         "No new accessibility findings in the changed section",
+        "Hero actions stack as full-width vertical buttons below 768px and return to a horizontal row at 768px; all four retain 44px minimum height, confirmed at 320, 390, 767, 768, 1024, and 1440px without horizontal overflow.",
+        "Hero social links show GitHub and LinkedIn beside their icons below 768px and remain icon-only from 768px upward.",
         "Issue #282: production browser checked responsive widths 320, 390, 768, 1024, and 1440px; theme, menu keyboard behavior, project images, and 404 recovery checked.",
         "npm run lint, npx tsc --noEmit, npm run build, Prettier check, and git diff --check passed."
       ]
@@ -64,6 +66,8 @@
       "evidence": [
         "Ficha de Treino card added to lib/constants.ts with live URL, repository, image, description, and tags",
         "Project actions use the hero primary button style for Ver Projeto plus an outlined GitHub button, with no trailing diagonal arrows; the six Stitch screen variants use the same primary style.",
+        "Project card actions stack vertically at full width below 768px and return to equal-width columns from 768px; browser verified 320, 390, 767, 768, 1024, and 1440px with no horizontal overflow.",
+        "Browser check confirmed each project card's Ver Projeto and GitHub actions are full-width vertical rows below 768px and equal-width side-by-side buttons at 768px and wider; all retain 44px minimum height.",
         "Issue #291: both project actions use 14px semibold text and a consistent 12px radius.",
         "The Hero E-mail and icon-only GitHub/LinkedIn links share the Button outline variant through asChild; E-mail uses an 8px icon-label gap, and social links retain 44px targets and accessible names.",
         "All Hero and project action links now render through the shared Button primitive using default, outline, and icon sizes as appropriate.",
@@ -80,6 +84,9 @@
         "Project descriptions reserve four lines and technology tags two rows, aligning titles, copy, tags, and preview images across cards while actions remain at the bottom.",
         "Mobile project cards use shorter description and tag slots and a smaller gap before previews; the 16px gap between previews and actions matches desktop.",
         "Project and skills technology pills use a brighter #1f3342 surface in dark mode while light mode retains its existing chip color.",
+        "Issue #290: project category badges and technology pills now match About skills pills in surface, text, typography, padding, and shape across responsive sizes.",
+        "Issue #290: browser comparison confirmed matching computed pill styles at 320, 390, 768, 1024, and 1440px with no horizontal overflow.",
+        "Issue #290: dark-mode browser check confirmed the same shared pill styling with the #1f3342 surface and #f5f5f5 text.",
         "Browser check confirmed both pill groups use the dark token, light mode remains #e9eef7, and text contrast on dark pills is 11.96:1.",
         "At 390px the project section screenshot shows compact mobile spacing; at 1440px computed description, tag, category-gap, and card-padding values match desktop values.",
         "Stitch desktop/mobile screens in both themes and mobile menu variants now use matching description and technology slots across all three project cards.",

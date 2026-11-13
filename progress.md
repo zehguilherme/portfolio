@@ -33,6 +33,10 @@
 - Standardized all shared Button radii to 12px in both themes, matching the theme toggle.
 - Centralized outline colors, border, hover, radius, and focus in Button's outline variant; the theme toggle and mobile-menu control now reuse it.
 - Matched the mobile project-card spacing between preview images and action buttons to desktop at 16px.
+- Issue #290: project category badges and technology pills now use the same visual treatment as About skills across screen sizes.
+- Hero actions stack at full width below 768px and return to a horizontal row from 768px; all buttons retain at least 44px height.
+- Hero GitHub and LinkedIn actions show their names beside the icons below 768px; larger screens remain icon-only.
+- Project card actions now stack at full width on mobile and return to two equal columns from 768px.
 
 ## Verification
 
@@ -50,6 +54,12 @@
 - Mobile project section screenshot reviewed at 390px; desktop computed spacing verified unchanged at 1440px.
 - `npm run lint`, `npx tsc --noEmit`, and `npm run build` passed after the mobile spacing adjustment.
 - Targeted Prettier passed; `npm run format:check` still flags only pre-existing formatting drift in `package.json` and `package-lock.json`.
+- Issue #290: `npm run lint`, `npx tsc --noEmit`, `npm run build`, targeted Prettier, and `git diff --check` passed. Browser computed styles matched for About and project pills at 320, 390, 768, 1024, and 1440px; no horizontal overflow.
+- Issue #290: `npm run format:check` reports formatting drift in 36 repository files; all six files changed for this issue pass targeted Prettier.
+- Hero mobile layout: full-width vertical action assertion failed before the change and passed after it; 320, 390, 767, 768, 1024, and 1440px are checked for responsive layout, 44px minimum height, and no horizontal overflow.
+- Hero mobile social labels: browser assertions at 320, 390, 767, 768, 1024, and 1440px confirmed names beside icons below 768px and icon-only buttons from 768px upward. All buttons remain at least 44px tall with no horizontal overflow.
+- Project action layout: browser assertion failed before the change and passed at 320, 390, 767, 768, 1024, and 1440px. Mobile actions fill each card width and stack vertically; from 768px they return to equal columns, with no overflow.
+- `npm run format:check` still reports pre-existing drift in 32 unrelated repository files; all files changed for the Hero layout pass targeted Prettier.
 - Production browser: light/dark preference, project images, mobile menu Escape and focus restoration, 404 recovery link, and widths 320/390/768/1024/1440px; no horizontal overflow.
 - `npm run lint`
 - `npx tsc --noEmit`

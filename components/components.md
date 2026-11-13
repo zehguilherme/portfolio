@@ -17,10 +17,10 @@ Holds the page sections that compose the portfolio experience.
 - Mobile menu links use the `surface-active` hover background in both themes.
 - `components/theme-toggle.tsx` - persisted light/dark selection using the shared outline Button variant
 - The theme toggle and mobile-menu control share the outline Button's border, transparent background, foreground, hover, radius, and focus styles.
-- `components/hero.tsx` - introduction, real profile photo, and contact actions; all four Hero actions use the shared Button primitive with default, outline, and icon sizes
+- `components/hero.tsx` - introduction, real profile photo, and contact actions; all four Hero actions use the shared Button primitive with default, outline, and icon sizes, stacking at full width with named social icons below `md` and returning to an icon-only row at `md`
 - Hero E-mail, social, and project GitHub actions use the shared outline Button styling in both themes.
 - `components/projects.tsx` - responsive project grid
-- `components/project-card.tsx` - semantic project article with aligned description/tag/image rows, naturally sized technology chips centered in their reserved slot, tighter mobile vertical spacing, 16px spacing between previews and actions at every breakpoint, compact chips below 375px, and paired outbound actions using the shared Button primitive's default and outline variants
+- `components/project-card.tsx` - semantic project article with aligned description/tag/image rows, About-matched category and technology chips centered in their reserved slot, tighter mobile vertical spacing, 16px spacing between previews and actions at every breakpoint, and full-width stacked mobile actions that return to equal-width columns at `md`
 - Project and skills technology pills use a brighter chip surface in dark mode; light mode is unchanged.
 - `components/about.tsx` - complete biography and every skills category
 - About content sits in the same bordered, rounded card as Contact, with a semantic white surface; it uses an editorial two-column layout on desktop and a stacked layout on mobile and tablet.
