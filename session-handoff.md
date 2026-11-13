@@ -6,6 +6,8 @@ Issue #282 redesign is implemented. Production build, lint, typecheck, responsiv
 
 Issue #291 aligns the two project action buttons to the same 14px semibold text and 12px corners.
 
+Issue #292 refreshes `.github/img/portfolio-preview.png` from the published desktop portfolio; `README.md` and `README-en.md` both use this repository-relative image.
+
 The Hero E-mail and icon-only GitHub/LinkedIn links use the shared outline Button primitive through `asChild`; E-mail has an 8px icon-label gap.
 
 All primary and outline actions in the Hero and project cards now also use the shared Button primitive through `asChild`.
@@ -64,6 +66,7 @@ JSX links across the app and section components now use Next.js `Link`; existing
 
 ## Verification
 
+- Issue #292: production browser capture of only the initial 1440×900 viewport saved to `.github/img/portfolio-preview.png` and visually reviewed; both README image references match. The GitHub repository page still shows its committed image until this change is pushed.
 - Hero mobile actions: the full-width vertical stack was verified at 320, 390, and 767px; the horizontal layout was verified at 768, 1024, and 1440px. All action heights remain at least 44px, with no horizontal overflow.
 - Hero social labels: browser checks at 320, 390, 767, 768, 1024, and 1440px verified visible names beside icons below 768px, icon-only buttons from 768px upward, 44px minimum height, and no horizontal overflow.
 - Project card actions: verified at 320, 390, 767, 768, 1024, and 1440px. Buttons stack at full card width below 768px, remain equal-width columns above it, and keep at least 44px height without horizontal overflow.
