@@ -14,6 +14,8 @@
 ## Design System
 
 - `DESIGN.md` is the source of truth for colors, radii, and typography.
+- Use the [portfolio Stitch project](https://stitch.withgoogle.com/projects/5719660689573789097) as the visual reference for desktop/mobile screens and light/dark themes.
+- Keep implementation tokens synchronized with `DESIGN.md`; the Stitch project is a visual reference.
 - Tailwind CSS v4 is configured in `app/globals.css` with `@theme`; keep tokens in sync with `DESIGN.md`.
 - Do not add `tailwind.config.ts`.
 - Use the existing tokens and shadcn UI primitives.

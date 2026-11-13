@@ -1,154 +1,95 @@
 'use client'
 
 import * as React from 'react'
+import Link from 'next/link'
 import { MenuIcon, XIcon } from '@/components/ui/icon'
+import { ThemeToggle } from '@/components/theme-toggle'
 
-export default function Nav() {
+const links = [
+  { href: '#projects', label: 'Projetos' },
+  { href: '#about', label: 'Sobre' },
+  { href: '#contact', label: 'Contato' },
+]
+
+export function Nav() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const menuButtonRef = React.useRef<HTMLButtonElement>(null)
 
   React.useEffect(() => {
-    const hash = window.location.hash.slice(1)
+    if (!isOpen) return
 
-    if (hash) {
-      const element = document.getElementById(hash)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)
+        menuButtonRef.current?.focus()
       }
     }
-  }, [])
 
-  const handleSmoothScroll = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    targetId: string
-  ) => {
-    e.preventDefault()
-    const element = document.getElementById(targetId)
-    if (element) {
-      window.history.pushState(null, '', `#${targetId}`)
-      element.scrollIntoView({ behavior: 'smooth' })
-      element.focus({ preventScroll: true })
-    }
-  }
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      setIsOpen(false)
-    }
-  }
-
-  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    window.history.pushState(null, '', window.location.pathname)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    scrollToTop(e)
-    setIsOpen(false)
-  }
-
-  const handleHomeClick = scrollToTop
-
-  const handleHomeMobileClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    scrollToTop(e)
-    setIsOpen(false)
-  }
-
-  const handleToggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const handleProjectsMobileClick = (
-    e: React.MouseEvent<HTMLAnchorElement>
-  ) => {
-    handleSmoothScroll(e, 'projects')
-    setIsOpen(false)
-  }
-
-  const handleAboutMobileClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    handleSmoothScroll(e, 'about')
-    setIsOpen(false)
-  }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [isOpen])
 
   return (
-    <nav className="bg-background fixed top-0 right-0 left-0 z-50">
-      <div className="mx-auto max-w-7xl px-6 py-4">
-        <div className="flex items-center justify-between">
-          <a
-            href="#"
-            className="focus-visible:ring-ring rounded-sm text-xl font-semibold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-            onClick={handleLogoClick}
+    <header className="border-border-header bg-surface-page/95 sticky top-0 z-50 border-b backdrop-blur">
+      <nav
+        aria-label="Navegação principal"
+        className="mx-auto flex max-w-[1240px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+      >
+        <div className="flex items-center gap-6">
+          <Link
+            href="#hero"
+            className="font-display text-text-hero focus-visible:outline-focus-ring rounded-md text-2xl font-semibold focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             JG
-          </a>
+          </Link>
+          <ul className="hidden items-center gap-8 md:flex">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  className="text-text-secondary hover:text-text-hero focus-visible:outline-focus-ring rounded-md px-1 py-3 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+                  href={link.href}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
+        <div className="flex items-center gap-2 md:gap-8">
+          <ThemeToggle />
           <button
-            className="focus-visible:ring-ring cursor-pointer rounded-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
-            onClick={handleToggleMenu}
-            onKeyDown={handleKeyDown}
+            ref={menuButtonRef}
+            id="nav-menu-toggle"
+            type="button"
+            className="text-text-supporting focus-visible:outline-focus-ring border-border-header hover:border-action-primary hover:text-text-hero flex size-11 items-center justify-center rounded-xl border bg-transparent transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 md:hidden"
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsOpen((open) => !open)}
           >
             {isOpen ? <XIcon /> : <MenuIcon />}
           </button>
-
-          <div className="hidden items-center gap-8 md:flex">
-            <a
-              href="#"
-              className="hover:text-primary focus-visible:ring-ring rounded-sm text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-              onClick={handleHomeClick}
-            >
-              Início
-            </a>
-
-            <a
-              href="#projects"
-              className="hover:text-primary focus-visible:ring-ring rounded-sm text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-              onClick={(e) => handleSmoothScroll(e, 'projects')}
-            >
-              Projetos
-            </a>
-
-            <a
-              href="#about"
-              className="hover:text-primary focus-visible:ring-ring rounded-sm text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-              onClick={(e) => handleSmoothScroll(e, 'about')}
-            >
-              Sobre
-            </a>
-          </div>
         </div>
 
-        {isOpen && (
-          <div className="bg-background border-border absolute top-full right-0 left-0 border-t border-b md:hidden">
-            <div className="flex flex-col gap-4 px-6 py-4">
-              <a
-                href="#"
-                className="hover:text-primary focus-visible:ring-ring rounded-sm text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                onClick={handleHomeMobileClick}
+        <ul
+          id="mobile-navigation"
+          hidden={!isOpen}
+          className={`bg-surface-page border-border-header absolute top-full right-0 left-0 flex-col gap-1 border-b px-4 py-3 shadow-md sm:px-6 md:hidden ${isOpen ? 'flex' : 'hidden'}`}
+        >
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link
+                className="text-text-primary hover:bg-surface-active focus-visible:outline-focus-ring flex min-h-11 items-center rounded-xl px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2"
+                href={link.href}
+                onClick={() => setIsOpen(false)}
               >
-                Início
-              </a>
-
-              <a
-                href="#projects"
-                className="hover:text-primary focus-visible:ring-ring rounded-sm text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                onClick={handleProjectsMobileClick}
-              >
-                Projetos
-              </a>
-
-              <a
-                href="#about"
-                className="hover:text-primary focus-visible:ring-ring rounded-sm text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                onClick={handleAboutMobileClick}
-              >
-                Sobre
-              </a>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   )
 }

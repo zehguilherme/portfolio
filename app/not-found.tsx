@@ -5,10 +5,12 @@ export const dynamic = 'force-dynamic'
 
 export default function NotFound() {
   return (
-    <main className="bg-background flex min-h-screen flex-col items-center justify-center gap-6">
-      <h1 className="text-primary font-sans text-9xl font-semibold">404</h1>
+    <main className="bg-surface-page flex min-h-screen flex-col items-center justify-center gap-6">
+      <h1 className="text-action-primary font-sans text-9xl font-semibold">
+        404
+      </h1>
 
-      <h2 className="text-foreground text-center font-sans text-2xl font-medium">
+      <h2 className="text-text-primary text-center font-sans text-2xl font-medium">
         Página não encontrada
       </h2>
 

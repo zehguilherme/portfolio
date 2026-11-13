@@ -1,0 +1,1112 @@
+<!doctype html>
+
+<html class="light" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      name="viewport"
+    />
+    <title>José Guilherme — Desenvolvedor de Software</title>
+    <!-- Google Fonts & Fontshare Clash Display -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'inverse-primary': '#7fd1f4',
+              'tertiary-container': '#9b621a',
+              'tertiary-fixed-dim': '#ffb86b',
+              'on-tertiary-fixed-variant': '#683d00',
+              'inverse-on-surface': '#ecf1fa',
+              'on-surface': '#161c22',
+              'on-surface-variant': '#3f484d',
+              'tertiary-fixed': '#ffdcbc',
+              'on-error-container': '#93000a',
+              'surface-container-highest': '#dde3ec',
+              'inverse-surface': '#2b3138',
+              'error-container': '#ffdad6',
+              'outline-variant': '#bec8ce',
+              'on-primary-fixed': '#001f2a',
+              'surface-variant': '#dde3ec',
+              'on-background': '#161c22',
+              primary: '#005e79',
+              'primary-fixed-dim': '#7fd1f4',
+              'secondary-fixed-dim': '#bfc7d5',
+              tertiary: '#7e4a00',
+              'on-tertiary-fixed': '#2c1700',
+              secondary: '#575f6b',
+              outline: '#6f787e',
+              'on-primary-container': '#e5f6ff',
+              'on-primary-fixed-variant': '#004d63',
+              'on-primary': '#ffffff',
+              'surface-tint': '#006783',
+              'on-secondary-fixed-variant': '#3f4753',
+              'primary-fixed': '#bce9ff',
+              'surface-container-lowest': '#ffffff',
+              'secondary-container': '#d8e0ee',
+              'primary-container': '#0f7898',
+              'on-tertiary-container': '#fff0e5',
+              'on-secondary': '#ffffff',
+              'surface-container-low': '#eef4fd',
+              'surface-dim': '#d5dae3',
+              surface: '#f7f9ff',
+              'surface-container-high': '#e3e9f2',
+              'on-tertiary': '#ffffff',
+              background: '#f7f9ff',
+              'surface-bright': '#f7f9ff',
+              'on-secondary-fixed': '#141c26',
+              error: '#ba1a1a',
+              'secondary-fixed': '#dbe3f1',
+              'on-error': '#ffffff',
+              'surface-container': '#e9eef7',
+              'on-secondary-container': '#5b636f',
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+            spacing: {
+              gutter: '1rem',
+              'space-xs': '0.25rem',
+              'space-md': '1rem',
+              margin: '1.25rem',
+              'space-lg': '1.5rem',
+              'space-sm': '0.5rem',
+              'space-xl': '2rem',
+            },
+            fontFamily: {
+              'headline-sm': ['Clash Display', 'Space Grotesk', 'sans-serif'],
+              'headline-md': ['Clash Display', 'Space Grotesk', 'sans-serif'],
+              'headline-lg': ['Clash Display', 'Space Grotesk', 'sans-serif'],
+              'display-mobile': [
+                'Clash Display',
+                'Space Grotesk',
+                'sans-serif',
+              ],
+              'label-md': ['Inter', 'sans-serif'],
+              'label-sm': ['Inter', 'sans-serif'],
+              'body-lg': ['Inter', 'sans-serif'],
+              'body-md': ['Inter', 'sans-serif'],
+              'body-sm': ['Inter', 'sans-serif'],
+            },
+            fontSize: {
+              'headline-sm': [
+                '16px',
+                {
+                  lineHeight: '22px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '600',
+                },
+              ],
+              'label-md': [
+                '13px',
+                {
+                  lineHeight: '16px',
+                  letterSpacing: '0.01em',
+                  fontWeight: '500',
+                },
+              ],
+              'label-sm': [
+                '11px',
+                {
+                  lineHeight: '14px',
+                  letterSpacing: '0.04em',
+                  fontWeight: '600',
+                },
+              ],
+              'body-lg': [
+                '16px',
+                {
+                  lineHeight: '24px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '400',
+                },
+              ],
+              'display-mobile': [
+                '32px',
+                {
+                  lineHeight: '38px',
+                  letterSpacing: '-0.03em',
+                  fontWeight: '600',
+                },
+              ],
+              'body-md': [
+                '14px',
+                { lineHeight: '20px', letterSpacing: '0em', fontWeight: '400' },
+              ],
+              'headline-md': [
+                '20px',
+                {
+                  lineHeight: '26px',
+                  letterSpacing: '-0.02em',
+                  fontWeight: '600',
+                },
+              ],
+              'headline-lg': [
+                '26px',
+                {
+                  lineHeight: '32px',
+                  letterSpacing: '-0.025em',
+                  fontWeight: '600',
+                },
+              ],
+              'body-sm': [
+                '12px',
+                { lineHeight: '16px', letterSpacing: '0em', fontWeight: '400' },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+      body {
+        background-color: #f5f6f7;
+        color: #080e14;
+        -webkit-tap-highlight-color: transparent;
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed antialiased"
+  >
+    <!-- Mobile Viewport Wrapper (390px strict standard canvas) -->
+    <div
+      class="bg-surface relative mx-auto flex min-h-screen w-full max-w-[390px] flex-col shadow-sm"
+    >
+      <!-- TOP APP BAR WITH OPEN MENU -->
+      <header
+        class="dark:bg-inverse-surface/95 dark:border-outline/20 sticky top-0 z-50 w-full border-b border-[#d9dfe5] bg-[#f5f6f7]/95 backdrop-blur-md"
+      >
+        <div
+          class="mx-auto flex w-full max-w-[390px] items-center justify-between gap-2 px-4 py-3"
+        >
+          <a class="flex items-center focus:outline-none" href="#hero">
+            <span
+              class="dark:text-inverse-on-surface font-['Clash_Display',sans-serif] text-[18px] font-semibold tracking-tight text-[#080e14] sm:text-[20px]"
+            >
+              JG
+            </span>
+          </a>
+          <!-- Controls: Theme toggle + Close (X) icon indicating open state -->
+          <div class="flex items-center gap-2">
+            <button
+              aria-label="Alternar tema"
+              class="dark:border-outline/30 dark:text-inverse-on-surface bg-surface-container-lowest/80 dark:bg-inverse-surface flex h-[42px] w-[42px] items-center justify-center rounded-[12px] border border-[#d9dfe5] text-[#080e14] transition-all duration-150 active:scale-95"
+              id="theme-toggle"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >dark_mode</span
+              >
+            </button>
+            <button
+              aria-controls="mobile-menu"
+              aria-expanded="true"
+              aria-label="Fechar menu de navegação"
+              class="dark:border-outline/30 dark:text-inverse-on-surface bg-surface-container-lowest/80 dark:bg-inverse-surface flex h-[42px] w-[42px] items-center justify-center rounded-[12px] border border-[#d9dfe5] text-[#080e14] transition-all duration-150 active:scale-95"
+              id="menu-toggle-btn"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[22px]" id="menu-icon"
+                >close</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- PAINEL / DROPDOWN SUSPENSO VERTICAL ABERTO -->
+        <nav
+          aria-label="Navegação móvel"
+          class="bg-surface-container-lowest border-outline-variant/30 divide-outline-variant/20 flex w-full flex-col divide-y border-b shadow-md transition-all duration-200"
+          id="mobile-menu"
+        >
+          <a
+            class="nav-item hover:bg-surface-container/60 active:bg-surface-container flex items-center px-6 py-3.5 font-['Space_Grotesk',sans-serif] text-base font-medium text-[#080e14] transition-colors"
+            href="#hero"
+          >
+            Início
+          </a>
+          <a
+            class="nav-item hover:bg-surface-container/60 active:bg-surface-container flex items-center px-6 py-3.5 font-['Space_Grotesk',sans-serif] text-base font-medium text-[#080e14] transition-colors"
+            href="#projetos"
+          >
+            Projetos
+          </a>
+          <a
+            class="nav-item hover:bg-surface-container/60 active:bg-surface-container flex items-center px-6 py-3.5 font-['Space_Grotesk',sans-serif] text-base font-medium text-[#080e14] transition-colors"
+            href="#sobre"
+          >
+            Sobre
+          </a>
+        </nav>
+      </header>
+      <!-- MAIN CONTENT -->
+      <main class="pt-space-lg pb-space-xl flex flex-1 flex-col gap-5 px-4">
+        <!-- HERO SECTION -->
+        <section class="flex flex-col" id="hero" style="padding: 28px 0px 30px">
+          <!-- Eyebrow -->
+          <span
+            style="
+              font-family: 'Clash Display', 'Space Grotesk', sans-serif;
+              font-weight: 500;
+              font-size: 14px;
+              text-transform: uppercase;
+              letter-spacing: 0.16em;
+              color: #0f7898;
+              margin-bottom: 18px;
+              display: block;
+            "
+          >
+            DESENVOLVEDOR DE SOFTWARE
+          </span>
+          <!-- Headline -->
+          <h1
+            class="tracking-tight"
+            style="
+              font-family: 'Clash Display', 'Space Grotesk', sans-serif;
+              font-weight: 600;
+              font-size: clamp(40px, 10vw, 56px);
+              line-height: 0.98;
+              letter-spacing: -0.035em;
+              margin-bottom: 24px;
+              color: #080e14;
+            "
+          >
+            Olá, eu sou José Guilherme
+          </h1>
+          <!-- Description -->
+          <p
+            style="
+              font-family: 'Inter', sans-serif;
+              font-size: 16px;
+              line-height: 1.6;
+              color: #4b5865;
+              margin-bottom: 32px;
+            "
+          >
+            Há 8 anos construo produtos na web em que resultado para o cliente e
+            qualidade técnica andam juntos: interfaces modernas, performance e
+            código que o time gosta de manter.
+          </p>
+          <!-- CTA Action Buttons -->
+          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <a
+              class="hover:bg-primary inline-flex items-center gap-1.5 rounded-full bg-[#0f7898] px-4 py-2 text-sm font-medium text-white shadow-sm transition-all duration-150 active:scale-95"
+              href="#projetos"
+            >
+              <span>Ver Projetos</span>
+              <span class="material-symbols-outlined text-[16px]"
+                >arrow_downward</span
+              >
+            </a>
+            <a
+              class="border-outline-variant/60 bg-surface-container-lowest text-on-surface hover:bg-surface-container inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-150 active:scale-95"
+              href="mailto:jgtomaine@hotmail.com"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-secondary h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <span>E-mail</span>
+            </a>
+            <div
+              aria-hidden="true"
+              class="bg-outline-variant/50 mx-0.5 h-5 w-px"
+            ></div>
+            <a
+              aria-label="GitHub"
+              class="border-outline-variant/50 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-150 active:scale-95"
+              href="https://github.com/zehguilherme"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-4 w-4 fill-current"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <a
+              aria-label="LinkedIn"
+              class="border-outline-variant/50 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-150 active:scale-95"
+              href="https://www.linkedin.com/in/josé-guilherme-paro-monteiro-tomaine"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-4 w-4 fill-current"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <!-- Social Links -->
+          <div
+            class="border-outline-variant/40 bg-surface-container mx-auto mt-6 w-full max-w-[280px] overflow-hidden rounded-2xl border shadow-sm"
+          >
+            <img
+              alt="Fotografia de José Guilherme"
+              class="aspect-square w-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzRuHFkePSgzsOrezK5mU886FkC3N8dp-RsesxJlbzCMWqAUaPt9m-EJracmFqk_eRCWAzA95rtE-RHK1cZotINu6M--eNPV43UzVQ_iFQABtS0eBvkVrrGBMVbnYte2v4tF9leSnLYuED2ALk0G9_29wkRK48eZ14-AlAZngGMYm64eXPjlyG0GJ2WccNr526ZlDM0EsrQWUl_fuAQtR9EHLsByC1N7Ec_UxdVV1zgst0GzbfAuw-PxhDbDsDSoBaRHGqXBMQwaQ"
+            />
+          </div>
+        </section>
+        <!-- DIVIDER -->
+        <!-- PROJETOS SELECIONADOS -->
+        <section class="flex flex-col gap-5" id="projetos">
+          <div class="flex flex-col items-start gap-2">
+            <span
+              class="font-label-mono text-primary-container text-[11px] font-semibold tracking-wider uppercase"
+              >TRABALHOS SELECIONADOS</span
+            >
+            <h2
+              class="text-headline-lg font-headline-lg text-on-surface tracking-tight"
+            >
+              Projetos
+            </h2>
+            <p class="text-secondary mt-3 text-left text-sm">
+              Projetos que desenvolvi e publiquei.
+            </p>
+          </div>
+          <!-- PROJETO 1: Ficha de Treino (Destaque Principal) -->
+          <article
+            class="bg-surface-container-lowest border-outline-variant/50 flex flex-col gap-4 rounded-2xl border p-5 shadow-[0_4px_20px_-2px_rgba(8,14,20,0.02)]"
+          >
+            <!-- Category Tag -->
+            <div class="flex items-center">
+              <span
+                class="text-label-sm font-label-sm bg-surface-container text-secondary border-outline-variant/30 rounded-full border px-2.5 py-1"
+              >
+                Web App
+              </span>
+            </div>
+            <!-- Title & Description -->
+            <div class="flex flex-col gap-1.5">
+              <h3
+                class="text-headline-md font-headline-md text-on-surface font-semibold"
+              >
+                Ficha de Treino
+              </h3>
+              <p
+                class="text-body-md font-body-md text-secondary leading-relaxed"
+              >
+                Gerenciador de treinos para acompanhamento e montagem de rotinas
+                personalizadas.
+              </p>
+            </div>
+            <!-- Tech Stack Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Next.js</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >React</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >TypeScript</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Tailwind</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Node</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >PostgreSQL</span
+              >
+            </div>
+            <!-- Mockup Image -->
+            <div
+              class="bg-surface-container border-outline-variant/40 relative aspect-[16/10] w-full overflow-hidden rounded-xl border"
+            >
+              <img
+                class="h-full w-full object-cover"
+                data-alt="A clean and modern web application dashboard interface for workout routine tracking. The screen exhibits high-contrast minimalist cards, subtle grey backgrounds, sharp border definitions, and cyan-blue primary accents. Crisp typographic hierarchy showcases exercises and weekly progression charts in a bright, modern light-mode aesthetic with calm ambient lighting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTmP1q0gmWqI2NZW7OgUFzAHFXbkE1FYfUfZ0fHK_oek1P1tQrIY5KZUpQK45eOp5PJK-PdUBIgsNGUXZA2u03924QSDl6hwf-Xd5GUWF1qVk1hqL_SX404u4cRsMhHeT4isZYb1hFUnNCfV8X3WbSbWdkiUPGAqUoQtlbC0vOxrurcZyHlZW76Y7bkboawvb331SA4uGblyPgoooPcJtATFO7Z4JB6NU_kAnHzOei6qXKOlnqBhWAEj7vRbpiiHq6KE39iL-jHxI"
+              />
+            </div>
+            <!-- Actions -->
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <a
+                class="bg-surface-container text-on-surface font-label-md text-label-md active:bg-surface-container-high flex h-10 items-center justify-center gap-1.5 rounded-2xl font-semibold transition-colors"
+                href="https://github.com/zehguilherme"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M13 5h6v6M19 5l-9 9"></path>
+                  <path
+                    d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"
+                  ></path></svg
+                ><span>Ver Projeto</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >north_east</span
+                >
+              </a>
+              <a
+                class="bg-surface-container-lowest border-outline-variant/60 text-on-surface font-label-md text-label-md active:bg-surface-container flex h-10 items-center justify-center gap-1.5 rounded-2xl border font-semibold transition-colors"
+                href="https://github.com/zehguilherme"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 fill-current"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.2-3.37-1.2-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.65.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.83c0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+                  ></path></svg
+                ><span>GitHub</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >north_east</span
+                >
+              </a>
+            </div>
+          </article>
+          <!-- PROJETO 2: Studio Amanda Borges -->
+          <article
+            class="bg-surface-container-lowest border-outline-variant/50 flex flex-col gap-4 rounded-2xl border p-5 shadow-[0_4px_20px_-2px_rgba(8,14,20,0.02)]"
+          >
+            <!-- Category Tag -->
+            <div class="flex items-center">
+              <span
+                class="text-label-sm font-label-sm bg-surface-container text-secondary border-outline-variant/30 rounded-full border px-2.5 py-1"
+              >
+                Website Institucional
+              </span>
+            </div>
+            <!-- Title & Description -->
+            <div class="flex flex-col gap-1.5">
+              <h3
+                class="text-headline-md font-headline-md text-on-surface font-semibold"
+              >
+                Studio Amanda Borges
+              </h3>
+              <p
+                class="text-body-md font-body-md text-secondary leading-relaxed"
+              >
+                Portfólio de arquiteta com apresentação institucional limpa,
+                design minimalista e foco em performance e SEO.
+              </p>
+            </div>
+            <!-- Tech Stack Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Next</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >React</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >JavaScript</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Tailwind</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Jest</span
+              >
+            </div>
+            <!-- Mockup Image -->
+            <div
+              class="bg-surface-container border-outline-variant/40 relative aspect-[16/10] w-full overflow-hidden rounded-xl border"
+            >
+              <img
+                class="h-full w-full object-cover"
+                data-alt="An elegant architecture studio portfolio website displayed on a sleek digital device. Minimalist architectural photographs with high concrete walls and warm interior spaces are organized into an asymmetric gallery grid. The interface features pure white surfaces, soft grey typographic labels, and precision alignment tailored for a modern architectural presentation."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAqCY1kDv4HRDqoKaD6oxDoECYaoJqSb7ZEtgzBEx86TGoYCYQP-yTp0KwpUODUc835Wg9hYhyFDqasQ62nVaX1X8sC6QLe7dT0PyjdaLWKrD_6JxZQBhMREmyL_bu-ZZ5iTpLExQpNlxU83ZZwKw0ED1TPwiANHQB5xeizKwzEUa19mXCcf20zhYPB0xUh8Zyu7gyuyDnIUcdZ4kQyh10z6q6vmZACAtFSh5pSOn6PDNz068hdH7THcUirsq0vKlDN-jy15HkieU"
+              />
+            </div>
+            <!-- Actions -->
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <a
+                class="bg-surface-container text-on-surface font-label-md text-label-md active:bg-surface-container-high flex h-10 items-center justify-center gap-1.5 rounded-2xl font-semibold transition-colors"
+                href="https://github.com/zehguilherme"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M13 5h6v6M19 5l-9 9"></path>
+                  <path
+                    d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"
+                  ></path></svg
+                ><span>Ver Projeto</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >north_east</span
+                >
+              </a>
+              <a
+                class="bg-surface-container-lowest border-outline-variant/60 text-on-surface font-label-md text-label-md active:bg-surface-container flex h-10 items-center justify-center gap-1.5 rounded-2xl border font-semibold transition-colors"
+                href="https://github.com/zehguilherme"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 fill-current"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.2-3.37-1.2-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.65.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.83c0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+                  ></path></svg
+                ><span>GitHub</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >north_east</span
+                >
+              </a>
+            </div>
+          </article>
+          <!-- PROJETO 3: Naturella -->
+          <article
+            class="bg-surface-container-lowest border-outline-variant/50 flex flex-col gap-4 rounded-2xl border p-5 shadow-[0_4px_20px_-2px_rgba(8,14,20,0.02)]"
+          >
+            <!-- Category Tag -->
+            <div class="flex items-center">
+              <span
+                class="text-label-sm font-label-sm bg-surface-container text-secondary border-outline-variant/30 rounded-full border px-2.5 py-1"
+              >
+                Catálogo Digital
+              </span>
+            </div>
+            <!-- Title & Description -->
+            <div class="flex flex-col gap-1.5">
+              <h3
+                class="text-headline-md font-headline-md text-on-surface font-semibold"
+              >
+                Naturella
+              </h3>
+              <p
+                class="text-body-md font-body-md text-secondary leading-relaxed"
+              >
+                Catálogo e vitrine de peças decorativas autorais em concreto.
+              </p>
+            </div>
+            <!-- Tech Stack Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Next</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >React</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >TypeScript</span
+              >
+              <span
+                class="bg-surface text-secondary border-outline-variant/30 text-label-sm font-label-sm rounded-full border px-2.5 py-0.5"
+                >Tailwind</span
+              >
+            </div>
+            <!-- Mockup Image -->
+            <div
+              class="bg-surface-container border-outline-variant/40 relative aspect-[16/10] w-full overflow-hidden rounded-xl border"
+            >
+              <img
+                class="h-full w-full object-cover"
+                data-alt="A curated digital showcase website featuring handcrafted artisanal concrete home decor items like brutalist planters and architectural trays. The product cards show soft directional natural lighting, warm grey textures, clean product dimensions, and subtle geometric typography in a contemporary Swiss layout style."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAZD3vfwSarZ30wGFC8iVCefdVg5GEHkcUf_WNFISgHzBY8Hj5A4xOb5kdlXO6-APlNDUjr9AS_5ecugFTo6esLgiNjeZMV1th5CLsgxbaRQmFPFfXLiQMIJ2h9cDitpRcNvjCU5lcQeAOoUXCfE26-9GtTsv3J_UskWF78SEHTxndTv-C_X-KOhPUHsqTm3ILH2Igu5TIMYEfkg-AiKv33f8TzzZpKAX2VeaT7sxBHiLExRU1MFX6FHYtdA2pf1G776oyt2wZ-Xc"
+              />
+            </div>
+            <!-- Actions -->
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <a
+                class="bg-surface-container text-on-surface font-label-md text-label-md active:bg-surface-container-high flex h-10 items-center justify-center gap-1.5 rounded-2xl font-semibold transition-colors"
+                href="https://github.com/zehguilherme"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M13 5h6v6M19 5l-9 9"></path>
+                  <path
+                    d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"
+                  ></path></svg
+                ><span>Ver Projeto</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >north_east</span
+                >
+              </a>
+              <a
+                class="bg-surface-container-lowest border-outline-variant/60 text-on-surface font-label-md text-label-md active:bg-surface-container flex h-10 items-center justify-center gap-1.5 rounded-2xl border font-semibold transition-colors"
+                href="https://github.com/zehguilherme"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 fill-current"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.2-3.37-1.2-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.65.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.83c0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+                  ></path></svg
+                ><span>GitHub</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >north_east</span
+                >
+              </a>
+            </div>
+          </article>
+        </section>
+        <!-- DIVIDER -->
+        <!-- SEÇÃO SOBRE & HABILIDADES -->
+        <section class="flex flex-col gap-4" id="sobre">
+          <h2
+            class="text-headline-lg font-headline-lg text-on-surface tracking-tight"
+          >
+            Sobre
+          </h2>
+          <!-- Profile Card -->
+          <div
+            class="bg-surface-container-lowest border-outline-variant/50 flex flex-col gap-4 rounded-3xl border p-5"
+          >
+            <div class="flex items-center gap-3.5">
+              <div
+                class="bg-surface-container border-outline-variant/40 h-14 w-14 shrink-0 overflow-hidden rounded-2xl border"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="A professional, contemporary portrait profile avatar of a software developer in a studio setting. Neutral soft lighting, subtle charcoal shirt, modern minimalist backdrop with crisp architectural composition and friendly, thoughtful expression."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6bS_466m12NO_xRp_UYZcbhnkJUMLsSL9JzlcTdNCdM-yYH-WoNhEideLdXZMkwg3jsctQ8z58DkxqNJz3MnHcc16RZi5e4kF0VQxg3vKy3-FtmqIsBhzgHllMozhTRPqfUXc6XsaCzRYhspcU3cfRWZHMvi3ryJABIFRx89oHkx1mDFipLJQKoNPQukLjn_1LISYbSjlV4GjQ08KnOGZ8rOKKmuOdn3jq5VFQ6PsdfnS4Q-F--8OlhSKxDNu2uRDWTVXtxbQjUg"
+                />
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface">
+                  José Guilherme
+                </h3>
+                <p class="text-body-sm font-body-sm text-secondary">
+                  Desenvolvedor de Software
+                </p>
+              </div>
+            </div>
+            <!-- Bio Técnica -->
+            <p class="text-body-md font-body-md text-secondary leading-relaxed">
+              Atuo no desenvolvimento de interfaces modernas, arquitetura limpa,
+              tipagem forte e boas práticas. Trabalho com foco em criar
+              aplicações eficientes, manuteníveis e que proporcionam uma ótima
+              experiência para quem usa e facilidade para quem desenvolve.
+            </p>
+          </div>
+          <!-- Grade de Competências / Pilares -->
+          <div class="flex flex-col gap-3">
+            <h3 class="text-headline-sm font-headline-sm text-on-surface">
+              Pilares Técnicos
+            </h3>
+            <div class="grid grid-cols-1 gap-2.5">
+              <!-- Frontend Card -->
+              <div
+                class="bg-surface-container-lowest border-outline-variant/40 flex flex-col gap-1.5 rounded-2xl border p-4"
+              >
+                <div class="text-primary-container flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >laptop_mac</span
+                  >
+                  <span
+                    class="text-headline-sm font-headline-sm text-on-surface"
+                    >Frontend</span
+                  >
+                </div>
+                <p
+                  class="text-body-sm font-body-sm text-secondary leading-relaxed"
+                >
+                  Interfaces funcionais, componentização reutilizável e design
+                  responsivo.
+                </p>
+              </div>
+              <!-- Backend Card -->
+              <div
+                class="bg-surface-container-lowest border-outline-variant/40 flex flex-col gap-1.5 rounded-2xl border p-4"
+              >
+                <div class="text-primary-container flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[20px]">dns</span>
+                  <span
+                    class="text-headline-sm font-headline-sm text-on-surface"
+                    >Backend</span
+                  >
+                </div>
+                <p
+                  class="text-body-sm font-body-sm text-secondary leading-relaxed"
+                >
+                  APIs estruturadas, integração de banco de dados e regras de
+                  negócio seguras.
+                </p>
+              </div>
+              <!-- Qualidade Card -->
+              <div
+                class="bg-surface-container-lowest border-outline-variant/40 flex flex-col gap-1.5 rounded-2xl border p-4"
+              >
+                <div class="text-primary-container flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >verified</span
+                  >
+                  <span
+                    class="text-headline-sm font-headline-sm text-on-surface"
+                    >Qualidade</span
+                  >
+                </div>
+                <p
+                  class="text-body-sm font-body-sm text-secondary leading-relaxed"
+                >
+                  Versionamento estruturado com Git, testes automatizados e
+                  código legível.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tech Stack Tags -->
+          <div class="flex flex-col gap-2.5">
+            <h3 class="text-headline-sm font-headline-sm text-on-surface">
+              Tecnologias
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >Next.js</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >React</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >TypeScript</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >Node</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >PostgreSQL</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >Tailwind</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >Jest</span
+              >
+              <span
+                class="bg-surface-container-lowest text-on-surface border-outline-variant/50 text-label-sm font-label-sm rounded-full border px-3 py-1.5"
+                >Git</span
+              >
+            </div>
+          </div>
+        </section>
+        <!-- DIVIDER -->
+        <!-- SEÇÃO CONTATO -->
+        <section class="flex flex-col gap-4" id="contato">
+          <div class="flex flex-col gap-1">
+            <h2
+              class="text-headline-lg font-headline-lg text-on-surface tracking-tight"
+            >
+              Vamos conversar?
+            </h2>
+            <p class="text-body-md font-body-md text-secondary leading-relaxed">
+              Entre em contato para discutir novos projetos, colaborações ou
+              oportunidades de desenvolvimento.
+            </p>
+          </div>
+          <!-- Contact Links / Functional Blocks -->
+          <div class="flex flex-col gap-2.5 pt-1">
+            <!-- E-mail Block with Interactive Copy -->
+            <div
+              class="bg-surface-container-lowest border-outline-variant/50 flex flex-col gap-3 rounded-2xl border p-4"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-surface-container text-primary-container flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >mail</span
+                  >
+                </div>
+                <div class="flex min-w-0 flex-col">
+                  <span class="text-label-sm font-label-sm text-secondary"
+                    >E-mail</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface truncate font-medium"
+                    id="email-text"
+                    >jgtomaine@hotmail.com</span
+                  >
+                </div>
+              </div>
+              <a
+                class="text-primary-container inline-flex items-center justify-center gap-1 text-sm font-medium hover:underline"
+                href="mailto:jgtomaine@hotmail.com"
+                >Enviar e-mail
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-outlined text-[14px]"
+                  data-icon="north_east"
+                  >north_east</span
+                ></a
+              >
+            </div>
+            <!-- LinkedIn Link -->
+            <a
+              class="bg-surface-container-lowest border-outline-variant/50 active:bg-surface flex flex-col gap-3 rounded-2xl border p-4 transition-colors"
+              href="https://www.linkedin.com/in/josé-guilherme-paro-monteiro-tomaine"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-surface-container text-primary-container flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                >
+                  <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-label-sm font-label-sm text-secondary"
+                    >LinkedIn</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface font-medium"
+                    >José Guilherme</span
+                  >
+                </div>
+              </div>
+              <span
+                class="text-primary-container inline-flex items-center justify-center gap-1 text-sm font-medium"
+                >Acessar perfil
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-outlined text-[14px]"
+                  >north_east</span
+                ></span
+              >
+            </a>
+            <!-- GitHub Link -->
+            <a
+              class="bg-surface-container-lowest border-outline-variant/50 active:bg-surface flex flex-col gap-3 rounded-2xl border p-4 transition-colors"
+              href="https://github.com/zehguilherme"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-surface-container text-primary-container flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                >
+                  <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-label-sm font-label-sm text-secondary"
+                    >GitHub</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface font-medium"
+                    >@zehguilherme</span
+                  >
+                </div>
+              </div>
+              <span
+                class="text-primary-container inline-flex items-center justify-center gap-1 text-sm font-medium"
+                >Ver repositórios
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-outlined text-[14px]"
+                  >north_east</span
+                ></span
+              >
+            </a>
+          </div>
+        </section>
+      </main>
+      <!-- FOOTER -->
+      <footer
+        class="bg-surface-container-low dark:bg-inverse-surface border-outline-variant/30 dark:border-outline/20 full-width border-t text-center"
+      >
+        <div
+          class="flex w-full flex-col items-center justify-center gap-4 px-4 py-8 text-center"
+        >
+          <span class="font-headline-sm text-on-surface text-lg font-semibold"
+            >JG</span
+          >
+          <p
+            class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant"
+          >
+            © 2025 José Guilherme. Todos os direitos reservados.
+          </p>
+          <div class="flex items-center gap-4">
+            <a
+              class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150"
+              href="mailto:jgtomaine@hotmail.com"
+              >E-mail</a
+            >
+            <span class="text-outline-variant/50 text-xs">•</span>
+            <a
+              class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150"
+              href="https://www.linkedin.com/in/josé-guilherme-paro-monteiro-tomaine"
+              rel="noopener noreferrer"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <span class="text-outline-variant/50 text-xs">•</span>
+            <a
+              class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150"
+              href="https://github.com/zehguilherme"
+              rel="noopener noreferrer"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Interactive JavaScript logic -->
+    <script>
+      // Mobile hamburger menu toggle & accessibility
+      const menuBtn = document.getElementById('menu-toggle-btn')
+      const mobileMenu = document.getElementById('mobile-menu')
+      const menuIcon = document.getElementById('menu-icon')
+
+      function toggleMenu(show) {
+        const isCurrentlyOpen = !mobileMenu.classList.contains('hidden')
+        const willOpen = typeof show === 'boolean' ? show : !isCurrentlyOpen
+        if (willOpen) {
+          mobileMenu.classList.remove('hidden')
+          mobileMenu.classList.add('flex')
+          menuBtn.setAttribute('aria-expanded', 'true')
+          menuIcon.textContent = 'close'
+        } else {
+          mobileMenu.classList.add('hidden')
+          mobileMenu.classList.remove('flex')
+          menuBtn.setAttribute('aria-expanded', 'false')
+          menuIcon.textContent = 'menu'
+        }
+      }
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => toggleMenu())
+
+        // Close menu on link click
+        const navLinks = mobileMenu.querySelectorAll('.nav-item')
+        navLinks.forEach((link) => {
+          link.addEventListener('click', () => toggleMenu(false))
+        })
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            toggleMenu(false)
+            menuBtn.focus()
+          }
+        })
+      }
+
+      // Theme toggle indicator micro-interaction
+      const themeBtn = document.getElementById('theme-toggle')
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark')
+          const icon = themeBtn.querySelector('.material-symbols-outlined')
+          if (icon) {
+            icon.textContent = isDark ? 'light_mode' : 'dark_mode'
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

@@ -2,16 +2,16 @@
 
 ## Purpose
 
-Shared utilities and content constants.
+Shared utilities and portfolio content constants.
 
 ## Boundaries
 
 - Owns `lib/constants.ts` and `lib/utils.ts`.
-- Does not own rendering logic or route concerns.
+- Does not own rendering or route concerns.
 
 ## Key Files
 
-- `lib/constants.ts` - personal info, the three portfolio projects, and skills categories
+- `lib/constants.ts` - personal info, three projects with category strings, and every skills category
 - `lib/utils.ts` - shared helpers such as `cn()`
 
 ## Verification
@@ -21,5 +21,6 @@ Shared utilities and content constants.
 
 ## Constraints
 
-- Keep content data normalized and easy for sections to consume.
-- Avoid duplicating strings that already belong in constants.
+- Keep content factual and normalized for the section components.
+- Preserve project order: Ficha de Treino, Studio Amanda Borges, Naturella.
+- Project categories are Web App, Website Institucional, and Catálogo Digital.

@@ -14,6 +14,7 @@ export const PROJECTS = [
   {
     id: 3,
     title: 'Ficha de Treino',
+    category: 'Web App',
     description:
       'Aplicação web para gerenciar treinos semanais, consultar exercícios e acompanhar a conclusão de cada treino.',
     tags: [
@@ -31,6 +32,7 @@ export const PROJECTS = [
   {
     id: 2,
     title: 'Studio Amanda Borges',
+    category: 'Website Institucional',
     description:
       'Portfólio online da arquiteta Amanda Borges. Nele você pode conhecer um pouco mais sobre seus principais projetos, uma breve descrição sobre ela e como pode entrar em contato.',
     tags: [
@@ -48,6 +50,7 @@ export const PROJECTS = [
   {
     id: 1,
     title: 'Naturella',
+    category: 'Catálogo Digital',
     description:
       'Loja especializada na fabricação de peças decorativas em concreto',
     tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS'],
