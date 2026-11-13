@@ -2,48 +2,60 @@
 
 ## Current State
 
-The modular harness is in place for the portfolio app. Local skills now live in `.agents/skills` for shared Codex and Opencode use.
+Issue #282 redesign is implemented. Production build, lint, typecheck, responsive browser checks, screenshot capture, and documentation synchronization are complete.
+
+The contact card now follows the centered 1240px section container used by Projects and About.
+
+Footer links now use the same hover text color as desktop navigation links.
+
+The footer brand mark now displays “JG”, matching Stitch; the copyright still uses José Guilherme.
+
+Outlined hero and GitHub project buttons use brighter dark-mode hover colors, with light-mode colors preserved.
+
+Mobile menu links use the stronger `surface-active` hover background in both themes.
+
+Project technology chips use less padding and gaps below 375px to keep six-tag cards to two rows.
+
+Technology chips now keep their natural height when the reserved tag slot has extra vertical space.
+
+Mobile project cards now use shorter description and technology slots and smaller gaps before previews and actions; tablet and desktop spacing is unchanged.
+
+Project and skills technology pills use a brighter `#1f3342` dark-mode surface; light-mode colors are unchanged.
+
+Browser screenshots reviewed both pill groups in dark mode. Computed light chip remains `#e9eef7`; dark pill text contrast is 11.96:1.
+
+The JG favicon now matches the header wordmark more closely and switches text color for the system light/dark theme.
+
+About content uses the same bordered, rounded semantic card as Contact; mobile and tablet stack the content and use a horizontal divider before skills.
+
+JSX links across the app and section components now use Next.js `Link`; existing styling, hrefs, and external-link attributes are preserved.
 
 ## Key Files
 
-- `AGENTS.md` - root index and working rules
-- `feature_list.json` - active UI feature list
-- `progress.md` - current harness status
-- `init.sh` - baseline verification entry point
-- `DESIGN.md` - design system source of truth
-- `PRODUCT.md` - product context
-- `.agents/skills/` - local skills shared by Codex and Opencode
-- `.agents/skills/documentation-sync/SKILL.md` - living-document synchronization workflow
-- `public/images/ficha-treino.png` - Ficha de Treino project card screenshot
-- `app/app.md`, `components/components.md`, `components/ui/ui.md`, `lib/lib.md`, `tests/tests.md`, `docs/superpowers/superpowers.md`
-- `app/robots.ts` and `app/sitemap.ts` - native crawler metadata routes
-- `public/images/og-image.png` - horizontal Open Graph preview image
+- `app/globals.css`, `app/layout.tsx` - semantic light/dark tokens, local fonts, early theme initialization
+- `components/` - navigation, hero, project cards, biography, contact, and footer
+- `components/theme-toggle.tsx` - persisted theme control
+- `app/fonts/` - self-hosted Clash Display WOFF2 and license/source note
+- `DESIGN.md`, `PRODUCT.md`, module docs - synchronized design and product behavior
+- `docs/superpowers/references/issue-282/` - original Stitch exports
+- `tests/screenshots/issue-282-*.png` - production browser captures
+- `feature_list.json`, `progress.md` - current feature and verification state
 
 ## Verification
 
-- `opencode debug skill`
-- `codex debug prompt-input`
-- `npm run lint`
-- `npm run build`
-- `npm run format:check` currently reports pre-existing formatting drift outside this migration
-- `git diff --check` passed; the new skill and Markdown files were formatted with Prettier
-- `npx tsc --noEmit`, `npm run lint`, `npm run build`, and `git diff --check` passed for the metadata routes
+- `/icon.svg` returned 200 and parsed as valid XML; production build includes the static icon route.
+- Browser preview timed out; the icon was checked through the served SVG response and production build.
+- `npm run lint`, `npx tsc --noEmit`, and `npm run build` passed after the favicon change.
+- `npm run lint`, `npx tsc --noEmit`, `npm run build`, targeted Prettier, JSON parsing, and `git diff --check` passed after the About desktop change.
+- Whole-repo `npm run format:check` still flags only pre-existing formatting drift in `package.json` and `package-lock.json`.
+- Fresh-context review of the focused About patch found no issues.
+- About browser review at 320px, 390px, 768px, 1023px, 1024px, and 1440px confirmed unboxed stacked content with a horizontal divider through 1023px and unboxed two-column content with a vertical divider from 1024px; there is no horizontal overflow.
+- The desktop layout assertion failed against the original card styling and passed after the change.
+- Production browser checked theme preference, project images, menu keyboard behavior, 404 recovery, and responsive widths 320/390/768/1024/1440.
+- This spacing adjustment was reviewed in a 390px project-section screenshot; 1440px computed spacing values remained unchanged.
+- `npm run lint`, `npx tsc --noEmit`, `npm run build`, targeted Prettier, JSON parse, and `git diff --check` passed. Whole-repo `npm run format:check` only flags package.json and package-lock.json. `init.sh` could not start because WSL Bash access is denied; ran lint/build directly.
 
 ## Notes
 
-- 2026-08-14: Removed the “Principais tecnologias” paragraph from components/about.tsx. Lint, typecheck, Prettier, diff-check, and build passed; no new accessibility findings.
-
-- The app is a frontend-only Next.js portfolio with a single home route and a 404 page.
-- The app publishes `/robots.txt` and `/sitemap.xml` for crawler discovery.
-- Existing screenshot artifacts live under `tests/screenshots/`.
-- 2026-08-11: `lib/constants.ts` `SKILLS_CATEGORIES` updated (Back-end: +Node.js, SQL, Docker, Autenticação e Autorização; Ferramentas: +Vercel). Lint/build verified.
-- 2026-08-11: Docs aligned to current positioning — `PRODUCT.md`, `README.md`/`README-en.md` (description + regenerated `home.png`), `AGENTS.md` (Next.js ^16.3.0).
-- 2026-08-11: `.github/img/home.png` re-captured as viewport-only (1280x800, first visible area, no scroll). `profile.png` untouched.
-- 2026-08-11: `.github/img/home.png` re-captured with scrollbar hidden via injected CSS (`scrollbar-width:none` + `::-webkit-scrollbar{display:none}`).
-- 2026-08-11: Local skills moved from `.opencode/skills` to `.agents/skills`; Opencode loads that shared folder without project-local `.opencode` config.
-- 2026-09-07: Added the frontend-specific `documentation-sync` skill, made it required before completion in `AGENTS.md`, and excluded historical `docs/superpowers/` plans from routine synchronization.
-- 2026-09-07: Added Ficha de Treino to `lib/constants.ts` and synchronized the project documentation; `components/projects.tsx` required no logic change.
-- 2026-09-07: Reordered `PROJECTS` to Ficha de Treino, Studio Amanda Borges, and Naturella; rendering logic remains unchanged.
-- 2026-09-07: Typecheck, lint, build, Prettier, JSON parsing, and diff-check passed. Browser inspection confirmed the new card image, tags, and outbound links at `http://localhost:3000/#projects` (683px mobile viewport); Python Playwright helper was unavailable because Python is not installed.
-- 2026-09-13: Open Graph metadata now points to `public/images/og-image.png` (1200x630, standard social-preview dimensions) and uses a shortened social description. Lint, typecheck, build, Prettier, and diff-check passed; PNG dimensions were validated from the PNG header with PowerShell.
-- 2026-09-21: Added a Ledger Line bottom divider to the mobile navigation dropdown so it separates clearly from page content.
+- The browser tool reports local Vercel Analytics requests as 404 because the local production server is not deployed. This is expected locally.
+- No Git operation has been performed.

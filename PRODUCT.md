@@ -23,7 +23,8 @@ A software developer with a wide, production-ready front-end stack (Vue/Nuxt, Re
 
 ## Operating Context
 
-- Single-page site, pt-BR copy; sections: nav, hero, projects, about, footer.
+- Single-page site, pt-BR copy; sections: nav, hero, projects, about, contact, footer.
+- Supports light and dark themes; a saved preference takes priority, otherwise the system preference is used.
 - Contact paths: mailto (jgtomaine@hotmail.com), GitHub, LinkedIn; located in Bauru/SP, Brasil.
 - Deployed on Vercel; content centralized in lib/constants.ts.
 
@@ -31,6 +32,7 @@ A software developer with a wide, production-ready front-end stack (Vue/Nuxt, Re
 
 - Frontend-only (no backend, no CMS); content driven by lib/constants.ts (PERSONAL_INFO, PROJECTS, SKILLS_CATEGORIES).
 - Skip-to-content link, focus management, smooth scroll honoring prefers-reduced-motion.
+- Contact uses a `mailto:` link plus the existing LinkedIn and GitHub profiles; no form or copy-to-clipboard action.
 - Content (projects, photo, copy) may evolve over time; must stay cheap to update.
 
 ## Brand Commitments

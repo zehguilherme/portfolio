@@ -14,13 +14,18 @@
 
 This is my online portfolio! I'm a software developer specialized in creating modern and functional interfaces, with a strong focus on front-end and growing back-end experience. Here you can learn more about me, my main projects, and how to get in touch.
 
+## 🎨 Visual reference
+
+[Portfolio Stitch project](https://stitch.withgoogle.com/projects/5719660689573789097) — reference for desktop and mobile screens in light and dark themes.
+
 ## 🚀 Technologies
 
 ### Front-end
 
 - [NextJS](https://nextjs.org/) - Framework (based on [ReactJS](https://react.dev/)) used for building interfaces
 - [TypeScript](https://www.typescriptlang.org/) - Package that adds static typing to JavaScript
-- [Google Fonts](https://fonts.google.com/) - Library containing various fonts
+- [Fontshare](https://www.fontshare.com/fonts/clash-display) - Clash Display for headings and brand mark
+- [Google Fonts](https://fonts.google.com/) - Inter and JetBrains Mono
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework for styling
 
 ## 🚀 Getting Started

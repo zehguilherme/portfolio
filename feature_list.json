@@ -12,7 +12,7 @@
         "Verify the navigation, hero, projects, about, and footer sections render in order",
         "Verify the main content is reachable from the skip link and section anchors"
       ],
-      "passes": false,
+      "passes": true,
       "evidence": [
         "Sobre copy updated in components/about.tsx",
         "Vercel removed from lib/constants.ts",
@@ -21,7 +21,9 @@
         "npx tsc --noEmit passed",
         "npm run build passed",
         "Prettier check passed",
-        "No new accessibility findings in the changed section"
+        "No new accessibility findings in the changed section",
+        "Issue #282: production browser checked responsive widths 320, 390, 768, 1024, and 1440px; theme, menu keyboard behavior, project images, and 404 recovery checked.",
+        "npm run lint, npx tsc --noEmit, npm run build, Prettier check, and git diff --check passed."
       ]
     },
     {
@@ -36,9 +38,15 @@
         "Verify the mobile menu opens and closes"
       ],
       "evidence": [
-        "Mobile menu panel now has a Ledger Line bottom border to separate it from page content"
+        "Mobile menu panel now has a Ledger Line bottom border to separate it from page content",
+        "Desktop navigation link hover color matches apps.oprimo.dev (#080e14)",
+        "Desktop navigation links sit beside the brand mark, matching the Stitch reference.",
+        "Removed the Início menu item; the JG brand link remains the home anchor.",
+        "Mobile hamburger control shares the theme toggle design and hover treatment.",
+        "Issue #282: production browser checked responsive widths 320, 390, 768, 1024, and 1440px; theme, menu keyboard behavior, project images, and 404 recovery checked.",
+        "npm run lint, npx tsc --noEmit, npm run build, Prettier check, and git diff --check passed."
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "ui-003",
@@ -52,12 +60,23 @@
         "Verify external links open the expected destinations",
         "Verify the Ficha de Treino card shows its image, live link, repository, and technology tags"
       ],
-      "passes": false,
+      "passes": true,
       "evidence": [
         "Ficha de Treino card added to lib/constants.ts with live URL, repository, image, description, and tags",
+        "Project actions use the hero primary button style for Ver Projeto plus an outlined GitHub button, with no trailing diagonal arrows; the six Stitch screen variants use the same primary style.",
+        "Project action row keeps 16px spacing below the preview, matching the 16px spacing used above.",
+        "Project descriptions reserve four lines and technology tags two rows, aligning titles, copy, tags, and preview images across cards while actions remain at the bottom.",
+        "Mobile project cards use shorter description and tag slots and smaller gaps before previews and actions; tablet and desktop spacing is unchanged.",
+        "Project and skills technology pills use a brighter #1f3342 surface in dark mode while light mode retains its existing chip color.",
+        "Browser check confirmed both pill groups use the dark token, light mode remains #e9eef7, and text contrast on dark pills is 11.96:1.",
+        "At 390px the project section screenshot shows compact mobile spacing; at 1440px computed description, tag, category-gap, and card-padding values match desktop values.",
+        "Stitch desktop/mobile screens in both themes and mobile menu variants now use matching description and technology slots across all three project cards.",
+        "Stitch desktop, mobile, and mobile-menu screen HTML updated in both themes; all 36 project action links are arrow-free.",
         "Local image available at public/images/ficha-treino.png",
         "Browser DOM/screenshot check confirmed title, image, tags, and both outbound links",
-        "External links retain noopener noreferrer"
+        "External links retain noopener noreferrer",
+        "Issue #282: production browser checked responsive widths 320, 390, 768, 1024, and 1440px; theme, menu keyboard behavior, project images, and 404 recovery checked.",
+        "npm run lint, npx tsc --noEmit, npm run build, Prettier check, and git diff --check passed."
       ]
     },
     {
@@ -71,7 +90,8 @@
         "Verify the 404 page renders",
         "Verify the return-to-home button points back to the root route"
       ],
-      "passes": false
+      "passes": true,
+      "evidence": ["404 route renders and its home link has href /."]
     },
     {
       "id": "tooling-001",
@@ -119,6 +139,41 @@
         "git diff --check passed",
         "Open Graph image updated to a standard 1200x630 PNG with visible name, role, and value proposition",
         "Open Graph, page, and Twitter descriptions shortened below the evaluator's truncation threshold"
+      ]
+    },
+    {
+      "id": "ui-005",
+      "type": "ui",
+      "area": "portfolio-redesign",
+      "category": "functional",
+      "description": "Issue #282 redesign applies a responsive light/dark system, refreshed portfolio sections, contact paths, and accessible navigation.",
+      "steps": [
+        "Open home in light and dark themes",
+        "Verify responsive hero, projects, about, contact, and footer",
+        "Verify preference persistence and keyboard navigation"
+      ],
+      "passes": true,
+      "evidence": [
+        "Implemented issue #282 visual specification with self-hosted Clash Display, semantic tokens, persistent theme control, refreshed sections, and contact links.",
+        "Contact section card uses the shared centered 1240px section container and responsive horizontal padding.",
+        "Theme toggle transparent background, border, icon color, 18px moon/sun SVGs, and hover state match apps.oprimo.dev.",
+        "Footer link hover color matches the desktop navigation link hover color.",
+        "Footer displays the JG brand mark and keeps José Guilherme in the dynamic copyright line, matching Stitch.",
+        "Outlined hero and GitHub project buttons have a brighter hover surface and border in dark mode; light-mode hover colors are unchanged.",
+        "Mobile menu link hover uses the surface-active token in light and dark themes.",
+        "Project technology chips use compact padding and gaps below 375px, keeping six-tag cards within two rows at 320px.",
+        "Technology chips remain content-height when the reserved tag slot has extra vertical space.",
+        "All links and buttons use a pointer cursor through the global stylesheet.",
+        "Production browser checked both themes, mobile menu Escape/focus restoration, project images, and 320, 390, 768, 1024, and 1440px widths.",
+        "About uses an unboxed editorial layout at every size; the divider is vertical on desktop and horizontal between stacked sections on mobile and tablet.",
+        "About content uses the same bordered, rounded semantic card surface as Contact.",
+        "All JSX links use Next.js Link, preserving existing hrefs, attributes, and styling.",
+        "Browser review at 320px, 390px, 768px, 1023px, 1024px, and 1440px confirmed stacked mobile/tablet layout, two-column desktop layout, and no horizontal overflow.",
+        "Light and dark desktop layouts both use the unboxed editorial columns and theme-specific header-divider token.",
+        "The browser favicon uses the header's JG wordmark without a tile and adapts its text color to the system theme.",
+        "/icon.svg returned 200, parsed as valid XML, and was included in the production build.",
+        "npm run lint, npx tsc --noEmit, and npm run build passed after the desktop About layout change.",
+        "Screenshots: tests/screenshots/issue-282-desktop-light.png, issue-282-mobile-light.png, issue-282-mobile-dark.png, and issue-282-mobile-menu.png."
       ]
     }
   ]
