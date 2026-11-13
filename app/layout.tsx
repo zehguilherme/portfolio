@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/og-image.png',
+        url: '/images/og-image.png?v=287',
         width: 1200,
         height: 630,
         alt: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
@@ -73,7 +73,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
     description: socialDescription,
-    images: ['/images/og-image.png'],
+    images: [
+      {
+        url: '/images/og-image.png?v=287',
+        alt: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`,
+      },
+    ],
   },
 }
 
