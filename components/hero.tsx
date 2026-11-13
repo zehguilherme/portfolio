@@ -21,41 +21,55 @@ export function Hero() {
           <p className="text-text-supporting mb-7 max-w-2xl text-base leading-[1.6] sm:text-lg">
             {PERSONAL_INFO.description}
           </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button asChild variant="default" className="px-6">
+          <div className="flex w-full flex-col items-stretch gap-3 md:w-auto md:flex-row md:flex-wrap md:items-center">
+            <Button asChild variant="default" className="w-full px-6 md:w-auto">
               <Link href="#projects">
                 Ver Projetos <span aria-hidden="true">↓</span>
               </Link>
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="w-full md:w-auto">
               <Link href={`mailto:${PERSONAL_INFO.email}`}>
                 <MailIcon aria-hidden="true" /> E-mail
               </Link>
             </Button>
             <span
               aria-hidden="true"
-              className="border-border-surface mx-1 hidden h-8 border-l sm:block"
+              className="border-border-surface mx-1 hidden h-8 border-l md:block"
             />
-            <Button asChild variant="outline" size="icon">
-              <Link
-                href={PERSONAL_INFO.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar perfil no GitHub (abre em nova aba)"
+            <div className="flex w-full flex-col items-stretch gap-3 md:w-auto md:flex-row md:items-center">
+              <Button
+                asChild
+                variant="outline"
+                size="icon"
+                className="w-full md:w-11"
               >
-                <GithubIcon aria-hidden="true" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="icon">
-              <Link
-                href={PERSONAL_INFO.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar perfil no LinkedIn (abre em nova aba)"
+                <Link
+                  href={PERSONAL_INFO.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visitar perfil no GitHub (abre em nova aba)"
+                >
+                  <GithubIcon aria-hidden="true" />
+                  <span className="md:hidden">GitHub</span>
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="icon"
+                className="w-full md:w-11"
               >
-                <LinkedInIcon aria-hidden="true" />
-              </Link>
-            </Button>
+                <Link
+                  href={PERSONAL_INFO.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visitar perfil no LinkedIn (abre em nova aba)"
+                >
+                  <LinkedInIcon aria-hidden="true" />
+                  <span className="md:hidden">LinkedIn</span>
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
 

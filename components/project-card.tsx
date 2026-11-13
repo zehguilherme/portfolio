@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <article className="h-full">
       <Card className="flex h-full flex-col rounded-2xl p-5 lg:rounded-3xl lg:p-6">
         <div className="mb-2 flex items-center justify-between gap-2 md:mb-4">
-          <span className="bg-surface-soft text-action-hover border-border-surface font-mono-tech rounded-full border px-3 py-1 text-[11px] leading-4">
+          <span className="bg-surface-chip text-text-primary font-mono-tech rounded-full px-3 py-1.5 text-xs">
             {project.category}
           </span>
         </div>
@@ -36,12 +36,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <ul
           aria-label={`Tecnologias de ${project.title}`}
-          className="mt-3 flex min-h-12 list-none flex-wrap content-center items-center gap-1 p-0 min-[375px]:gap-1.5 md:mt-4 md:min-h-14"
+          className="mt-3 flex min-h-12 list-none flex-wrap content-center items-center gap-2 p-0 md:mt-4 md:min-h-14"
         >
           {project.tags.map((tag) => (
             <li
               key={tag}
-              className="bg-surface-chip text-text-primary font-mono-tech rounded-full px-0.5 py-1 text-[11px] leading-4 min-[375px]:px-2.5"
+              className="bg-surface-chip text-text-primary font-mono-tech rounded-full px-3 py-1.5 text-xs"
             >
               {tag}
             </li>
@@ -58,7 +58,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-        <div className="mt-auto grid grid-cols-2 gap-2 pt-4">
+        <div className="mt-auto grid grid-cols-1 gap-2 pt-4 md:grid-cols-2">
           <Button asChild variant="default" className="px-2">
             <Link
               href={project.link}
