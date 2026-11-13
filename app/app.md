@@ -11,7 +11,7 @@ Owns the Next.js app router entry points, root layout, metadata, and the home ro
 
 ## Key Files
 
-- `app/layout.tsx` - metadata, font setup, early theme initialization, analytics, skip link
+- `app/layout.tsx` - metadata, font setup, early theme initialization, analytics, skip link; Open Graph and Twitter share the 1200×630 portfolio image at `/images/og-image.png?v=287`.
 - The skip link uses Next.js `Link` to preserve consistent link handling.
 - `app/robots.ts` - crawler access rules and sitemap reference
 - `app/sitemap.ts` - public URL sitemap

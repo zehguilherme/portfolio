@@ -6,6 +6,8 @@
 
 ## Completed
 
+- Issue #287: refreshed the 1200×630 social image and versioned the Open Graph and Twitter metadata; production build, lint and typecheck passed.
+
 - Implemented the issue #282 visual system, responsive portfolio sections, persistent light/dark theme, contact section, mobile navigation behavior, and self-hosted Clash Display font files.
 - Synchronized `DESIGN.md`, `PRODUCT.md`, module docs, README font details, feature evidence, and test screenshot inventory.
 - Aligned the contact card to the shared 1240px section container used by Projects and About.

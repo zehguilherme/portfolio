@@ -2,6 +2,8 @@
 
 ## Current State
 
+Issue #287: social preview image and metadata updated. Build, lint and TypeScript passed; whole-repository formatting reports pre-existing drift.
+
 Issue #282 redesign is implemented. Production build, lint, typecheck, responsive browser checks, screenshot capture, and documentation synchronization are complete.
 
 Issue #291 aligns the two project action buttons to the same 14px semibold text and 12px corners.

@@ -111,7 +111,9 @@
         "Verify the return-to-home button points back to the root route"
       ],
       "passes": true,
-      "evidence": ["404 route renders and its home link has href /."]
+      "evidence": [
+        "404 route renders and its home link has href /."
+      ]
     },
     {
       "id": "tooling-001",
@@ -158,7 +160,8 @@
         "npm run build passed",
         "git diff --check passed",
         "Open Graph image updated to a standard 1200x630 PNG with visible name, role, and value proposition",
-        "Open Graph, page, and Twitter descriptions shortened below the evaluator's truncation threshold"
+        "Open Graph, page, and Twitter descriptions shortened below the evaluator's truncation threshold",
+        "Issue #287: Open Graph and Twitter share the refreshed 1200×630 image with versioned URLs and alt text; production build, lint and typecheck passed."
       ]
     },
     {
