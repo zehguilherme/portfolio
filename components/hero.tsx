@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 import { GithubIcon, LinkedInIcon, MailIcon } from '@/components/ui/icon'
 import { PERSONAL_INFO } from '@/lib/constants'
 
@@ -21,40 +22,40 @@ export function Hero() {
             {PERSONAL_INFO.description}
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            <Link
-              href="#projects"
-              className="bg-action-primary text-text-on-action hover:bg-action-hover focus-visible:outline-focus-ring inline-flex min-h-11 items-center gap-2 rounded-full px-6 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-            >
-              Ver Projetos <span aria-hidden="true">↓</span>
-            </Link>
-            <Link
-              href={`mailto:${PERSONAL_INFO.email}`}
-              className="bg-surface-card text-text-primary border-border-surface hover:bg-surface-soft dark:hover:bg-surface-active dark:hover:border-border-interactive-hover focus-visible:outline-focus-ring inline-flex min-h-11 items-center gap-2 rounded-full border px-5 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-            >
-              <MailIcon aria-hidden="true" /> E-mail
-            </Link>
+            <Button asChild variant="default" className="px-6">
+              <Link href="#projects">
+                Ver Projetos <span aria-hidden="true">↓</span>
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href={`mailto:${PERSONAL_INFO.email}`}>
+                <MailIcon aria-hidden="true" /> E-mail
+              </Link>
+            </Button>
             <span
               aria-hidden="true"
               className="border-border-surface mx-1 hidden h-8 border-l sm:block"
             />
-            <Link
-              href={PERSONAL_INFO.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visitar perfil no GitHub (abre em nova aba)"
-              className="bg-surface-card text-text-primary border-border-surface hover:bg-surface-soft dark:hover:bg-surface-active dark:hover:border-border-interactive-hover focus-visible:outline-focus-ring inline-flex size-11 items-center justify-center rounded-full border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-            >
-              <GithubIcon aria-hidden="true" />
-            </Link>
-            <Link
-              href={PERSONAL_INFO.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visitar perfil no LinkedIn (abre em nova aba)"
-              className="bg-surface-card text-text-primary border-border-surface hover:bg-surface-soft dark:hover:bg-surface-active dark:hover:border-border-interactive-hover focus-visible:outline-focus-ring inline-flex size-11 items-center justify-center rounded-full border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-            >
-              <LinkedInIcon aria-hidden="true" />
-            </Link>
+            <Button asChild variant="outline" size="icon">
+              <Link
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar perfil no GitHub (abre em nova aba)"
+              >
+                <GithubIcon aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon">
+              <Link
+                href={PERSONAL_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar perfil no LinkedIn (abre em nova aba)"
+              >
+                <LinkedInIcon aria-hidden="true" />
+              </Link>
+            </Button>
           </div>
         </div>
 

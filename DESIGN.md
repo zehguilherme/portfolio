@@ -107,7 +107,7 @@ The header theme toggle stores an explicit selection in local storage. On first 
 - Breakpoints: mobile below 768px; tablet 768–1023px; desktop from 1024px.
 - Spacing: 4, 8, 12, 16, 20, 24, 32, 36, 40, 48, 64px.
 - Project card padding 20px mobile, 24px desktop. Hero vertical padding 28/30px mobile plus main spacing, 64/36px desktop.
-- Control radius 12px; card radius 16px mobile and 24px desktop; pill actions 9999px. Media radii are separate.
+- Control and button radius 12px; card radius 16px mobile and 24px desktop; pill radius 9999px is reserved for tags and chips. Media radii are separate.
 - 1px borders, subtle shadows, 150–200ms transitions.
 - Visible 2px focus indicator with 2px offset; targets at least 44×44px.
 - Links and buttons use the pointer cursor.
@@ -115,13 +115,14 @@ The header theme toggle stores an explicit selection in local storage. On first 
 - Mobile menu links use the `surface-active` background on hover in light and dark themes.
 - Desktop navigation links sit beside the brand mark on the left; theme controls stay on the right.
 - The JG favicon follows the header wordmark, with dark text in light system mode and light text in dark system mode.
-- Project card actions use two equal-width controls, spaced 16px below the preview: the filled project link reuses the hero `Ver Projetos` teal, white text, pill shape, and hover colors; the GitHub link stays outlined with its GitHub icon. Do not add trailing diagonal arrows; keep each action at least 44px tall.
-- In dark mode, outlined hero and GitHub project buttons use the `surface-active` background and the `#617789` interactive-hover border (3.22:1 against the hover surface); light-mode hover colors remain unchanged.
+- Hero and project actions all use the shared Button primitive: primary links use the default variant, E-mail and GitHub links use the outline variant, and social links use the icon size. Every button uses the theme toggle's 12px radius in both themes. Icon-and-label buttons have an 8px gap by default. Project card actions are equal-width and spaced 16px below the preview; keep each action at least 44px tall and icon-only links named accessibly.
+- Icon-only social links keep 44px square targets.
+- Outline buttons and the theme toggle share a transparent background, header-divider border, supporting text, teal border/header text on hover, 12px radius, and 2px focus indicator in both themes.
 - Technology pills use the brighter `#1f3342` surface in dark mode; light-mode chip colors remain unchanged.
 - The About section uses the same bordered, rounded semantic card surface as Contact, with an editorial two-column layout and full-height divider on desktop, and a stacked flow with a horizontal divider before skills on mobile and tablet.
-- Project cards align descriptions and technology tags in reserved slots so preview images share a top edge. On mobile, the description and tag slots and the gaps before the preview and actions are shorter; tablet and desktop spacing remains unchanged. Chips keep their natural height and center within the tag slot. They use reduced padding and gaps below 375px; action buttons stay at the card bottom.
-- Theme toggle has a transparent background so the header surface shows through, matching apps.oprimo.dev. Its border uses the header divider token and its icons use supporting text at rest; on hover, the border changes to action teal and the icons to header text. Moon and sun icons are 18px.
-- The mobile menu button shares the theme toggle's transparent surface, border, icon colors, and hover state.
+- Project cards align descriptions and technology tags in reserved slots so preview images share a top edge. On mobile, the description and tag slots and the gap before the preview are shorter; the 16px gap between the preview and actions matches desktop. Chips keep their natural height and center within the tag slot. They use reduced padding and gaps below 375px; action buttons stay at the card bottom.
+- Theme toggle uses the outline Button variant with a transparent background. Its border uses the header divider token and its icons use supporting text at rest; on hover, the border changes to action teal and the icons to header text. Moon and sun icons are 18px.
+- The mobile menu button uses the same outline Button variant as the theme toggle.
 - Honor reduced motion and browser zoom.
 
 ## Migration status

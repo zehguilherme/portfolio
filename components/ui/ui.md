@@ -11,7 +11,7 @@ Reusable UI primitives for the portfolio.
 
 ## Key Files
 
-- `components/ui/button.tsx` - pill-shaped button variants with semantic theme colors and visible focus
+- `components/ui/button.tsx` - button variants with semantic theme colors, visible focus, a 12px radius, an 8px default icon-label gap, and `asChild` support for links; outline styling is shared by the theme and mobile-menu controls
 - `components/ui/card.tsx` - responsive card surface and layout primitives
 - `components/ui/input.tsx` - semantic input colors, focus, and disabled state
 - `components/ui/label.tsx` - accessible label primitive
