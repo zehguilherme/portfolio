@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import { MoonIcon, SunIcon } from '@/components/ui/icon'
 
 export function ThemeToggle() {
@@ -13,14 +14,15 @@ export function ThemeToggle() {
   }
 
   return (
-    <button
+    <Button
       type="button"
+      variant="outline"
+      size="icon"
       aria-label="Alternar tema claro ou escuro"
       onClick={toggleTheme}
-      className="text-text-supporting focus-visible:outline-focus-ring border-border-header hover:border-action-primary hover:text-text-hero flex size-11 items-center justify-center rounded-xl border bg-transparent transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
     >
       <MoonIcon aria-hidden="true" className="theme-icon-moon" />
       <SunIcon aria-hidden="true" className="theme-icon-sun" />
-    </button>
+    </Button>
   )
 }

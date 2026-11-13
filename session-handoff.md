@@ -4,6 +4,20 @@
 
 Issue #282 redesign is implemented. Production build, lint, typecheck, responsive browser checks, screenshot capture, and documentation synchronization are complete.
 
+Issue #291 aligns the two project action buttons to the same 14px semibold text and 12px corners.
+
+The Hero E-mail and icon-only GitHub/LinkedIn links use the shared outline Button primitive through `asChild`; E-mail has an 8px icon-label gap.
+
+All primary and outline actions in the Hero and project cards now also use the shared Button primitive through `asChild`.
+
+Dark-mode outline buttons match the theme toggle's transparent background, header-divider border, supporting text, and teal/text hover state.
+
+Shared Button sets an 8px default gap between icon and label; icon-only buttons remain unchanged.
+
+All shared Button variants and sizes use the same 12px radius in light and dark themes, matching the theme toggle.
+
+Outline colors, border, hover, and focus styling are centralized in the Button outline variant, shared by the theme toggle and mobile-menu control.
+
 The contact card now follows the centered 1240px section container used by Projects and About.
 
 Footer links now use the same hover text color as desktop navigation links.
@@ -18,7 +32,7 @@ Project technology chips use less padding and gaps below 375px to keep six-tag c
 
 Technology chips now keep their natural height when the reserved tag slot has extra vertical space.
 
-Mobile project cards now use shorter description and technology slots and smaller gaps before previews and actions; tablet and desktop spacing is unchanged.
+Mobile project cards use shorter description and technology slots and a smaller gap before previews; the 16px space between previews and actions now matches desktop.
 
 Project and skills technology pills use a brighter `#1f3342` dark-mode surface; light-mode colors are unchanged.
 
@@ -34,6 +48,7 @@ JSX links across the app and section components now use Next.js `Link`; existing
 
 - `app/globals.css`, `app/layout.tsx` - semantic light/dark tokens, local fonts, early theme initialization
 - `components/` - navigation, hero, project cards, biography, contact, and footer
+- `DESIGN.md`, `components/components.md`, `feature_list.json`, `progress.md` - issue #291 design and state records
 - `components/theme-toggle.tsx` - persisted theme control
 - `app/fonts/` - self-hosted Clash Display WOFF2 and license/source note
 - `DESIGN.md`, `PRODUCT.md`, module docs - synchronized design and product behavior
@@ -43,6 +58,9 @@ JSX links across the app and section components now use Next.js `Link`; existing
 
 ## Verification
 
+- Issue #291: `npm run lint`, `npx tsc --noEmit`, targeted Prettier check, and `git diff --check` passed. Static accessibility review confirmed 44px minimum action height, visible focus, descriptive labels, and safe new-tab attributes.
+- Project preview/action spacing is now 16px across breakpoints. Lint, TypeScript, production build, targeted Prettier, JSON validation, and `git diff --check` passed; whole-repo `npm run format:check` still flags 28 unrelated files.
+- Button radius normalization: ESLint, TypeScript, targeted Prettier, JSON validation, `git diff --check`, and production build passed; one transient font-resolution build error cleared on immediate retry.
 - `/icon.svg` returned 200 and parsed as valid XML; production build includes the static icon route.
 - Browser preview timed out; the icon was checked through the served SVG response and production build.
 - `npm run lint`, `npx tsc --noEmit`, and `npm run build` passed after the favicon change.

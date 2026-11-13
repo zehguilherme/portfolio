@@ -2,7 +2,7 @@
 
 - Status: Issue #282 portfolio redesign implemented and verified
 - Project type: frontend
-- Last updated: 2026-11-12
+- Last updated: 2026-11-13
 
 ## Completed
 
@@ -24,9 +24,21 @@
 - Replaced JSX anchor elements across the portfolio with Next.js Link while preserving link classes and attributes.
 - Archived the supplied Stitch exports under `docs/superpowers/references/issue-282/` before implementation.
 - Captured production screenshots in `tests/screenshots/issue-282-*.png` and refreshed `.github/img/home.png`.
+- Issue #291: aligned both project action labels to 14px semibold text and consistent 12px corners.
+- Reused the shared outline Button primitive for the Hero E-mail and project GitHub links so typography, radius, and focus styling stay aligned.
+- Set an 8px gap between the Hero E-mail icon and label, and moved its GitHub/LinkedIn icon-only links to the same outline Button primitive.
+- Migrated the Hero and project primary action links to the shared Button primitive, so every action in the supplied reference uses the same base component.
+- Aligned dark-mode outline buttons with the theme toggle's transparent background, header-divider border, supporting text, and hover state.
+- Set an 8px default icon-label gap in the shared Button primitive and removed per-button gap overrides.
+- Standardized all shared Button radii to 12px in both themes, matching the theme toggle.
+- Centralized outline colors, border, hover, radius, and focus in Button's outline variant; the theme toggle and mobile-menu control now reuse it.
+- Matched the mobile project-card spacing between preview images and action buttons to desktop at 16px.
 
 ## Verification
 
+- Issue #291: `npm run lint`, `npx tsc --noEmit`, targeted Prettier check, and `git diff --check` passed; changed links retain 44px targets, visible focus, descriptive labels, and safe new-tab attributes.
+- Project preview/action spacing is now 16px across breakpoints. Lint, TypeScript, production build, targeted Prettier, JSON validation, and diff check passed; whole-repo `npm run format:check` still flags 28 unrelated files.
+- Radius normalization: ESLint, TypeScript, targeted Prettier, JSON validation, `git diff --check`, and production build passed. The first build attempt hit a transient `next/font/google` resolution error; the immediate retry passed.
 - `/icon.svg` returned 200 and parsed as valid XML; production build includes the static icon route.
 - Browser preview timed out; the icon was checked through the served SVG response and production build.
 - `npm run lint`, `npx tsc --noEmit`, and `npm run build` passed after the favicon change.

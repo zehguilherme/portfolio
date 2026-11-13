@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Card } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { ExternalLinkIcon, GithubIcon } from '@/components/ui/icon'
 
 interface ProjectCardProps {
@@ -57,26 +58,33 @@ export function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-        <div className="mt-auto grid grid-cols-2 gap-2 pt-3 md:pt-4">
-          <Link
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Ver ${project.title} (abre em nova aba)`}
-            className="bg-action-primary text-text-on-action hover:bg-action-hover focus-visible:outline-focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+        <div className="mt-auto grid grid-cols-2 gap-2 pt-4">
+          <Button asChild variant="default" className="px-2">
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver ${project.title} (abre em nova aba)`}
+            >
+              <ExternalLinkIcon aria-hidden="true" />
+              Ver Projeto
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="min-h-11 px-1.5"
           >
-            <ExternalLinkIcon aria-hidden="true" />
-            Ver Projeto
-          </Link>
-          <Link
-            href={project.repository}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Ver repositório de ${project.title} (abre em nova aba)`}
-            className="border-border-surface bg-surface-card text-text-primary hover:bg-surface-chip dark:hover:bg-surface-active dark:hover:border-border-interactive-hover focus-visible:outline-focus-ring inline-flex min-h-11 items-center justify-center gap-1 rounded-2xl border px-1.5 text-xs font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-          >
-            <GithubIcon aria-hidden="true" /> GitHub
-          </Link>
+            <Link
+              href={project.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver repositório de ${project.title} (abre em nova aba)`}
+            >
+              <GithubIcon aria-hidden="true" /> GitHub
+            </Link>
+          </Button>
         </div>
       </Card>
     </article>

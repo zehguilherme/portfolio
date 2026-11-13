@@ -15,12 +15,12 @@ Holds the page sections that compose the portfolio experience.
 - Desktop navigation links use the header text color on hover, matching the reference site.
 - Footer links use the same hover text color as desktop navigation links.
 - Mobile menu links use the `surface-active` hover background in both themes.
-- `components/theme-toggle.tsx` - persisted light/dark selection with transparent background and reference colors, border, and hover state
-- The theme toggle uses the header divider color for its border, matching apps.oprimo.dev.
-- `components/hero.tsx` - introduction, real profile photo, and contact actions
-- Outlined hero and GitHub project buttons use a brighter surface and border on hover in dark mode; light hover colors remain unchanged.
+- `components/theme-toggle.tsx` - persisted light/dark selection using the shared outline Button variant
+- The theme toggle and mobile-menu control share the outline Button's border, transparent background, foreground, hover, radius, and focus styles.
+- `components/hero.tsx` - introduction, real profile photo, and contact actions; all four Hero actions use the shared Button primitive with default, outline, and icon sizes
+- Hero E-mail, social, and project GitHub actions use the shared outline Button styling in both themes.
 - `components/projects.tsx` - responsive project grid
-- `components/project-card.tsx` - semantic project article with aligned description/tag/image rows, naturally sized technology chips centered in their reserved slot, tighter mobile vertical spacing, compact chips below 375px, and paired Stitch-style outbound action buttons
+- `components/project-card.tsx` - semantic project article with aligned description/tag/image rows, naturally sized technology chips centered in their reserved slot, tighter mobile vertical spacing, 16px spacing between previews and actions at every breakpoint, compact chips below 375px, and paired outbound actions using the shared Button primitive's default and outline variants
 - Project and skills technology pills use a brighter chip surface in dark mode; light mode is unchanged.
 - `components/about.tsx` - complete biography and every skills category
 - About content sits in the same bordered, rounded card as Contact, with a semantic white surface; it uses an editorial two-column layout on desktop and a stacked layout on mobile and tablet.
