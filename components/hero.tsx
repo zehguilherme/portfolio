@@ -78,8 +78,9 @@ export function Hero() {
             src="/images/profile.png"
             alt="José Guilherme"
             fill
-            preload
-            sizes="(max-width: 1023px) 80vw, 400px"
+            loading="eager"
+            fetchPriority="high"
+            sizes="(max-width: 351px) calc(100vw - 32px), (max-width: 1023px) 320px, 400px"
             className="object-cover"
           />
         </div>
