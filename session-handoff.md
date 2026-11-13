@@ -10,6 +10,8 @@ Issue #291 aligns the two project action buttons to the same 14px semibold text 
 
 Issue #292 refreshes `.github/img/portfolio-preview.png` from the published desktop portfolio; `README.md` and `README-en.md` both use this repository-relative image.
 
+Issue #293 adds the public, view-only Stitch project link to both READMEs, `DESIGN.md`, and `AGENTS.md`. Anonymous browser access loaded the project canvas; Stitch sharing reports `ANYONE` with `READER` access.
+
 The Hero E-mail and icon-only GitHub/LinkedIn links use the shared outline Button primitive through `asChild`; E-mail has an 8px icon-label gap.
 
 All primary and outline actions in the Hero and project cards now also use the shared Button primitive through `asChild`.

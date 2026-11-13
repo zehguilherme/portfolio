@@ -40,6 +40,7 @@
 - Hero GitHub and LinkedIn actions show their names beside the icons below 768px; larger screens remain icon-only.
 - Project card actions now stack at full width on mobile and return to two equal columns from 768px.
 - Issue #292: refreshed the README cover image from the current published portfolio and updated both README references to `.github/img/portfolio-preview.png`.
+- Issue #293: published the read-only Stitch project link in both READMEs, `DESIGN.md`, and `AGENTS.md`; anonymous access and reader permission were verified.
 
 ## Verification
 
