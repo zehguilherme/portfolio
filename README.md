@@ -2,7 +2,7 @@
   Portfolio
 </h1>
 
-![Captura de tela da página inicial](./.github/img/home.png)
+![Captura de tela atual do portfólio](./.github/img/portfolio-preview.png)
 
 <div align="center">
   <a href="README-en.md">English</a>

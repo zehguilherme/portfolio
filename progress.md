@@ -37,10 +37,12 @@
 - Hero actions stack at full width below 768px and return to a horizontal row from 768px; all buttons retain at least 44px height.
 - Hero GitHub and LinkedIn actions show their names beside the icons below 768px; larger screens remain icon-only.
 - Project card actions now stack at full width on mobile and return to two equal columns from 768px.
+- Issue #292: refreshed the README cover image from the current published portfolio and updated both README references to `.github/img/portfolio-preview.png`.
 
 ## Verification
 
 - Issue #291: `npm run lint`, `npx tsc --noEmit`, targeted Prettier check, and `git diff --check` passed; changed links retain 44px targets, visible focus, descriptive labels, and safe new-tab attributes.
+- Issue #292: captured and reviewed only the published site's initial 1440×900 browser viewport; both README references resolve to `.github/img/portfolio-preview.png`. GitHub's rendered repository page cannot show the uncommitted replacement yet.
 - Project preview/action spacing is now 16px across breakpoints. Lint, TypeScript, production build, targeted Prettier, JSON validation, and diff check passed; whole-repo `npm run format:check` still flags 28 unrelated files.
 - Radius normalization: ESLint, TypeScript, targeted Prettier, JSON validation, `git diff --check`, and production build passed. The first build attempt hit a transient `next/font/google` resolution error; the immediate retry passed.
 - `/icon.svg` returned 200 and parsed as valid XML; production build includes the static icon route.
