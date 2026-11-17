@@ -17,12 +17,13 @@
   </style>
   <text
     x="32"
-    y="46"
+    y="32"
     font-family="Arial, sans-serif"
     font-size="44"
     font-weight="700"
     letter-spacing="-3"
     text-anchor="middle"
+    dominant-baseline="central"
   >
     JG
   </text>
