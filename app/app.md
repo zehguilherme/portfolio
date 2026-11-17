@@ -16,13 +16,13 @@ Owns the Next.js app router entry points, root layout, metadata, and the home ro
 - `app/robots.ts` - crawler access rules and sitemap reference
 - `app/sitemap.ts` - public URL sitemap
 - `app/page.tsx` - home route composition
-- `app/icon.svg` - header-inspired JG favicon with system light/dark colors
+- `app/icon.svg` - horizontally and vertically centered header-inspired JG favicon with system light/dark colors
 - `app/globals.css` - light/dark semantic tokens, Tailwind theme bridge, and base styling including pointer cursors on links and buttons
 
 ## UI Surfaces
 
 - `/` - portfolio landing page with nav, hero, projects, about, and footer
-- `/icon.svg` - browser favicon based on the JG header wordmark with system-theme colors
+- `/icon.svg` - centered browser favicon based on the JG header wordmark with system-theme colors
 - `404` - centered error page with return link
 - `/robots.txt` - allows crawler access and references the sitemap
 - `/sitemap.xml` - lists the public home URL
